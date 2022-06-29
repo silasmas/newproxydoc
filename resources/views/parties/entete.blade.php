@@ -40,7 +40,7 @@
     <!-- Elements CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/elements.css') }}">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/monstyle.css') }}">
     <!-- Modernizr Js -->
     <script src="{{ asset('assets/js/modernizr-3.5.0.min.js') }}"></script>
 </head>
