@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="why-choose-box-layout2 col-lg-4">
-                            <img src="{{ asset('assets/img/proxy/5-09.png') }}" alt="about" class="img-fluid">
+                            <img src="{{ asset('assets/img/proxy/5-10.png') }}" alt="about" class="img-fluid">
                         </div>
                     </div>
                 </div>
