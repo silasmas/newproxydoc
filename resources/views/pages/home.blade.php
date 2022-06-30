@@ -9,26 +9,11 @@
     <div class="slider-area slider-layout2 bg-light-primary100 slider-top-margin2">
         <div class="bend niceties preview-1">
             <div id="ensign-nivoslider-1" class="slides">
-                <img src="{{ asset('assets/img/slider/slide1-1.jpg') }}" alt="slider" title="#slider-direction-1" />
-                <img src="{{ asset('assets/img/slider/slide1-2.jpg') }}" alt="slider" title="#slider-direction-2" />
-                <img src="{{ asset('assets/img/slider/slide1-3.jpg') }}" alt="slider" title="#slider-direction-3" />
+                <img src="{{ asset('assets/img/proxy/1-02.png') }}" alt="slider" title="#slider-direction-1" />
+                <img src="{{ asset('assets/img/proxy/2-03.png') }}" alt="slider" title="#slider-direction-2" />
+                <img src="{{ asset('assets/img/proxy/3-04.png') }}" alt="slider" title="#slider-direction-3" />
             </div>
-            {{-- <div id="slider-direction-1" class="t-cn slider-direction">
-                <div class="slider-content s-tb slide-1">
-                    <div class="container">
-                        <div class="text-box">
-                            <div class="slider-big-text">We are providing total<span> healthcare solutions.</span></div>
-                            <p class="slider-paragraph">Mimply dummy text of the printing and type settin age
-                                ipsum dolor sit amet, consecte tur adipiscing pitaeir ding total healthcare
-                                solutions.
-                            </p>
-                            <div class="slider-btn-area">
-                                <a href="#" class="item-btn">READ MORE<i class="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
+            
             <div id="slider-direction-1" class="t-cn slider-direction">
                 <div class="slider-content s-tb slide-1">
                     <div class="text-left title-container s-tb-c">
@@ -337,7 +322,7 @@
                             class="img-fluid rounded-circle">
                         <ul class="item-icon">
                             <li>
-                                <a href="single-doctor.html">
+                                <a href="#">
                                     <i class="fas fa-plus"></i>
                                 </a>
                             </li>
@@ -345,7 +330,7 @@
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="single-doctor.html">Dr. Zinia Zara</a>
+                            <a href="#">Dr. Zinia Zara</a>
                         </h3>
                         <p>Gynaecology</p>
                     </div>
@@ -361,9 +346,10 @@
                                 <span>08.00 :17.00</span>
                             </li>
                         </ul>
-                        <a href="single-doctor.html" class="item-btn">MAKE AN APPOINTMENT</a>
+                        <a href="#" class="item-btn">MAKE AN APPOINTMENT</a>
                     </div>
                 </div>
+               
                 <div class="team-box-layout2">
                     <div class="item-img">
                         <img src="{{ asset('assets/img/slider/dr2.png') }}" alt="Team1"
@@ -378,9 +364,9 @@
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="single-doctor.html">Dr. Nadim Kamal</a>
+                            <a href="#">Dr. Rihana Roy</a>
                         </h3>
-                        <p>Orthopaedics</p>
+                        <p>Lense Expert</p>
                     </div>
                     <div class="item-schedule">
                         <ul>
@@ -394,7 +380,7 @@
                                 <span>08.00 :17.00</span>
                             </li>
                         </ul>
-                        <a href="single-doctor.html" class="item-btn">MAKE AN APPOINTMENT</a>
+                        <a href="#" class="item-btn">MAKE AN APPOINTMENT</a>
                     </div>
                 </div>
                 <div class="team-box-layout2">
@@ -411,7 +397,7 @@
                     </div>
                     <div class="item-content">
                         <h3 class="item-title">
-                            <a href="single-doctor.html">Dr. Rihana Roy</a>
+                            <a href="#">Dr. Rihana Roy</a>
                         </h3>
                         <p>Lense Expert</p>
                     </div>
@@ -427,634 +413,14 @@
                                 <span>08.00 :17.00</span>
                             </li>
                         </ul>
-                        <a href="single-doctor.html" class="item-btn">MAKE AN APPOINTMENT</a>
-                    </div>
-                </div>
-                <div class="team-box-layout2">
-                    <div class="item-img">
-                        <img src="{{ asset('assets/img/slider/team36.png') }}" alt="Team1"
-                            class="img-fluid rounded-circle">
-                        <ul class="item-icon">
-                            <li>
-                                <a href="single-doctor.html">
-                                    <i class="fas fa-plus"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="item-content">
-                        <h3 class="item-title">
-                            <a href="single-doctor.html">Dr. Steven Roy</a>
-                        </h3>
-                        <p>Cardiology</p>
-                    </div>
-                    <div class="item-schedule">
-                        <ul>
-                            <li>Mon - Tues
-                                <span>08.00 :17.00</span>
-                            </li>
-                            <li>Fri - Sat
-                                <span>09.00 :12.00</span>
-                            </li>
-                            <li>Sun - Mon
-                                <span>08.00 :17.00</span>
-                            </li>
-                        </ul>
-                        <a href="single-doctor.html" class="item-btn">MAKE AN APPOINTMENT</a>
+                        <a href="#" class="item-btn">MAKE AN APPOINTMENT</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Team Area End Here -->
-    <!-- Schedule Area Start Here -->
-    {{-- <section class="class-schedule1">
-        <div class="container">
-            <div class="text-center section-heading heading-dark heading-layout1">
-                <h2>Specialist Doctors</h2>
-                <p>Experienced Doctor</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="class-schedule-wrap1">
-                        <div class="table-responsive">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            <div class="schedule-time-heading">Time</div>
-                                        </th>
-                                        <td>
-                                            <div class="schedule-day-heading">Monday</div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-day-heading">Tuesday</div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-day-heading">Wednesday</div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-day-heading">Thursday</div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-day-heading">Friday</div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-day-heading">Saturday</div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-day-heading">Sunday</div>
-                                        </td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="schedule-time-wrapper">08.00am</div>
-                                        </th>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
 
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="schedule-time-wrapper">10.00am</div>
-                                        </th>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="schedule-time-wrapper">12.00pm</div>
-                                        </th>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="schedule-time-wrapper">02.00pm</div>
-                                        </th>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="schedule-time-wrapper">04.00pm</div>
-                                        </th>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <div class="schedule-time-wrapper">06.00pm</div>
-                                        </th>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-                                                <div class="media">
-                                                    <div class="item-img">
-                                                        <img src="img/team/team7.png" alt="team"
-                                                            class="img-fluid rounded-circle">
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <h3 class="title">Steven Smith</h3>
-                                                        <div class="item-ctg">Contact Lens</div>
-                                                        <a href="single-details.html"
-                                                            class="item-btn btn-fill size-xs radius-4">View
-                                                            Profile</a>
-                                                    </div>
-                                                </div>
-                                                <div class="item-ctg">Contact Lens</div>
-                                                <div class="item-time">08.00am - 09.00am</div>
-                                                <div class="item-team">Dr.Mike Hussy</div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="schedule-item-wrapper">
-
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Schedule Area End Here -->
     <!-- Banner Area Start Here -->
     <section class="banner-wrap-layout1 parallaxie" data-bg-image="{{ asset('assets/img/slider/slide4-3.jpg') }}">
         <div class="container">
@@ -1076,30 +442,6 @@
     </section>
     <!-- Banner End Here -->
     @include('parties.abonnements')
-    <!-- Call to Action Area Start Here -->
-    {{-- <section class="call-to-action-wrap-layout4">
-        <div class="item-img">
-            <img src="{{ asset('assets/img/slider/figure7.png') }}" alt="figure" class="img-fluid">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12 col-lg-8 col-md-8 col-12">
-                    <div class="call-to-action-box-layout4">
-                        <h2 class="item-title">
-                            Nous fournissons le plus haut niveau de soins et de services de satisfaction à nos patients.
-                        </h2>
-                        <div class="call-to-action-phone">
-                            <a href="tel:+243 827839232><i class=" fas fa-phone"></i>+243 827839232</a>
-                        </div>
-                        <div class="call-to-action-btn">
-                            <a href="#" onclick="info('contact')" class="item-btn">Nous contacter</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!-- Call to Action End Here -->
 @endsection
 
 @section('autreScript')

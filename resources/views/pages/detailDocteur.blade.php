@@ -117,7 +117,7 @@
                     </div>
                     <div class="order-xl-1 order-lg-1 sidebar-widget-area sidebar-break-md col-xl-3 col-lg-4 col-md-12 col-12">
                         <div class="widget widget-about-team">
-                            <img src="{{ asset('assets/img/slider/team9.png') }}" class="img-fluid" alt="team">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" class="img-fluid" alt="team">
                             <div class="item-content">
                                 <h3 class="item-title">Dr.Zinia Zara</h3>
                                 <p class="item-ctg">Cardiology</p>

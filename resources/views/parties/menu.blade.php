@@ -61,7 +61,7 @@
                <div class="row no-gutters d-flex align-items-center">
                    <div class="col-lg-1 col-md-1 logo-area-layout1">
                        <a href="{{ route('home') }}" class="temp-logo">
-                           <img src="{{ asset('assets/logo/logo1.png') }}" alt="logo" height="70" width="70"
+                           <img src="{{ asset('assets/img/proxy/11-12.png') }}" alt="Proxydoc" height="200" width="200"
                                class="img-fluid">
                        </a>
                    </div>

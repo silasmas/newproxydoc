@@ -29,7 +29,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gastroenterology neurology">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team8.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -51,7 +51,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 dental cardiology">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team9.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -73,7 +73,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gastroenterology medicine">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team11.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -95,7 +95,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 dental orthopaedics medicine">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team12.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -117,7 +117,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 eye gynaecology neurology">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team8.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -139,7 +139,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cardiology medicine">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team9.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -161,7 +161,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 dental neurology">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team11.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -183,7 +183,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gastroenterology orthopaedics">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team12.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -205,7 +205,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 eye neurology medicine">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team8.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -227,7 +227,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 cardiology gynaecology">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team9.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -249,7 +249,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 dental neurology cardiology">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team11.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>
@@ -271,7 +271,7 @@
                 <div class="no-equal-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 eye orthopaedics medicine neurology">
                     <div class="team-box-layout2">
                         <div class="item-img">
-                            <img src="{{ asset('assets/img/slider/team12.png') }}" alt="Team1" class="img-fluid rounded-circle">
+                            <img src="{{ asset('assets/img/slider/dr1.jpg') }}" alt="Team1" class="img-fluid rounded-circle">
                             <ul class="item-icon">
                                 <li><a href="{{ route('detailDocteur') }}"><i class="fas fa-plus"></i></a></li>
                             </ul>

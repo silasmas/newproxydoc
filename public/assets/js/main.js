@@ -205,7 +205,7 @@
     MeanMenu activation code
     --------------------------------------*/
     $('nav#dropdown').meanmenu({
-        siteLogo: "<div class='mobile-menu-nav-back'><a class='logo-mobile' href='index.html'><img src='assets/logo/logo1.png' alt='logo' height='60' width='60'  class='img-fluid'/></a></div>"
+        siteLogo: "<div class='mobile-menu-nav-back'><a class='logo-mobile' href='home'><img src='assets/img/proxy/5-12.png' alt='Proxydoc' height='100' width='100'  class='img-fluid'/></a></div>"
     });
 
     /*-------------------------------------

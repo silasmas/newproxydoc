@@ -221,7 +221,7 @@
            </div>
            <div class="col-xl-6">
                <div class="appointment-banner">
-                   <img src="{{ asset('assets/img/slider/figure2.png') }}" alt="appointment" class="img-fluid">
+                   <img src="{{ asset('assets/img/proxy/5-11.png') }}" alt="appointment" class="img-fluid">
                </div>
            </div>
        </div>

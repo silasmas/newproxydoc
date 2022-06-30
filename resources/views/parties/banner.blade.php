@@ -1,5 +1,6 @@
 
-<section class="inner-page-banner bg-common inner-page-top-margin" data-bg-image="{{ asset('assets/img/slider/figure2.jpg') }}">
+<section class="inner-page-banner bg-common inner-page-top-margin" data-bg-image="{{ asset('assets/img/proxy/4a-07.png
+') }}">
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -28,7 +28,7 @@
             <div class="col-lg-6">
                 <div class="about-box-layout14">
                     <div class="item-video">
-                        <img src="{{ asset('assets/img/slider/about2.jpg') }}" alt="about">
+                        <img src="{{ asset('assets/img/proxy/5-08.png') }}" alt="about">
                         <a class="play-btn popup-youtube" href="http://www.youtube.com/watch?v=1iIZeIy7TqM">
                         <i class="flaticon-play-button"></i>
                         </a>
@@ -252,14 +252,15 @@
                 </div>
             </div>
             <div class="why-choose-box-layout2 col-lg-6">
-                <img src="{{ asset('assets/img/slider/about2.png') }}" alt="about" class="img-fluid">
+                <img src="{{ asset('assets/img/proxy/5-09.png') }}" alt="about" class="img-fluid">
             </div>
         </div>
     </div>
 </section>
 <!-- Why Choose Area End Here -->
+
  <!-- Testimonial Area Start Here -->
- <section class="testmonial-wrap-layout2 bg-common" data-bg-image="{{ asset('assets/img/slider/testimonial-bg1.jpg') }}">
+ {{-- <section class="testmonial-wrap-layout2 bg-common" data-bg-image="{{ asset('assets/img/slider/testimonial-bg1.jpg') }}">
     <div class="container">
         <div class="rc-carousel dot-control-layout2" data-loop="true" data-items="1" data-margin="30" data-autoplay="true" data-autoplay-timeout="5000"
             data-smart-speed="2000" data-dots="true" data-nav="false" data-nav-speed="false" data-r-x-small="1" data-r-x-small-nav="false"
@@ -302,8 +303,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- Testimonial Area End Here -->
+
 <!-- Brand Area Start Here -->
 <section class="brand-wrap-layout2 bg-light-primary100">
     <div class="container">
