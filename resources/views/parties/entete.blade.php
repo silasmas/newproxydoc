@@ -46,7 +46,7 @@
 </head>
 <body>
     <!-- Preloader Start Here -->
-    <div id="preloader"></div>
+    <div id="preloaderddd"></div>
     <!-- Preloader End Here -->
     <!-- scrollUp Start Here -->
     <a href="#wrapper" data-type="section-switch" class="scrollUp">

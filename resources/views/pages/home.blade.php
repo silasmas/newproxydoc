@@ -171,7 +171,7 @@
                 </div>
                 <div class="about-box-layout7 col-lg-6">
                     <div class="item-video">
-                        <img src="{{ asset('assets/img/about3.png') }}" alt="about">
+                        <img src="{{ asset('assets/img/proxy/video.jpeg') }}" alt="about">
                         <a class="play-btn popup-youtube" href="http://www.youtube.com/watch?v=1iIZeIy7TqM">
                             <i class="flaticon-play-button"></i>
                         </a>
