@@ -10,18 +10,16 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-box-layout13">
-                    <h2 class="item-title">Notre meilleur laboratoire
-                        <span>ProxyDoc Labo</span>
+                    <h2 class="item-title">Nos services
+                        <span>ProxyDoc </span>
+                       
                     </h2>
-                    <p>Nous offrons des services médicaux étendus pour nos patients,
-                         nous vous recommandons d'utiliser
-                         le texte officia.simply factice de
-                         l'industrie de l'impression et de la composition.</p>
+                    <p>L’application ou le site internet ProxyDoc propose les services ou options ci-après :</p>
                     <ul class="list-info">
-                        <li>Personnel Qualifié de Médecins</li>
-                        <li>Sentez-vous comme chez Home Services</li>
-                        <li>Services d'urgence 24h/24 et 7j/7</li>
-                        <li>Facturation facile et abordable</li>
+                        <li>ProxyChat </li>
+                        <li>ProxyFamily</li>
+                        <li>ProxyChem </li>
+                        <li>ProxyGency </li>
                     </ul>
                 </div>
             </div>
@@ -69,34 +67,50 @@
                             <div class="tab-pane fade active show" id="related1">
                                 <div class="about-box-layout5">
                                     <h2 class="item-title">Apropo de nous </h2>
-                                    <p>Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
-                                        bibendum non mattis fusceut perspiciatis undeuisque. Maecenas. Eros mus.
-                                        Hymenaeos eros. Nisi mauris et adipiscing. Aliquam class bibendum
-                                        mattis fusceut persecenas. Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi
-                                        mauris et adipisc iquam class bibendum non mattis fusceut perspiciatis
-                                        undeuisque.</p>
+                                    <p>
+                                        Fort de l’ampleur que présentent les NTIC dans la vie 
+                                        quotidienne de la population à travers le monde, 
+                                        réalisant l’inaccessibilité des services médicaux 
+                                        en temps réel, sans négliger les effets de 
+                                        la crise sanitaire du Covid-19 qui impose 
+                                        à la population de trouver des solutions rapides
+                                         afin de se procurer des services sur les besoins 
+                                         en matière de santé à distance, ProxyDoc se veut 
+                                         faciliter la vie de la population en termes d’accès 
+                                         aux services de santé à travers une application sur
+                                          smartphone et un site internet afin de rapprocher
+                                           la population des services hospitaliers, sans se 
+                                           déplacer.
+                                    </p>
                                  
-                                    <p>Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
-                                        bibendum non mattis fusceut perspiciatis undeuisque. Maecenas. Eros mus.
-                                        Hymenaeos eros. Nisi mauris et adipiscing. Aliquam class bibendum
-                                        mattis fusceut persecenas. Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi
-                                        mauris et adipisc iquam class bibendum non mattis fusceut perspiciatis
-                                        undeuisque. Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris
-                                        et adipisc iquam class bibendum non mattis fusceut perspiciatise.</p>
-                                    <ul class="about-info">
-                                        <li>Keep Patients First</li>
-                                        <li>Pursue Excellence</li>
-                                        <li>Keep Everyone Safe</li>
-                                        <li>Manage Your Resources</li>
-                                        <li>Work Together</li>
-                                        <li>Keep Learning</li>
+                                    <p>
+                                        Une autre problématique à laquelle ProxyDoc se veut être une solution,
+                                         c’est le manque à gagner des médecins (personnel de santé) face aux
+                                          consultations informelles par des appels et messagerie téléphoniques
+                                           à l’égard des personnes familières que l’on ne saurait facturer au 
+                                           terme du service rendu. Ainsi, ProxyDoc veut être cette plateforme où
+                                            les patients peuvent présenter leurs soucis de santé à des médecins 
+                                            (personnel de santé) sans pour autant que ces patients ne se sentent 
+                                            facturés, car la consultation étant tenue par chat, ProxyChat, et le
+                                             médecin à son tour en tire des dividendes par l’utilisation du forfait 
+                                             internet ProxyDoc lors de l’utilisation de l’application ou du site 
+                                             internet par le patient.
+                                    </p>
+                                     <ul class="about-info">
+                                        <li>ProxyChat </li>
+                                        <li>ProxyFamily</li>
+                                        <li>ProxyGency </li>
+                                        <li>ProxyChem </li>
+                                        <li>ProxyNews </li>
+                                        <li>ProxyNurse  </li>
+                                        <li>ProxImage </li>
                                     </ul>
-                                    <p>Hymenaeos eros. Nisi mauris et adipisc iquam class bibendum non mattis fusceut
+                                   {{-- <p>Hymenaeos eros. Nisi mauris et adipisc iquam class bibendum non mattis fusceut
                                         perspiciatis undeuisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et
                                         adipiscing. Aliquam class bibendum mattis fusceut persecenas.
                                         Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
                                         bibendum non mattis fusceut perspiciatis undeuisque. Quisque. Maecenas. Eros
-                                        mus. Hymenaeos eros.</p>
+                                        mus. Hymenaeos eros.</p> --}}
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="related2">
@@ -116,20 +130,7 @@
                                         mauris et adipisc iquam class bibendum non mattis fusceut perspiciatis
                                         undeuisque. Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris
                                         et adipisc iquam class bibendum non mattis fusceut perspiciatise.</p>
-                                    <ul class="about-info">
-                                        <li>Keep Patients First</li>
-                                        <li>Pursue Excellence</li>
-                                        <li>Keep Everyone Safe</li>
-                                        <li>Manage Your Resources</li>
-                                        <li>Work Together</li>
-                                        <li>Keep Learning</li>
-                                    </ul>
-                                    <p>Hymenaeos eros. Nisi mauris et adipisc iquam class bibendum non mattis fusceut
-                                        perspiciatis undeuisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et
-                                        adipiscing. Aliquam class bibendum mattis fusceut persecenas.
-                                        Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
-                                        bibendum non mattis fusceut perspiciatis undeuisque. Quisque. Maecenas. Eros
-                                        mus. Hymenaeos eros.</p>
+                                   
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="related3">
@@ -148,20 +149,7 @@
                                         mauris et adipisc iquam class bibendum non mattis fusceut perspiciatis
                                         undeuisque. Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris
                                         et adipisc iquam class bibendum non mattis fusceut perspiciatise.</p>
-                                    <ul class="about-info">
-                                        <li>Keep Patients First</li>
-                                        <li>Pursue Excellence</li>
-                                        <li>Keep Everyone Safe</li>
-                                        <li>Manage Your Resources</li>
-                                        <li>Work Together</li>
-                                        <li>Keep Learning</li>
-                                    </ul>
-                                    <p>Hymenaeos eros. Nisi mauris et adipisc iquam class bibendum non mattis fusceut
-                                        perspiciatis undeuisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et
-                                        adipiscing. Aliquam class bibendum mattis fusceut persecenas.
-                                        Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
-                                        bibendum non mattis fusceut perspiciatis undeuisque. Quisque. Maecenas. Eros
-                                        mus. Hymenaeos eros.</p>
+                                    
                                 </div>
                             </div>
                             

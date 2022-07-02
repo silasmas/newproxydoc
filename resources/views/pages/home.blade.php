@@ -14,7 +14,31 @@
                 <img src="{{ asset('assets/img/proxy/3-04.png') }}" alt="slider" title="#slider-direction-3" />
             </div>
             
-            <div id="slider-direction-1" class="t-cn slider-direction">
+            @forelse ($service as $s)
+            <div id="slider-direction-{{$loop->iteration }}" class="t-cn slider-direction">
+           <div class="slider-content s-tb slide-{{$loop->iteration }}">
+               <div class="text-left title-container s-tb-c">
+                   <div class="container">
+                       <div class="text-box">
+                           <div class="slider-big-text">{{ $s->nom }} </div>
+                           <p class="slider-paragraph">
+                               {{$s->description}}
+                           </p>
+                           <div class="slider-btn-area">
+                               <a href="{{ route('detailAbonnement') }}" class="item-btn">Voir plus<i class="fas fa-chevron-right"></i></a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       @empty
+           
+       @endforelse
+
+
+
+            {{-- <div id="slider-direction-1" class="t-cn slider-direction">
                 <div class="slider-content s-tb slide-1">
                     <div class="text-left title-container s-tb-c">
                         <div class="container">
@@ -67,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- Slider Area End Here -->
@@ -269,13 +293,13 @@
     <section class="brand-wrap-layout1 bg-primary100">
         <div class="container">
             <div class="row">
-                <div class="brand-box-layout1 col-xl-7 col-lg-6 col-md-12 col-12">
-                    <h2 class="item-title">We Are Certified Award Winning Hospital.</h2>
+                <div class="brand-box-layout1 col-xl-11 col-lg-11 col-md-12 col-12 text-center">
+                    <h2 class="item-title ">Connecter pour une meilleure santé </h2>
                 </div>
-                <div class="brand-box-layout2 col-xl-5 col-lg-6 col-md-12 col-12">
+                <div class="brand-box-layout2 col-xl-1 col-lg-1 col-md-12 col-12">
                     <img src="{{ asset('assets/img/slider/brand-bg1.png') }}" alt="brand"
                         class="img-fluid d-none d-lg-block">
-                    <ul>
+                    {{-- <ul>
                         <li>
                             <img src="{{ asset('assets/img/slider/brand1.png') }}" alt="brand" class="img-fluid">
                         </li>
@@ -285,7 +309,7 @@
                         <li>
                             <img src="{{ asset('assets/img/slider/brand3.png') }}" alt="brand" class="img-fluid">
                         </li>
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </div>
@@ -297,8 +321,8 @@
         <img class="right-img img-fluid" src="{{ asset('assets/img/slider/figure5.png') }}" alt="figure">
         <div class="container">
             <div class="text-left section-heading heading-dark heading-layout1">
-                <h2>Specialist Doctors</h2>
-                <p>Experienced Doctor</p>
+                <h2>Médecins spécialistes</h2>
+                <p>Médecin expérimenté</p>
                 <div id="owl-nav2" class="owl-nav-layout1">
                     <span class="rt-prev">
                         <i class="fas fa-chevron-left"></i>
