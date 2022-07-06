@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\order;
 use App\Models\service;
 use App\Models\abonnement;
 use Laravel\Sanctum\HasApiTokens;
@@ -23,6 +24,10 @@ class User extends Authenticatable
     protected $guarded=[];
     public function abonnement(){
         return $this->belongsToMany(abonnement::class,'abonnement_users')->withPivot('etat','date_debut','date_fin');
+    }
+
+    public function order(){
+        return $this->hasMany(order::class);
     }
     /**
      * The attributes that should be hidden for serialization.

@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/monstyle.css') }}">
     <!-- Modernizr Js -->
     <script src="{{ asset('assets/js/modernizr-3.5.0.min.js') }}"></script>
+    <link href="{{ asset('js/sweetalert/sweetalert.css') }}" rel="stylesheet">
 </head>
 <body>
     <!-- Preloader Start Here -->

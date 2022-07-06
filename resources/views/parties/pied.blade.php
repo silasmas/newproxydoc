@@ -31,7 +31,7 @@
 <script src="{{ asset('assets/js/smoothscroll.min.js') }}"></script>
 <!-- Custom Js -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
-
+<script src="{{ asset('js/sweetalert/sweetalert.min.js') }}"></script>
 <script async src='https://stackwhats.com/pixel/2fa93742e74205573241c74f75d46f'></script>
 @auth
 @if ($mesService->pluck('nom')->contains('standars')||$mesService->pluck('nom')->contains('Premium')||$mesService->pluck('nom')->contains('business'))
@@ -52,7 +52,93 @@
     
 @endauth
 
+<script>
+    function addToCart(id) {
+        event.preventDefault()
+       addCard(id, "", "../addCard");
+    }
+    function removeCart(id) {
+        event.preventDefault()
+        removeFromCartList(id);
+    }
+    function removedCart(form) {
+        event.preventDefault()
+        swal({
+            title: 'Merci de patienter...',
+            icon: 'info'
+        })
+        $.ajax({
+            url: $(form).attr('action'),
+            method: "POST",
+            data: $(form).serialize(),
+            success: function(data) {
+                if (!data.reponse) {
+                    swal({
+                        title: data.msg,
+                        icon: 'error'
+                    })
+                } else {
+                    swal({
+                        title: data.msg,
+                        icon: 'success'
+                    })
+                    actualiser();
+                }
+            },
+        });
 
+    }
+    function addCard(form, idLoad, url) {
+        event.preventDefault()
+        swal({
+            title: 'Merci de patienter...',
+            icon: 'info'
+        })
+        $.ajax({
+            url: url,
+            method: "POST",
+            data: $(form).serialize(),
+            success: function(data) {
+                if (!data.reponse) {
+                    swal({
+                        title: data.msg,
+                        icon: 'error'
+                    })
+                } else {
+                    swal({
+                        title: data.msg,
+                        icon: 'success'
+                    })
+                    actualiser();
+                }
+            },
+        });
+
+    }
+    function removeFromCartList(id) {
+        event.preventDefault()
+        swal({
+            title: "Supprimer du panier",
+            text: "êtes-vous sûre de supprimer ce produit du panier?",
+            icon: 'warning',
+            dangerMode: true,
+            buttons: {
+                cancel: 'Non',
+                delete: 'OUI'
+            }
+        }).then(function(willDelete) {
+            if (willDelete) {
+                removedCart(id);
+            } else {
+
+            }
+
+        });
+    }
+    function actualiser() {
+        location.reload();
+    }
+</script>
 </body>
 
 </html>

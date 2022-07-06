@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AbonnementController;
+use App\Http\Controllers\ProduitController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
 
@@ -36,7 +37,15 @@ Route::get('/retour', [AbonnementController::class, 'index'])->name('retour');
 Route::post('/retour', [AbonnementController::class, 'retour'])->name('retour');
 Route::post('/notify', [AbonnementController::class, 'notify'])->name('notify');
 
+Route::get('/monpanier', [ProduitController::class, 'monpanier'])->name('monpanier');
 Route::get('/notify', [AbonnementController::class, 'note'])->name('notify');
+Route::get('/pharmacie', [ProduitController::class, 'index'])->name('pharmacie');
+Route::get('detailProdui/{id}', [ProduitController::class, 'show'])->name('detailProdui');
+
+Route::delete('cartRemove/{id}', [ProduitController::class, 'destroy'])->name('cartRemove');
+
+
+Route::post('addCard', [ProduitController::class, 'store'])->name('addCard');
 
 Route::get('contact', function () {
     return view('pages.contact');

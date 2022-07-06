@@ -2,12 +2,14 @@
  
 namespace App\Providers;
 
+use App\Models\produit;
+use App\Models\service;
+use App\Models\categorie;
 use App\Models\abonnement;
+use App\Models\serviceAbonnement;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Auth;
-use App\Models\service;
-use App\Models\serviceAbonnement;
 
 class ViewServiceProvider extends ServiceProvider
 {
@@ -45,7 +47,11 @@ class ViewServiceProvider extends ServiceProvider
                 $view->with('mesService',$mines);
             }
            $service=service::all();
-        //   
+           $produit=produit::with("categorie")->limit(10)->get();
+        //    $produits=produit::with("categorie")->whereHas("categorie",function($q){
+        //     $q->where("slug",request()->cat);
+        // })->orderBy("created_at","DESC")->paginate(6);
+        //  dd($produit);
           
            $acte=service::with('acte')->get();
            $abonnement=abonnement::with('service')->get();
@@ -60,6 +66,7 @@ class ViewServiceProvider extends ServiceProvider
             
            $view->with('abonnement',$avocatBy);
            $view->with('service',$service);
+           $view->with('produits',$produit);
 
         }); 
     }

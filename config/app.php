@@ -1,6 +1,8 @@
 <?php
 
+
 use Illuminate\Support\Facades\Facade;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 return [
 
@@ -178,6 +180,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\ViewServiceProvider::class,
 
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class
+
     ],
 
     /*
@@ -193,6 +197,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
     ])->toArray(),
 
 ];
