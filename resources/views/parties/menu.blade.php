@@ -169,7 +169,7 @@
                                                 <form action="{{ route('cartRemove', ['id'=>$panier->rowId]) }}" method="post" onsubmit="removeCart(this)">
                                                     @csrf
                                                     @method("DELETE")
-                                                    <button type="submit">
+                                                    <button type="submit" style="background: transparent; border: none">
                                                         <i class="far fa-trash-alt"></i>
                                                     </button>
                                                 </form>
