@@ -183,7 +183,7 @@
                                                <div class="cart-btn">
                                                    <a href="{{ route('monpanier') }}" class="item-btn">Voir le
                                                        panier</a>
-                                                   <a href="#" class="item-btn">La caisse</a>
+                                                   {{-- <a href="#" class="item-btn">La caisse</a> --}}
                                                </div>
                                            </div>
                                        @endif
