@@ -145,7 +145,7 @@
                                </li>
                                <li class="cart-area-dark">
                                    <a class="cart-trigger-icon ml-5"
-                                       href="{{ Cart::count() > 0 ? route('monpanier') : '#' }}">
+                                       href="{{ Cart::count() > 0 ? route('monpanier') : route('pharmacie') }}">
                                        <i class="flaticon-shopping-cart"></i>
                                        <span>{{ Cart::count() }}</span>
                                    </a>
@@ -165,11 +165,11 @@
                                                <div class="cart-quantity">X {{ $panier->qty }}</div>
                                                <div class="cart-price">
                                                    {{ $panier->model->monaie . '' . $panier->price }}</div>
-                                               <div class="cart-trash">
+                                               <div class="cart-trash" >
                                                 <form action="{{ route('cartRemove', ['id'=>$panier->rowId]) }}" method="post" onsubmit="removeCart(this)">
                                                     @csrf
                                                     @method("DELETE")
-                                                    <button type="submit" style="background: transparent; border: none">
+                                                    <button type="submit" style="background: transparent; border: none;cursor: pointer;">
                                                         <i class="far fa-trash-alt"></i>
                                                     </button>
                                                 </form>

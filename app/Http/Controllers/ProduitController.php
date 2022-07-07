@@ -31,6 +31,7 @@ class ProduitController extends Controller
      */
     public function monpanier()
     {
+        return view("pages.monpanier");
     }
     public function create()
     {
@@ -106,6 +107,5 @@ class ProduitController extends Controller
     {
         Cart::remove($id);
         return response()->json(['reponse' => true, 'msg' => "Le produit a été supprimé"]);
-
     }
 }

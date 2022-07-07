@@ -21,8 +21,7 @@
                 <div class="col-xl-9 col-lg-8 col-12 margin-b-30r">
                     <div class="single-product-box">
                         <div class="row">
-                            <div class="col-xl-6 col-12">
-                                
+                            <div class="col-xl-6 col-12">                                
                                 <div class="single-product-gallery">
                                     <div class="tab-content">
                                         <div role="tabpanel" class="tab-pane fade active show" id="fitness-related1">
