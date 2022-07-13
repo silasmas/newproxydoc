@@ -18,9 +18,17 @@ class ProduitController extends Controller
      */
     public function index()
     {
-
-        $allproduits = produit::with("categorie")->paginate(20);
+        if (request()->cat) {
+            $allproduits = produit::with("categorie")->whereHas("categorie", function ($q) {
+                $q->where("nom", request()->cat);
+            })->orderBy("created_at", "DESC")->simplePaginate(20);
+            $allproduits->withPath('pharmacie?cat=' . request()->cat);
+        } else {
+            // $allproduits = categorie::with("produit")->simplePaginate(20);
+            $allproduits = produit::with("categorie")->simplePaginate(20);
+        }
         $cat = categorie::with("produit")->get();
+
         return view("pages.pharmacie", compact("allproduits", "cat"));
     }
 
@@ -72,6 +80,13 @@ class ProduitController extends Controller
         $prod = produit::with("categorie")->where("id", $id)->first();
         $cat = categorie::with("produit")->get();
         return view("pages.detailProduit", compact("prod", "cat"));
+    }
+    public function showCat($id)
+    {
+        $allproduits = produit::with("categorie")->where("id", $id)->first();
+        $cat = categorie::with("produit")->where("id", $id)->get();
+        dd($cat);
+        return view("pages.detailProduit", compact("allproduits", "cat"));
     }
 
     /**

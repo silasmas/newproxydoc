@@ -1,6 +1,6 @@
 @extends('templates.template')
 @section('title', 'Pharmacie')
-@section('page', 'profil')
+@section('page', 'Notre pharmacie')
 
 @section('autreStyle')
     <link rel="stylesheet" href="{{ asset('assets/css/select2.min.css') }}">
@@ -16,7 +16,7 @@
                 <div class="col-xl-9 col-lg-8 col-12">
                     <div class="row">
                         @forelse ($allproduits as $p)
-                            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-12">
+                            <div class="col-xl-3 col-lg-6 col-md-3 col-sm-6 col-12">
                                 <div class="shop-box-layout1 margin-b-30">
                                     <div class="item-img">
                                         <img src="{{ asset('assets/img/shop1.png') }}" alt="shop" class="img-fluid">
@@ -66,7 +66,8 @@
 
                 </div>
                 <div class="col-12 form-group text-center">
-                        {{ $allproduits->links() }}
+                        
+                    {{ $allproduits->links() }}
                     
                 </div>
             </div>

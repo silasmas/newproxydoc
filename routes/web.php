@@ -4,6 +4,7 @@ use App\Http\Controllers\AbonnementController;
 use App\Http\Controllers\ProduitController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AchatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,9 +44,11 @@ Route::get('/pharmacie', [ProduitController::class, 'index'])->name('pharmacie')
 Route::get('detailProdui/{id}', [ProduitController::class, 'show'])->name('detailProdui');
 
 Route::delete('cartRemove/{id}', [ProduitController::class, 'destroy'])->name('cartRemove');
+Route::get('showCat/{id}', [ProduitController::class, 'showCat'])->name('showCat');
 
 
 Route::post('addCard', [ProduitController::class, 'store'])->name('addCard');
+Route::post('achatProduit', [AchatController::class, 'store'])->name('achatProduit');
 
 Route::get('contact', function () {
     return view('pages.contact');

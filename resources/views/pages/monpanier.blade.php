@@ -60,9 +60,9 @@
 
                                 </ul>
                                 <hr>
-                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Sous-total :  {{ Cart::subtotal() }}</h2>
-                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Tax :  {{ Cart::tax() }}</h2>
-                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Totale :  {{ Cart::total() }}</h2>
+                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Sous-total :  $ {{ Cart::subtotal() }}</h2>
+                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Tax : $ {{ Cart::tax() }}</h2>
+                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Totale : $ {{ Cart::total() }}</h2>
 
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                                         J'ai un compte <a href="{{ route('login') }}">Me connecter</a>
                                     </p>
                                 @endguest
-                                <form action="{{ url('abonnement') }}" method="POST" data-parsley-validate>
+                                <form action="{{ url('achatProduit') }}" method="POST" data-parsley-validate>
                                     @csrf
                                     @guest
                                         <div class="row gutters-15">
@@ -139,25 +139,25 @@
 
                                     <h2 class="title title-bar-primary2">Procédez au paiement</h2>
                                     <div class="row gutters-15">
-                                        <div {{ isset($ab) && $ab != '' ? 'hidden' : '' }}>
-                                            @if (isset($ab) && $ab != '')
+                                        <div>
+                                            {{-- @if (isset($ab) && $ab != '') --}}
                                                 <div class="col-12 form-group">
-                                                    <input type="text" class="form-control" name="abonnement_id"
+                                                    {{-- <input type="text" class="form-control" name="abonnement_id"
                                                         value="{{ $ab->id }}" id="abonnement_id"
                                                         data-error="Name field is required" required>
-                                                    <div class="help-block with-errors"></div>
+                                                    <div class="help-block with-errors"></div> --}}
                                                 </div>
                                                 <div class="col-12 form-group">
-                                                    <input type="text" class="form-control" name="prix"
+                                                    {{-- <input type="text" class="form-control" name="prix"
                                                         value="{{ Cart::total() }}" id="prix">
-                                                    <div class="help-block with-errors"></div>
+                                                    <div class="help-block with-errors"></div> --}}
                                                 </div>
                                                 <div class="col-12 form-group">
-                                                    <input type="text" class="form-control" name="monaie"
-                                                        value="USD" id="monaie">
-                                                    <div class="help-block with-errors"></div>
+                                                    {{-- <input type="text" class="form-control" name="monaie"
+                                                        value="{{ $ab->model->monaie=="$"?"USD":"CDF"}}" id="monaie">
+                                                    <div class="help-block with-errors"></div> --}}
                                                 </div>
-                                            @endif
+                                            {{-- @endif --}}
                                         </div>
 
                                         <div class="col-12 form-group carte">

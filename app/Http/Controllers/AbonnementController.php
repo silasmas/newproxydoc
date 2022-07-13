@@ -97,8 +97,6 @@ class AbonnementController extends Controller
     }
     public function note()
     {
-        //8.ZabjB4FDNL
-        //8.rQGbxK1qnt
         $response_body = self::verifyStatus("8.rQGbxK1qnt");
         $retour = abonnementUser::where("transaction_id", "8.jr59UZaOps")->first();
         $ab = abonnement::with("service")->where("id", $retour->abonnement_id)->first();

@@ -3,7 +3,7 @@
     <ul>
         @forelse ($cat as $c)
             <li>
-            <a href="#">
+            <a href="{{ route('pharmacie', ['cat'=>$c->nom]) }}">
                 {{ $c->nom }}
                 <span>({{ $c->produit->count() }})</span>
             </a>

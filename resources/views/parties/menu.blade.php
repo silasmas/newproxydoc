@@ -1,5 +1,5 @@
    <!-- Header Area Start Here -->
-
+   
    <header id="header_1">
        <div class="header-top-bar top-bar-border-bottom bg-light-primary100 d-none d-md-block">
            <div class="container">
@@ -93,7 +93,7 @@
                                            class="action-items-primary-btn">S'abonner</a>
                                    </li>
                                    <li class="hide-on-desktop-menu">
-                                       <a href="{{ Cart::count() > 0 ? route('monpanier') : '#' }}"
+                                       <a href="{{ Cart::count() > 0 ? route('monpanier') : route('pharmacie') }}"
                                            class="action-items-primary-btn">Mon panier ({{ Cart::count() }})</a>
                                    </li>
 
@@ -130,8 +130,19 @@
                        </div>
                    </div>
                    <div class="col-lg-5 col-md-5">
+                     
                        <div class="header-action-items-layout1 d-flex align-items-center justify-content-end">
                            <ul>
+                            @if (isset($allproduits))                                        
+                            <li class="d-none d-xl-block">
+                                <form id="top-search-form" method="" acttion="" class="header-search-dark">
+                                    <input type="text" class="search-input" placeholder="cherchez un produit par son nom" required="">
+                                    <button class="search-button" type="submit">
+                                        <i class="flaticon-search"></i>
+                                    </button>
+                                </form>
+                            </li> 
+                            @endif 
                                @guest
                                    <li>
                                        <a href="{{ route('login') }}" class="action-items-primary-btn">Connéxion<i
@@ -219,16 +230,8 @@
                                        </div>
                                    </li>
                                @endauth
-                               {{-- @auth                                   
-                               <li class="d-none d-xl-block">
-                                   <form id="top-search-form" class="header-search-dark">
-                                       <input type="text" class="search-input" placeholder="cherchez un service par son nom" required="">
-                                       <button class="search-button">
-                                           <i class="flaticon-search"></i>
-                                       </button>
-                                   </form>
-                               </li> 
-                               @endauth --}}
+                                                  
+                              
 
                            </ul>
 
