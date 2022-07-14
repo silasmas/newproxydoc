@@ -84,7 +84,7 @@
                                     @endforeach
                                 </div>
                                 @guest
-                                    <h2 class="title title-bar-primary2">Votre compte</h2>
+                                    <h2 class="title title-bar-primary2">Votre compte  uu</h2>
                                     <p>
                                         J'ai un compte <a href="{{ route('login') }}">Me connecter</a>
                                     </p>
