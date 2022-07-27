@@ -5,16 +5,39 @@ namespace App\Http\Controllers;
 use Rules\Password;
 use App\Models\User;
 use App\Models\achat;
+use App\Models\commune;
 use App\Rules\PhoneNumber;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use App\Http\Requests\UpdateachatRequest;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Http\Controllers\AbonnementController;
 
 class AchatController extends Controller
 {
-    public $achat = new AbonnementController();
+
+    public function deletePriceLivraison($commune)
+    {
+        Session::forget('priceLivraison');
+        $v = Session::get('priceLivraison', '0');
+        return response()->json(['reponse' => true, 'msg' => "Frais de livraison retranché", 'val' => Cart::total() + $v, "pl" => $v]);
+    }
+    public function getPriceLivraison($commune)
+    {
+
+        $com = commune::where("nom", $commune)->first();
+
+        // dd($com->zone->montant);
+        if ($com) {
+            Session::put("priceLivraison", $com->zone->montant);
+            $v = Session::get('priceLivraison', '0');
+            return response()->json(['reponse' => true, 'msg' => "Frais de livraison pris en compte", 'val' => Cart::total() + $v, "pl" => $v]);
+        } else {
+            return response()->json(['reponse' => false, 'msg' => "La zone interdite pour la livraison"]);
+        }
+    }
     /**
      * Display a listing of the resource.
      *
@@ -43,18 +66,19 @@ class AchatController extends Controller
      */
     public function store(Request $request)
     {
+        $achat = new AbonnementController();
         if (!Auth::guest()) {
-            $transaction_id = $this->achat->genererTransaction_id(Auth::user()->id);
-            $verification = $this->achat->verivyInfo_paiement($request);
+            $transaction_id = $achat->genererTransaction_id(Auth::user()->id);
+            $verification = $achat->verivyInfo_paiement($request);
             $user = Auth::user();
             if ($verification) {
-                $init = $this->achat->initInfo($request, $transaction_id);
+                $init = $achat->initInfo($request, $transaction_id);
 
                 // dd($init);
-                return $ret = $this->achat->initPaie($init, $request->toArray(), $user);
+                return $ret = $achat->initPaie($init, $request->toArray(), $user);
             }
         } else {
-            $compteExiste = $this->achat->verifyCompte($request->email);
+            $compteExiste = $achat->verifyCompte($request->email);
             //dd($compteExiste);
             if ($compteExiste[0] == true) {
                 if ($compteExiste[1] == true) {
@@ -68,11 +92,11 @@ class AchatController extends Controller
                         'password' => ['required', 'confirmed', Rules\Password::defaults()],
                     ]);
                     $user = User::where("email", $request->email)->first();
-                    $transaction_id = $this->achat->genererTransaction_id($user->id);
-                    $verification = $this->achat->verivyInfo_paiement($request);
+                    $transaction_id = $achat->genererTransaction_id($user->id);
+                    $verification = $achat->verivyInfo_paiement($request);
                     if ($verification) {
-                        $init = $this->achat->initInfo($request, $transaction_id);
-                        return $ret = $this->achat->initPaie($init, $request->toArray(), $user);
+                        $init = $achat->initInfo($request, $transaction_id);
+                        return $ret = $achat->initPaie($init, $request->toArray(), $user);
                     }
                 }
             } else {
@@ -92,11 +116,11 @@ class AchatController extends Controller
                     'password' => Hash::make($request->password),
                 ]);
                 if ($user) {
-                    $transaction_id = $this->achat->genererTransaction_id($user->id);
-                    $verification = $this->achat->verivyInfo_paiement($request);
+                    $transaction_id = $achat->genererTransaction_id($user->id);
+                    $verification = $achat->verivyInfo_paiement($request);
                     if ($verification) {
-                        $init = $this->achat->initInfo($request, $transaction_id);
-                        return $ret = $this->achat->initPaie($init, $request->toArray(), $user);
+                        $init = $achat->initInfo($request, $transaction_id);
+                        return $ret = $achat->initPaie($init, $request->toArray(), $user);
                     }
                 } else {
                     return back()->with('message', 'Erreur de création de compte!');
@@ -104,6 +128,7 @@ class AchatController extends Controller
             }
         }
     }
+
 
     /**
      * Display the specified resource.

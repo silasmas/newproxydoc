@@ -57,13 +57,22 @@ class ProduitController extends Controller
         $duplicata = Cart::search(function ($cartItem, $rowId) use ($request) {
             return $cartItem->id == $request->idProd;
         });
-        if ($duplicata->isNotEmpty()) {
+        // dd($request->quantity);
+        if ($duplicata->isNotEmpty() && $duplicata->first()->qty == $request->quantity) {
             return response()->json(['reponse' => false, 'msg' => "Le produit a déjà été ajouté"]);
         } else {
-            $produit = produit::find($request->idProd);
-            Cart::add($produit->id, $produit->nom, $request->quantity, $produit->prix)
-                ->associate("App\models\produit");
-            return response()->json(['reponse' => true, 'msg' => "Le produit a bien été ajouté"]);
+            if ($duplicata->isNotEmpty() && $duplicata->first()->qty != $request->quantity) {
+                $produit = produit::find($request->idProd);
+                Cart::add($produit->id, $produit->nom, $request->quantity, $produit->prix)
+                    ->associate("App\models\produit");
+                return response()->json(['reponse' => true, 'msg' => "La quantité est mis à jour avec succès"]);
+            } else {
+
+                $produit = produit::find($request->idProd);
+                Cart::add($produit->id, $produit->nom, $request->quantity, $produit->prix)
+                    ->associate("App\models\produit");
+                return response()->json(['reponse' => true, 'msg' => "Le produit a bien été ajouté"]);
+            }
         }
     }
 

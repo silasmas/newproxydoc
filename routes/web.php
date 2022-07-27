@@ -49,6 +49,8 @@ Route::get('showCat/{id}', [ProduitController::class, 'showCat'])->name('showCat
 
 Route::post('addCard', [ProduitController::class, 'store'])->name('addCard');
 Route::post('achatProduit', [AchatController::class, 'store'])->name('achatProduit');
+Route::get('getPriceLivraison/{commune}', [AchatController::class, 'getPriceLivraison'])->name('getPriceLivraison');
+Route::get('deletePriceLivraison/{commune}', [AchatController::class, 'deletePriceLivraison'])->name('deletePriceLivraison');
 
 Route::get('contact', function () {
     return view('pages.contact');

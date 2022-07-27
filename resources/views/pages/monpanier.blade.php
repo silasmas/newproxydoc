@@ -26,14 +26,13 @@
                                 <ul>
                                     @forelse (Cart::content() as $c)
                                         <li>
-                                            <a href="#">
+                                            <a href="{{ route('detailProdui', ['id' => $c->model->id]) }}">
                                                 <img alt="single" src="{{ asset('assets/img/shop1.png') }}"
                                                     class="img-responsive" height="100" width="100">
 
                                                 {{ $c->model->nom }}
                                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                                 <label style="margin-left: 10px">
-
                                                     ({{ $c->model->monaie . '' . $c->price }} X {{ $c->qty }})
                                                 </label>
 
@@ -60,9 +59,33 @@
 
                                 </ul>
                                 <hr>
-                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Sous-total :  $ {{ Cart::subtotal() }}</h2>
-                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Tax : $ {{ Cart::tax() }}</h2>
-                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Totale : $ {{ Cart::total() }}</h2>
+                                <small class='text-danger'>La livraison à domicile est accéptée pour les achats supérieure à
+                                    <b>10$</b></small>
+                                @if (Cart::total() >= 10)
+                                    <div class="col-12 form-group carte">
+                                        <select class="select2 comm" name="channels"
+                                            onchange="switch_livraisone(this.value)" id='livraisonChoice'>
+                                            <option value="" selected>Voulez-vous être livré à domicile?
+                                            </option>
+                                            <option value="OUI">OUI</option>
+                                            <option value="NON">NON</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div id="commune" class="col-12 form-group commune" style="display: none">
+                                        @include('pages.listeCommune')
+                                    </div>
+                                    <h2 class="title title-bar-primary2 liv" id='livraisonvue' style="margin-top: 20px">
+                                        Livraison : $ {{ Session::get('priceLivraison', '0') }}</h2>
+                                @endif
+                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Sous-total : $
+                                    {{ Cart::subtotal() }}</h2>
+                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Tax : $ {{ Cart::tax() }}
+                                </h2>
+                                <hr>
+
+                                <h2 class="title title-bar-primary2" id='total' style="margin-top: 20px">Totale : $
+                                    {{ Cart::total() + Session::get('priceLivraison', '0') }}</h2>
 
                             </div>
                         </div>
@@ -84,7 +107,7 @@
                                     @endforeach
                                 </div>
                                 @guest
-                                    <h2 class="title title-bar-primary2">Votre compte  uu</h2>
+                                    <h2 class="title title-bar-primary2">Votre compte</h2>
                                     <p>
                                         J'ai un compte <a href="{{ route('login') }}">Me connecter</a>
                                     </p>
@@ -128,10 +151,11 @@
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="col-md-6 form-group">
-                                                <input type="password" placeholder="Repetez mot de passe" class="form-control"
-                                                    name="password_confirmation" id="password_confirmation"
-                                                    data-parsley-equalto="#password" data-parsley-minlength="5"
-                                                    data-parsley-trigger="change" data-error="Champ obligatoire" required>
+                                                <input type="password" placeholder="Repetez mot de passe"
+                                                    class="form-control" name="password_confirmation"
+                                                    id="password_confirmation" data-parsley-equalto="#password"
+                                                    data-parsley-minlength="5" data-parsley-trigger="change"
+                                                    data-error="Champ obligatoire" required>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
@@ -141,22 +165,22 @@
                                     <div class="row gutters-15">
                                         <div>
                                             {{-- @if (isset($ab) && $ab != '') --}}
-                                                <div class="col-12 form-group">
-                                                    {{-- <input type="text" class="form-control" name="abonnement_id"
+                                            <div class="col-12 form-group">
+                                                {{-- <input type="text" class="form-control" name="abonnement_id"
                                                         value="{{ $ab->id }}" id="abonnement_id"
                                                         data-error="Name field is required" required>
                                                     <div class="help-block with-errors"></div> --}}
-                                                </div>
-                                                <div class="col-12 form-group">
-                                                    {{-- <input type="text" class="form-control" name="prix"
+                                            </div>
+                                            <div class="col-12 form-group">
+                                                {{-- <input type="text" class="form-control" name="prix"
                                                         value="{{ Cart::total() }}" id="prix">
                                                     <div class="help-block with-errors"></div> --}}
-                                                </div>
-                                                <div class="col-12 form-group">
-                                                    {{-- <input type="text" class="form-control" name="monaie"
+                                            </div>
+                                            <div class="col-12 form-group">
+                                                {{-- <input type="text" class="form-control" name="monaie"
                                                         value="{{ $ab->model->monaie=="$"?"USD":"CDF"}}" id="monaie">
                                                     <div class="help-block with-errors"></div> --}}
-                                                </div>
+                                            </div>
                                             {{-- @endif --}}
                                         </div>
 
@@ -229,6 +253,8 @@
             switch_modepaie(moyen);
             var state = document.querySelector('select.carte2').value;
             switch_state(state);
+            var commune = document.querySelector('select.comm').value;            
+            switch_livraisone(commune);
         });
 
         function viewFacture(val) {
@@ -245,6 +271,91 @@
                 document.querySelector('#facture').setAttribute("hidden", "");
             }
         }
+
+        function switch_livraisone(val) {
+            switch (val) {
+                case "OUI":
+                    document.getElementById('commune').style.display = "block";
+                    document.getElementById('livraisonvue').style.display = "block";
+                    break;
+                case "NON":
+                    var liv = {{ Session::get('priceLivraison', '0') }};
+                    if (liv > 0) {                   
+                        noLivraison();
+                        document.getElementById('livraisonvue').style.display = "none";
+                        document.getElementById('commune').style.display = "none";
+                    } else {
+                        document.getElementById('commune').style.display = "none";
+                        document.getElementById('livraisonvue').style.display = "none";
+                    }
+                    break;
+            }
+        }
+
+        function noLivraison() {
+            event.preventDefault();
+            
+            swal({
+                title: 'Merci de patienter...',
+                icon: 'info'
+            })
+            $.ajax({
+                url: "../deletePriceLivraison/ok",
+                method: "GET",
+                data: "",
+                success: function(data) {
+                    if (!data.reponse) {
+                        swal({
+                            title: data.msg,
+                            icon: 'error'
+                        })
+                    } else {
+                        $('#livraisonvue').html("Livraison : $"+data.pl);
+                        // document.getElementById('commune').style.display = "block";
+                        $('#total').html("Totale : $ "+data.val);
+                       // location.reload();
+                        swal({
+                            title: data.msg,
+                            icon: 'success'
+                        })
+
+                    }
+                },
+            });
+        }
+        function switch_street(val) {
+            event.preventDefault();
+            
+            swal({
+                title: 'Merci de patienter...',
+                icon: 'info'
+            })
+            $.ajax({
+                url: "../getPriceLivraison/" + val,
+                method: "GET",
+                data: "",
+                success: function(data) {
+                    //alert(data.reponse + data.val)
+                    if (!data.reponse) {
+                        swal({
+                            title: data.msg,
+                            icon: 'error'
+                        })
+                    } else {
+                        $('#livraisonvue').html("Livraison : $"+data.pl);
+                        document.getElementById('commune').style.display = "block";
+                        $('#total').html("Totale : $ "+data.val);
+                       // location.reload();
+                        swal({
+                            title: data.msg,
+                            icon: 'success'
+                        })
+
+                    }
+                },
+            });
+        }
+
 
         function switch_modepaie(val) {
             switch (val) {
@@ -281,6 +392,7 @@
                     break;
             }
         }
+
         function switch_state(val) {
             switch (val) {
                 case "US":
@@ -313,6 +425,10 @@
                     // document.querySelector('input.carte3').removeAttribute('required');
                     break;
             }
+        }
+
+        function actualiser() {
+            location.reload();
         }
     </script>
 @endsection

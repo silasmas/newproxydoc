@@ -76,10 +76,13 @@
                                        <a href="{{ route('about') }}">Apropo</a>
                                    </li>
                                    <li>
-                                       <a href="{{ route('services') }}">Nos services</a>
+                                       <a href="{{ route('services') }}">Services</a>
                                    </li>
                                    <li>
-                                       <a href="{{ route('docteur') }}">Nos docteurs</a>
+                                       <a href="{{ route('pharmacie') }}">Pharmacie</a>
+                                   </li>
+                                   <li>
+                                       <a href="{{ route('docteur') }}">Médecins</a>
                                    </li>
 
                                    @guest
