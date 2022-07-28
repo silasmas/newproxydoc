@@ -65,7 +65,7 @@ class AchatController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    { 
         $achat = new AbonnementController();
         if (!Auth::guest()) {
             $transaction_id = $achat->genererTransaction_id(Auth::user()->id);
