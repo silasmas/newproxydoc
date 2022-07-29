@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="item-content">
                                         <h4 class="item-title">
-                                            <a href="{{ route('detailProdui',['id'=>$p->id]) }}">{{ $p->produit->nom }}</a>
+                                            <a href="{{ route('detailProdui',['id'=>$p->produit->id]) }}">{{ $p->produit->nom }}</a>
                                         </h4>
                                         <h5 class="item-title">
                                             <a href="{{ route('detailProduitAcheter',['id'=>$p->id]) }}">Voir en detail</a>
