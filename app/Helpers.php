@@ -296,7 +296,7 @@ function initInfo($request, $transaction_id)
     if ($request->channels == "MOBILE_MONEY") {
         $cinetpay_data = [
             "amount" => (int)Cart::total() + Session::get('priceLivraison', '0'),
-            "currency" => "USD",
+            "currency" => "CDF",
             "apikey" => env("CINETPAY_APIKEY"),
             "site_id" => env("CINETPAY_SERVICD_ID"),
             "transaction_id" => $transaction_id,
