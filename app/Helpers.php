@@ -346,6 +346,7 @@ function initPaie($cinetpay_data, $request, $user)
                         "commune_id" => Session::get('communeLivraison', '0'),
                         "user_id" => $user->id,
                         "transaction_id" => $cinetpay_data['transaction_id'],
+                        "produit_id" => $p->id,
                     ]);
                 }
                 $register = produitUser::create([

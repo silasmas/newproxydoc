@@ -82,7 +82,7 @@
                                         <span class="text-danger">
                                             {{ "Pas des livraison" }}</span>
                                         @else
-                                        @if ($livraison->etat=='0')
+                                        @if ($prod->livraison=='1')
                                         <span class="text-warning">
                                            En attente de livraison
                                         </span>
@@ -108,7 +108,23 @@
                                     <p>
 
                                     </p>
+                                    @if ($prod->livraison=='1')
+                                    <div class="cart-action-area">
+                                        <form action="{{ route('confirmUserLivraison') }}" method="post"
+                                                    onsubmit="confirmLivraison(this)">
+                                                    @csrf
+                                                    <input type="text" name="produit_id" value="{{$prod->produit->id}}" hidden>
+                                                    <input type="text" name="transaction_id" value="{{$prod->transaction_id}}" hidden>
+                                                    <input type="text" name="p_id" value="{{$prod->id}}" hidden>
 
+                                            <ul class="cart-quantity" >
+                                                <li>
+                                                    <button type="submit" class="item-btn">Confirmer lalivraison</button>
+                                                </li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>

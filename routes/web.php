@@ -49,6 +49,7 @@ Route::delete('cartRemove/{id}', [ProduitController::class, 'destroy'])->name('c
 Route::get('showCat/{id}', [ProduitController::class, 'showCat'])->name('showCat');
 
 
+Route::post('confirmUserLivraison', [AchatController::class, 'confirmUserLivraison'])->name('confirmUserLivraison');
 Route::post('addCard', [ProduitController::class, 'store'])->name('addCard');
 Route::post('achatProduit', [AchatController::class, 'store'])->name('achatProduit');
 Route::get('getPriceLivraison/{commune}', [AchatController::class, 'getPriceLivraison'])->name('getPriceLivraison');

@@ -69,6 +69,27 @@ class AchatController extends Controller
     {
         //
     }
+    public function confirmUserLivraison(Request $request)
+    {
+        $porduit=livraison::where([['transaction_id',$request->transaction_id],['produit_id',$request->produit_id],['etat','1']])->first();
+        $pr=produitUser::find($request->p_id);
+
+        if($porduit){
+            return response()->json(['reponse' => false, 'msg' => "La livraison de ce produit est déjà confirmé"]);
+        }else{
+            $prod=livraison::where([['transaction_id',$request->transaction_id],['produit_id',$request->produit_id]])->first();
+            if($prod){
+                $prod->etat="1";
+                $prod->save();
+                $pr->livraison="2";
+                $pr->save();
+                return response()->json(['reponse' => true, 'msg' => "Merci de confirmé votre livraison et de nous faire confiance"]);
+            }else{
+               return response()->json(['reponse' => false, 'msg' => "Erreur de confirmation"]);
+
+           }
+        }
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -151,7 +172,7 @@ class AchatController extends Controller
     public function show($id)
     {
         $prod=produitUser::find($id);
-        if($prod->livraison=='1'){
+        if($prod->livraison!='0'){
             $order=order::where([['produits',$prod->produit_id],['transaction_id',$prod->transaction_id]])->first();
             $livraison=livraison::where([['user_id',$prod->user_id],['transaction_id',$prod->transaction_id]])->first();
             return view('pages.detailProduitAcheter',compact('order','livraison','prod'));

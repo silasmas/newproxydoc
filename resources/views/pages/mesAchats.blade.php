@@ -22,9 +22,26 @@
                                         <img src="{{ asset('assets/img/shop1.png') }}" alt="shop" class="img-fluid">
                                         <ul class="shop-action-items">
                                             <li>
-                                                <a href="{{ route('detailProdui',['id'=>$p->id]) }}" alt="" title="Voir en detail">
+                                                @if ($p->livraison=='1')
+                                                <form action="{{ route('confirmUserLivraison') }}" method="post"
+                                                    onsubmit="confirmLivraison(this)">
+                                                    @csrf
+                                                    <input type="text" name="produit_id" value="{{$p->produit->id}}" hidden>
+                                                    <input type="text" name="transaction_id" value="{{$p->transaction_id}}" hidden>
+                                                    <input type="text" name="p_id" value="{{$p->id}}" hidden>
+                                                    <a type="submit" alt="" title="Confirmez la livraison" style="cursor: pointer;">
+                                                        {{-- <i class="flaticon-exchange-arrows"></i> --}}
+                                                        <button type="submit" style="background: transparent; border: none;cursor: pointer;"
+                                                        title="confirmez la livraison" >
+                                                            <i class="flaticon-exchange-arrows"></i>
+                                                        </button>
+                                                    </a>
+                                                </form>
+                                                @else
+                                                <a href="{{ route('detailProduitAcheter',['id'=>$p->id]) }}" alt="" title="Voir en detail" style="cursor: pointer;">
                                                     <i class="flaticon-exchange-arrows"></i>
                                                 </a>
+                                                @endif
                                             </li>
                                         </ul>
                                     </div>
@@ -37,7 +54,21 @@
                                         </h5>
 
                                     </div>
-                                    <div class="item-price">{{ $p->produit->monaie . ' ' . $p->produit->prix }}</div>
+                                    @switch($p->livraison)
+                                        @case("0")
+                                        <small class="text-danger">
+                                            Ce produit ne sera pas livré à domicile
+                                        </small>
+                                            @break
+                                        @case("1")
+                                        <small class="text-warning">Ce produit vous sera livré à domicile</small>
+                                            @break
+                                        @case("2")
+                                        <small class="text-success">Ce produit est déjà livré</small>
+                                            @break
+                                        @default
+
+                                    @endswitch
                                 </div>
                             </div>
                 @empty
