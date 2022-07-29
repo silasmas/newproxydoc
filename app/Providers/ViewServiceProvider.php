@@ -6,6 +6,7 @@ use App\Models\produit;
 use App\Models\service;
 use App\Models\categorie;
 use App\Models\abonnement;
+use App\Models\produitUser;
 use App\Models\serviceAbonnement;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
@@ -30,6 +31,18 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        View::composer('pages.mesAchats*', function ($view) {
+            if (!Auth::guest()) {
+                $m = Auth::user()->id;
+                    $p= produitUser::where("user_id",$m)->get();
+                    $mines = $p->filter(function ($value, $key) {
+                        return $value->etat == "Payer";
+                    });
+                    //    dd($mines);
+                $view->with('produitsAcheter', $mines);
+            }
+        });
 
         View::composer('pages.*', function ($view) {
             if (!Auth::guest()) {

@@ -8,6 +8,7 @@ use App\Models\achat;
 use App\Models\order;
 use App\Models\commune;
 use App\Mail\notifyAchat;
+use App\Models\livraison;
 use App\Rules\PhoneNumber;
 use App\Models\produitUser;
 use Illuminate\Http\Request;
@@ -53,6 +54,10 @@ class AchatController extends Controller
     public function index()
     {
         //
+    }
+    public function mesAchats()
+    {
+        return view('pages.mesAchats');
     }
 
     /**
@@ -143,9 +148,20 @@ class AchatController extends Controller
      * @param  \App\Models\achat  $achat
      * @return \Illuminate\Http\Response
      */
-    public function show(achat $achat)
+    public function show($id)
     {
-        //
+        $prod=produitUser::find($id);
+        if($prod->livraison=='1'){
+            $order=order::where([['produits',$prod->produit_id],['transaction_id',$prod->transaction_id]])->first();
+            $livraison=livraison::where([['user_id',$prod->user_id],['transaction_id',$prod->transaction_id]])->first();
+            return view('pages.detailProduitAcheter',compact('order','livraison','prod'));
+        }else{
+            $order=order::where([['produits',$prod->produit_id],['transaction_id',$prod->transaction_id]])->first();
+        //    dd($prod->produit);
+            return view('pages.detailProduitAcheter',compact('order','prod'));
+        }
+
+
     }
 
     /**
@@ -262,7 +278,7 @@ class AchatController extends Controller
                 $user = User::find($retour->user_id);
                 Mail::to($user->email)->send(new notifyAchat($user, 'success', "Achat produit réussi"));
 
-                return view('pages.notify', compact('data', "message"));
+                return view('pages.notifyProduit', compact('data', "message"));
             } else {
                 $data = $response_body;
                 $login =verifyLogin($request->transaction_id);
@@ -273,7 +289,7 @@ class AchatController extends Controller
                 $user = User::find($retour->user_id);
                 Mail::to($user->email)->send(new notifyAchat($user, $msg, "Achat produit échouer"));
 
-                return view('pages.notify', compact('data', "message"));
+                return view('pages.notifyProduit', compact('data', "message"));
             }
         } else {
 
@@ -286,7 +302,7 @@ class AchatController extends Controller
             $user = User::find($retour->user_id);
             Mail::to($user->email)->send(new notifyAchat($user, $message, "Achat produit échouer"));
 
-            return view('pages.notify', compact('data', "message"));
+            return view('pages.notifyProduit', compact('data', "message"));
         }
     }
 }

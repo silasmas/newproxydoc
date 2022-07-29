@@ -65,8 +65,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/mesAbonnements', [ServiceController::class, 'index'])->name('mesAbonnements');
     Route::get('/profil', [ServiceController::class, 'profil'])->name('profil');
+    Route::get('/mesAchats', [AchatController::class, 'mesAchats'])->name('mesAchats');
     Route::get('/historique', [ServiceController::class, 'historique'])->name('historique');
 
+    Route::get('/detailProduitAcheter/{id}', [AchatController::class, 'show'])->name('detailProduitAcheter');
     Route::get('/detailHistorique/{id}', [ServiceController::class, 'detailHistorique'])->name('detailHistorique');
     Route::get('/detailmonAbonnement/{id}', [ServiceController::class, 'show'])->name('detailmonAbonnement');
 

@@ -2,21 +2,23 @@
 
 namespace App\Models;
 
-use App\Models\User;
 use App\Models\produit;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class produitUser extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    
 
-    public function produit(){
+    protected $with = ["produit", "user"];
+    public function produit()
+    {
         return $this->belongsTo(produit::class);
     }
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }

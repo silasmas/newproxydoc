@@ -332,16 +332,7 @@ function initInfo($request, $transaction_id)
 }
 function initPaie($cinetpay_data, $request, $user)
 {
-    $existe = "";
-    foreach (Cart::content() as $p) {
-        // dd($p->id);
-        $existe = produitUser::where([["user_id", $user->id], ["produit_id", $p->id], ["etat", "Payer"]])->first();
-    }
-//  abonnementUser::where([["user_id", $user->id], ["abonnement_id", $request['abonnement_id']], ["etat", "Payer"]])->first();
-    // dd($existe);
-    if ($existe) {
-        return back()->with('message', "Vous êtes déjà abonner à ce boucker, pour le verifier allez dans la page MON COMPTE->MES ABONNEMENTS");
-    } else {
+
         $url = 'https://api-checkout.cinetpay.com/v2/payment';
         $response = Http::asJson()->post($url, $cinetpay_data);
 
@@ -363,6 +354,7 @@ function initPaie($cinetpay_data, $request, $user)
                     "transaction_id" => $cinetpay_data['transaction_id'],
                     "quantite" => $p->qty,
                     'etat' => "En attente",
+                    'livraison' => Session::get('communeLivraison', '0')=='0'?"":"1",
                 ]);
                 $paiementInfo = order::create([
                     "produits" => $p->id,
@@ -396,5 +388,4 @@ function initPaie($cinetpay_data, $request, $user)
             return back()->with('message', $response_body['description']);
             // return response()->json(['reponse' => false, 'bank' => true, 'msg' => $response_body['description']]);
         }
-    }
 }
