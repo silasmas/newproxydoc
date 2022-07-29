@@ -11,6 +11,7 @@ use App\Mail\notifyAchat;
 use App\Rules\PhoneNumber;
 use App\Models\produitUser;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
