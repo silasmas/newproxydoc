@@ -111,7 +111,7 @@ class AchatController extends Controller
                     'prenom' => ['required', 'string', 'max:255'],
                     'telephone' => ['required', new PhoneNumber, 'unique:users'],
                     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-                    'password' => ['required', 'confirmed', Password::defaults()],
+                    'password' => ['required', 'confirmed', Rules\Password::defaults()],
                 ]);
                 //ici on crée le compte du user
                 $user = User::create([
