@@ -244,7 +244,7 @@ class AchatController extends Controller
     {
         $retour = produitUser::where("transaction_id", $request->cpm_trans_id)->first();
         $paiement = order::where("transaction_id", $request->cpm_trans_id)->first();
-        $ab = abonnement::with("service")->where("id", $retour->abonnement_id)->first();
+       // $ab = abonnement::with("service")->where("id", $retour->abonnement_id)->first();
         if ($retour) {
             $response_body = verifyStatus($request->transaction_id);
             // dd($response_body);
@@ -282,7 +282,7 @@ class AchatController extends Controller
             $user = User::find($retour->user_id);
             Mail::to($user->email)->send(new notifyAchat($user, $message, "Achat produit échouer"));
 
-            return view('pages.notify', compact('data', "message", "ab"));
+            return view('pages.notify', compact('data', "message"));
         }
     }
 }
