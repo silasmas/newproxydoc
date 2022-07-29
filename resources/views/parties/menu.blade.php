@@ -111,6 +111,9 @@
                                                    <a href="{{ route('profil') }}">Mon profil</a>
                                                </li>
                                                <li>
+                                                <a href="{{ route('mesAchats') }}">Mes achats</a>
+                                            </li>
+                                               <li>
                                                    <a href="{{ route('historique') }}">Historique des transations</a>
                                                </li>
                                                <li>
