@@ -242,7 +242,7 @@ class AchatController extends Controller
 
     public function retour(Request $request)
     {
-        dd($request);
+        dd($request->cpm_trans_id);
         $retour = produitUser::where("transaction_id", $request->cpm_trans_id)->first();
         $paiement = order::where("transaction_id", $request->cpm_trans_id)->first();
        // $ab = abonnement::with("service")->where("id", $retour->abonnement_id)->first();
