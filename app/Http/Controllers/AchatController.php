@@ -104,6 +104,7 @@ class AchatController extends Controller
                     }
                 }
             } else {
+
                 $request->validate([
                     'name' => ['required', 'string', 'max:255'],
                     'prenom' => ['required', 'string', 'max:255'],
