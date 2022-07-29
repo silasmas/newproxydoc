@@ -37,6 +37,8 @@ Route::post('/abonnement', [AbonnementController::class, 'store'])->name('abonne
 Route::get('/retour', [AbonnementController::class, 'index'])->name('retour');
 Route::post('/retour', [AbonnementController::class, 'retour'])->name('retour');
 Route::post('/notify', [AbonnementController::class, 'notify'])->name('notify');
+Route::post('/retourAchat', [AchatController::class, 'retour'])->name('retourAchat');
+Route::post('/notifyAchat', [AchatController::class, 'notify'])->name('notifyAchat');
 
 Route::get('/monpanier', [ProduitController::class, 'monpanier'])->name('monpanier');
 Route::get('/notify', [AbonnementController::class, 'note'])->name('notify');

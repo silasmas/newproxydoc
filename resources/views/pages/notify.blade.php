@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-lg-6 col-sm-12" style="margin-top:80px">
-                <div class="card  mb-3 
+                <div class="card  mb-3
                  {{ $data['data']['status'] == 'ACCEPTED' ? 'border-success' : 'border-danger' }}"
                     style="max-width: 50rem;">
                     <div
@@ -35,17 +35,19 @@
                         {{-- <p class="card-text">{{ $data['data']['status'] }}</p> --}}
                         <p class="card-text">Montant : {{ $data['data']['amount'] . $data['data']['currency'] }}</p>
                         {{-- <p>Opérateur : {{ isset($operateur)?$operateur:"absent"}}</p> --}}
-                        <p class="card-text">
-                            Description : <br>
-                            <b> {{ $ab->nom }}</b>
-                            @forelse ($ab->service as $s)
-                              <ul>
-                                <li>{{ $s->nom }}</li>
-                              </ul>
-                            @empty
-                                
-                            @endforelse 
-                        </p>
+                      @if(isset($ab))
+                      <p class="card-text">
+                          Description : <br>
+                          <b> {{ $ab->nom }}</b>
+                          @forelse ($ab->service as $s)
+                            <ul>
+                              <li>{{ $s->nom }}</li>
+                            </ul>
+                          @empty
+
+                          @endforelse
+                      </p>
+                      @endif
 
                         <p class="card-text">
                             Date :{{ \Carbon\Carbon::parse($data['data']['payment_date'])->isoFormat('LLL') }}
