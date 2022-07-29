@@ -200,8 +200,8 @@ class AchatController extends Controller
 
     public function notify(Request $request)
     {
-        $retour = produitUser::where("transaction_id", $request->cpm_trans_id)->first();
-        $paiement = order::where("transaction_id", $request->cpm_trans_id)->first();
+        $retour = produitUser::where("transaction_id", $request->cpm_trans_id)->get();
+        $paiement = order::where("transaction_id", $request->cpm_trans_id)->get();
         /**
          * composition de la variable reponse, c'est une concatenation de montant+monaie+
          * signature+telephone+prefix du pay+la langue+la version+la configuration+l'action
@@ -212,18 +212,22 @@ class AchatController extends Controller
         if ($retour) {
             $response_body = verifyStatus($request->cpm_trans_id);
             if ((int)$response_body["code"] === 00 && $response_body["message"] == "SUCCES") {
-                $retour->etat = 'Payer';
-                $retour->updated_at = $request->cpm_trans_date;
-                $retour->save();
+                foreach($retour as $ret){
+                    $ret->etat = 'Payer';
+                    $ret->updated_at = $request->cpm_trans_date;
+                    $ret->save();
+                }
+                foreach($paiement as $p){
 
-                $paiement->updated_at = $request->cpm_trans_date;
-                $paiement->reponse = $reponse;
+                    $p->updated_at = $request->cpm_trans_date;
+                    $p->reponse = $reponse;
 
-                $paiement->type = $response_body['code'];
-                $paiement->moyenPaiement = $response_body['data']['payment_method'];
-                $paiement->message = $response_body['message'];
-                $paiement->reference = $response_body['data']['status'];
-                $paiement->save();
+                    $p->type = $response_body['code'];
+                    $p->moyenPaiement = $response_body['data']['payment_method'];
+                    $p->message = $response_body['message'];
+                    $p->reference = $response_body['data']['status'];
+                    $p->save();
+                }
 
                 //ici je notifi le client par mail
                 $user = User::find($retour->user_id);
@@ -232,17 +236,21 @@ class AchatController extends Controller
 
                 return dd($response_body['data']['status']);
             } else {
-                $retour->etat =  $response_body['data']['status'];
-                $retour->updated_at = $request->cpm_trans_date;
-                $retour->save();
+                foreach($retour as $ret){
+                $ret->etat =  $response_body['data']['status'];
+                $ret->updated_at = $request->cpm_trans_date;
+                $ret->save();
+            }
 
-                $paiement->updated_at = $request->cpm_trans_date;
-                $paiement->reponse = $reponse;
-                $paiement->moyenPaiement = $response_body['data']['payment_method'];
-                $paiement->message = $response_body['message'];
-                $paiement->type = $response_body['code'];
-                $paiement->reference = $response_body['data']['status'];
-                $paiement->save();
+            foreach($paiement as $p){
+                $p->updated_at = $request->cpm_trans_date;
+                $p->reponse = $reponse;
+                $p->moyenPaiement = $response_body['data']['payment_method'];
+                $p->message = $response_body['message'];
+                $p->type = $response_body['code'];
+                $p->reference = $response_body['data']['status'];
+                $p->save();
+            }
                 $data = $response_body;
                 $message = message($response_body);
                 //ici je notifi le client par mail
