@@ -61,7 +61,8 @@ function verifyLogin($id)
 {
     $verify = explode('.', $id);
     $id = $verify[0];
-    $u = User::where([["id", $id], ["email_verified_at", '<>', null]])->first();
+    $u = User::where("id", $id)->first();
+    // $u = User::where([["id", $id], ["email_verified_at", '<>', null]])->first();
 
     if ($u) {
         event(new Registered($u));
