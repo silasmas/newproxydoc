@@ -57,13 +57,13 @@
                     <div
                         class="card-footer bg-transparent  {{ $data['data']['status'] == 'ACCEPTED' ? 'border-success' : 'border-danger' }}">
                         @if ($data['data']['status'] == 'ACCEPTED')
-                            <button type="button" id="mesAbonnements" onclick="retour(this)"
+                            <button type="button" id="mesAchats" onclick="retour(this)"
                                 class="btn btn-outline-success" style="cursor: pointer">Voir vos produit</button>
 
                         @else
                             {{-- <a href="{{ route('abonnement') }}" type="button" class="btn btn-outline-danger ">Retour
                             </a> --}}
-                            <button type="button" id="pharùacie" onclick="retour(this)"
+                            <button type="button" id="pharmacie" onclick="retour(this)"
                             class="btn btn-outline-danger" style="cursor: pointer">Retour</button>
                         @endif
                     </div>
