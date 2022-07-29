@@ -64,7 +64,7 @@
                                         <small class="text-warning">Ce produit vous sera livré à domicile</small>
                                             @break
                                         @case("2")
-                                        <small class="text-success">Ce produit est déjà livré</small>
+                                        <small class="text-success">Livraison effectuée</small>
                                             @break
                                         @default
 
