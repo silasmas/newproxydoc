@@ -228,7 +228,7 @@ class AchatController extends Controller
                 $paiement->reference = $response_body['data']['status'];
                 $paiement->save();
                 $data = $response_body;
-                $message = self::message($response_body);
+                $message = message($response_body);
                 //ici je notifi le client par mail
                 $msg = $message['message'];
                 $user = User::find($retour->user_id);
