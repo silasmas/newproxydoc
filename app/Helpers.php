@@ -355,7 +355,7 @@ function initPaie($cinetpay_data, $request, $user)
                     "transaction_id" => $cinetpay_data['transaction_id'],
                     "quantite" => $p->qty,
                     'etat' => "En attente",
-                    'livraison' => Session::get('communeLivraison', '0')=='0'?"":"1",
+                    'livraison' => Session::get('communeLivraison', '0')=='0'?"0":"1",
                 ]);
                 $paiementInfo = order::create([
                     "produits" => $p->id,
