@@ -11,6 +11,7 @@ class livraison extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    protected $with=['user','commune'];
     public function user()
     {
         return $this->belongsTo(User::class);

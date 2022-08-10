@@ -253,7 +253,7 @@
             switch_modepaie(moyen);
             var state = document.querySelector('select.carte2').value;
             switch_state(state);
-            var commune = document.querySelector('select.comm').value;            
+            var commune = document.querySelector('select.comm').value;
             switch_livraisone(commune);
         });
 
@@ -280,7 +280,7 @@
                     break;
                 case "NON":
                     var liv = {{ Session::get('priceLivraison', '0') }};
-                    if (liv > 0) {                   
+                    if (liv > 0) {
                         noLivraison();
                         document.getElementById('livraisonvue').style.display = "none";
                         document.getElementById('commune').style.display = "none";
@@ -294,7 +294,7 @@
 
         function noLivraison() {
             event.preventDefault();
-            
+
             swal({
                 title: 'Merci de patienter...',
                 icon: 'info'
@@ -325,7 +325,7 @@
         }
         function switch_street(val) {
             event.preventDefault();
-            
+
             swal({
                 title: 'Merci de patienter...',
                 icon: 'info'

@@ -37,6 +37,8 @@ Route::post('/abonnement', [AbonnementController::class, 'store'])->name('abonne
 Route::get('/retour', [AbonnementController::class, 'index'])->name('retour');
 Route::post('/retour', [AbonnementController::class, 'retour'])->name('retour');
 Route::post('/notify', [AbonnementController::class, 'notify'])->name('notify');
+Route::post('/retourAchat', [AchatController::class, 'retour'])->name('retourAchat');
+Route::post('/notifyAchat', [AchatController::class, 'notify'])->name('notifyAchat');
 
 Route::get('/monpanier', [ProduitController::class, 'monpanier'])->name('monpanier');
 Route::get('/notify', [AbonnementController::class, 'note'])->name('notify');
@@ -47,6 +49,7 @@ Route::delete('cartRemove/{id}', [ProduitController::class, 'destroy'])->name('c
 Route::get('showCat/{id}', [ProduitController::class, 'showCat'])->name('showCat');
 
 
+Route::post('confirmUserLivraison', [AchatController::class, 'confirmUserLivraison'])->name('confirmUserLivraison');
 Route::post('addCard', [ProduitController::class, 'store'])->name('addCard');
 Route::post('achatProduit', [AchatController::class, 'store'])->name('achatProduit');
 Route::get('getPriceLivraison/{commune}', [AchatController::class, 'getPriceLivraison'])->name('getPriceLivraison');
@@ -63,8 +66,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/mesAbonnements', [ServiceController::class, 'index'])->name('mesAbonnements');
     Route::get('/profil', [ServiceController::class, 'profil'])->name('profil');
+    Route::get('/mesAchats', [AchatController::class, 'mesAchats'])->name('mesAchats');
     Route::get('/historique', [ServiceController::class, 'historique'])->name('historique');
 
+    Route::get('/detailProduitAcheter/{id}', [AchatController::class, 'show'])->name('detailProduitAcheter');
     Route::get('/detailHistorique/{id}', [ServiceController::class, 'detailHistorique'])->name('detailHistorique');
     Route::get('/detailmonAbonnement/{id}', [ServiceController::class, 'show'])->name('detailmonAbonnement');
 

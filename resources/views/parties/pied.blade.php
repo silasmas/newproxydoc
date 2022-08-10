@@ -47,9 +47,9 @@
     s0.parentNode.insertBefore(s1,s0);
     })();
     </script>
-    <!--End of Tawk.to Script--> 
+    <!--End of Tawk.to Script-->
 @endif
-    
+
 @endauth
 
 <script>
@@ -114,6 +114,48 @@
             },
         });
 
+    }
+    function confirmLivraison(id) {
+        event.preventDefault()
+        swal({
+            title: "Confirmation livraison",
+            text: "Vous êtes surle point de confirmé votre livraison, êtes vous sûre d'avoir reçu touts vos produit achéter?",
+            icon: 'warning',
+            dangerMode: true,
+            buttons: {
+                cancel: 'Non',
+                delete: 'OUI'
+            }
+        }).then(function(willDelete) {
+            if (willDelete) {
+                swal({
+            title: 'Merci de patienter...',
+            icon: 'info'
+        })
+        $.ajax({
+            url: $(id).attr('action'),
+            method: "POST",
+            data: $(id).serialize(),
+            success: function(data) {
+                if (!data.reponse) {
+                    swal({
+                        title: data.msg,
+                        icon: 'error'
+                    })
+                } else {
+                    swal({
+                        title: data.msg,
+                        icon: 'success'
+                    })
+                    actualiser();
+                }
+            },
+        });
+            } else {
+
+            }
+
+        });
     }
     function removeFromCartList(id) {
         event.preventDefault()

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Notification du paiement</title>
+    <title>Notification d'achat</title>
     <link rel="shortcut icon" type="image/rdp-icon" href="{{ asset('assets/logo/logoan.png') }}">
 
     <!-- Fonts -->
@@ -26,7 +26,7 @@
                     style="max-width: 50rem;">
                     <div
                         class="card-header bg-transparent {{ $data['data']['status'] == 'ACCEPTED' ? 'border-success' : 'border-danger' }}">
-                        Etat de votre paiement
+                        Etat de votre achat
                     </div>
                     <div
                         class="card-body {{ $data['data']['status'] == 'ACCEPTED' ? 'text-success' : 'text-danger' }}">
@@ -57,15 +57,13 @@
                     <div
                         class="card-footer bg-transparent  {{ $data['data']['status'] == 'ACCEPTED' ? 'border-success' : 'border-danger' }}">
                         @if ($data['data']['status'] == 'ACCEPTED')
-                            <button type="button" id="mesAbonnements" onclick="retour(this)"
-                                class="btn btn-outline-success" style="cursor: pointer">Voir la page
-                                d'abonnement</button>
-                            {{-- <a href="{{ route('mesAbonnements') }}" type="button"
-                                class="btn btn-outline-successs "></a> --}}
+                            <button type="button" id="mesAchats" onclick="retour(this)"
+                                class="btn btn-outline-success" style="cursor: pointer">Voir vos produit</button>
+
                         @else
                             {{-- <a href="{{ route('abonnement') }}" type="button" class="btn btn-outline-danger ">Retour
                             </a> --}}
-                            <button type="button" id="abonnement" onclick="retour(this)"
+                            <button type="button" id="pharmacie" onclick="retour(this)"
                             class="btn btn-outline-danger" style="cursor: pointer">Retour</button>
                         @endif
                     </div>

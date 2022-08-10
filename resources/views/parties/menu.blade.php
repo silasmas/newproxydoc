@@ -1,5 +1,5 @@
    <!-- Header Area Start Here -->
-   
+
    <header id="header_1">
        <div class="header-top-bar top-bar-border-bottom bg-light-primary100 d-none d-md-block">
            <div class="container">
@@ -111,7 +111,10 @@
                                                    <a href="{{ route('profil') }}">Mon profil</a>
                                                </li>
                                                <li>
-                                                   <a href="{{ route('historique') }}">Historique d'achats</a>
+                                                <a href="{{ route('mesAchats') }}">Mes achats</a>
+                                            </li>
+                                               <li>
+                                                   <a href="{{ route('historique') }}">Historique des transations</a>
                                                </li>
                                                <li>
                                                    <a class="" href="{{ route('logout') }}"
@@ -133,10 +136,10 @@
                        </div>
                    </div>
                    <div class="col-lg-5 col-md-5">
-                     
+
                        <div class="header-action-items-layout1 d-flex align-items-center justify-content-end">
                            <ul>
-                            @if (isset($allproduits))                                        
+                            @if (isset($allproduits))
                             <li class="d-none d-xl-block">
                                 <form id="top-search-form" method="" acttion="" class="header-search-dark">
                                     <input type="text" class="search-input" placeholder="cherchez un produit par son nom" required="">
@@ -144,8 +147,8 @@
                                         <i class="flaticon-search"></i>
                                     </button>
                                 </form>
-                            </li> 
-                            @endif 
+                            </li>
+                            @endif
                                @guest
                                    <li>
                                        <a href="{{ route('login') }}" class="action-items-primary-btn">Connéxion<i
@@ -214,9 +217,13 @@
                                                </li>
                                                <li>
                                                    <a href="{{ route('profil') }}">Mon profil</a>
+                                                </li>
+
+                                               <li>
+                                                   <a href="{{ route('mesAchats') }}">Mes achats</a>
                                                </li>
                                                <li>
-                                                   <a href="{{ route('historique') }}">Historique d'achats</a>
+                                                   <a href="{{ route('historique') }}">Historique des transations</a>
                                                </li>
                                                <li>
                                                    <a class="" href="{{ route('logout') }}"
@@ -233,8 +240,8 @@
                                        </div>
                                    </li>
                                @endauth
-                                                  
-                              
+
+
 
                            </ul>
 
