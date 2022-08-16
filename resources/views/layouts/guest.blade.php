@@ -20,5 +20,10 @@
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
+       <script>
+        $('.btn-search').click(function(){
+            alert('Coucou')
+        })
+       </script>
     </body>
 </html>

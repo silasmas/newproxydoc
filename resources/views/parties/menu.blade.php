@@ -26,6 +26,11 @@
                    </div>
                    <div class="col-xl-4 d-none d-xl-block">
                        <ul class="header-social-layout1">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
                            <li>
                                <a href="#">
                                    <i class="fab fa-facebook-f"></i>
@@ -42,30 +47,32 @@
                                </a>
                            </li>
                            <li>
-                               <a href="#">
-                                   <i class="fab fa-pinterest"></i>
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   <i class="fab fa-skype"></i>
-                               </a>
-                           </li>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+
+
                        </ul>
                    </div>
                </div>
            </div>
        </div>
        <div class="header-menu-area header-menu-layout4">
+        <form action="" class="form-search-nav">
+            <div class="d-flex">
+                <input type="text" class="form-control" placeholder="Recherche...">
+            </div>
+        </form>
            <div class="container">
                <div class="row no-gutters d-flex align-items-center">
-                   <div class="col-lg-1 col-md-1 logo-area-layout1">
+                   <div class="col-lg-2 col-md-2 logo-area-layout1">
                        <a href="{{ route('home') }}" class="temp-logo">
                            <img src="{{ asset('assets/img/proxy/11-12.png') }}" alt="Proxydoc" height="200"
                                width="200" class="img-fluid">
                        </a>
                    </div>
-                   <div class="col-lg-6 col-md-6 possition-static">
+                   <div class="col-lg-5 col-md-5 possition-static">
                        <div class="template-main-menu">
                            <nav id="dropdown">
                                <ul>
@@ -75,16 +82,38 @@
                                    <li>
                                        <a href="{{ route('about') }}">Apropo</a>
                                    </li>
-                                   <li>
-                                       <a href="{{ route('services') }}">Services</a>
-                                   </li>
-                                   <li>
-                                       <a href="{{ route('pharmacie') }}">Pharmacie</a>
-                                   </li>
-                                   <li>
-                                       <a href="{{ route('docteur') }}">Médecins</a>
-                                   </li>
 
+                                   <li>
+                                       <a href="{{ route('pharmacie') }}">Proxychem</a>
+                                       <ul class="dropdown-menu-col-1">
+                                        <li>
+                                            <a href="#">Trouvez la liste de médicaments</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Trouvez votre ordonance</a>
+                                        </li>
+                                       </ul>
+                                   </li>
+                                   <li>
+                                       <a href="{{ route('docteur') }}">Proxychat</a>
+                                       <ul class="dropdown-menu-col-1">
+                                        <li>
+                                            <a href="#">Trouvez l'annuaire des médecins</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Trouvez un spécialiste</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Chatter avec un médecin</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Prendre rendez-vous</a>
+                                        </li>
+                                       </ul>
+                                   </li>
+                                   <li>
+                                    <a href="#">Actualités</a>
+                                    </li>
                                    @guest
                                        <li class="hide-on-desktop-menu">
                                            <a href="{{ route('login') }}" class="action-items-primary-btn">Connéxion</a>
@@ -138,6 +167,9 @@
                    <div class="col-lg-5 col-md-5">
 
                        <div class="header-action-items-layout1 d-flex align-items-center justify-content-end">
+                            <a href="#" class="btn-search mr-5 d-block">
+                                <i class="fas fa-search"></i>
+                            </a>
                            <ul>
                             @if (isset($allproduits))
                             <li class="d-none d-xl-block">

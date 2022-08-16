@@ -13,7 +13,7 @@
                 <img src="{{ asset('assets/img/proxy/2-03.png') }}" alt="slider" title="#slider-direction-2" />
                 <img src="{{ asset('assets/img/proxy/3-04.png') }}" alt="slider" title="#slider-direction-3" />
             </div>
-            
+
             @forelse ($service as $s)
             <div id="slider-direction-{{$loop->iteration }}" class="t-cn slider-direction">
            <div class="slider-content s-tb slide-{{$loop->iteration }}">
@@ -33,7 +33,7 @@
            </div>
        </div>
        @empty
-           
+
        @endforelse
 
 
@@ -106,13 +106,23 @@
                             <a href="{{ route('createAbonnement',['id'=>$a->id])}}">
                                 {{ $a->monaie=="USD"?"$":"FC" }}{{  $a->prix }}
                                 {{ $a->nom }}
+                            <div class="tooltips">
+                                <div class="text-center">
+                                    <h5><sup>{{ $a->monaie=="USD"?"$":"FC" }}</sup>{{  $a->prix }}<span>/ 3 Mois</span></h5>
+                                    <ul>
+                                        <li>ProxyChem</li>
+                                        <li>ProxyChem</li>
+                                        <li>ProxyChem</li>
+                                    </ul>
+                                </div>
+                            </div>
                             </a>
                         </div>
                     </div>
                 </div>
                 @endforeach
                 @empty
-                    
+
                 @endforelse
                 {{-- <div class="col-lg-3 col-12">
                     <div class="call-to-action-box-layout3">
@@ -147,11 +157,11 @@
                     <div class="item-content">
                         <h2 class="item-title">Bienvenue chez {{ config('app.name') }}.</h2>
                         <div class="sub-title">
-                            Connecter pour une meilleure santé 
+                            Connecter pour une meilleure santé
                         </div>
                         <p>
-                            L’entreprise ProxyDoc s’assigne comme objectif de rendre 
-                            les services médicaux à la population au travers des moyens 
+                            L’entreprise ProxyDoc s’assigne comme objectif de rendre
+                            les services médicaux à la population au travers des moyens
                             de nouvelles technologies de l’information et de communication (NTIC).
                         </p>
                         <img src="{{ asset('assets/img/slider/sign1.png') }}" alt="sign" class="img-fluid">
@@ -184,11 +194,11 @@
                     <h1 class="item-title">Bienvenue chez
                         <span>{{ config('app.name') }}</span>.</h1>
                     <div class="sub-title">
-                        Connecter pour une meilleure santé 
+                        Connecter pour une meilleure santé
                     </div>
                         <p>
-                            L’entreprise ProxyDoc s’assigne comme objectif de rendre 
-                            les services médicaux à la population au travers des moyens 
+                            L’entreprise ProxyDoc s’assigne comme objectif de rendre
+                            les services médicaux à la population au travers des moyens
                             de nouvelles technologies de l’information et de communication (NTIC).
                         </p>
                     {{-- <img src="img/about/sign1.png" alt="sign" class="img-fluid"> --}}
@@ -326,9 +336,9 @@
                 <div class="rc-carousel dot-control-layout3" data-loop="true" data-items="4" data-margin="30" data-autoplay="false" data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="true" data-nav="false" data-nav-speed="false" data-r-x-small="1" data-r-x-small-nav="false"
                     data-r-x-small-dots="true" data-r-x-medium="2" data-r-x-medium-nav="false" data-r-x-medium-dots="true" data-r-small="2" data-r-small-nav="false" data-r-small-dots="true" data-r-medium="3" data-r-medium-nav="false" data-r-medium-dots="true"
                     data-r-large="4" data-r-large-nav="false" data-r-large-dots="true" data-r-extra-large="4" data-r-extra-large-nav="false" data-r-extra-large-dots="true">
-                   
-                   @include('parties.slideproduit')                    
-                   
+
+                   @include('parties.slideproduit')
+
                 </div>
                 <div class="loadmore-layout1 margin-t-20">
                     <a href="{{ route('pharmacie') }}" class="item-btn">Voir toute la pharmacie</a>
@@ -396,7 +406,7 @@
                         <a href="#" class="item-btn">MAKE AN APPOINTMENT</a>
                     </div>
                 </div>
-               
+
                 <div class="team-box-layout2">
                     <div class="item-img">
                         <img src="{{ asset('assets/img/slider/dr2.png') }}" alt="Team1"

@@ -53,6 +53,10 @@
 @endauth
 
 <script>
+    $('.btn-search').click(function(){
+        $(this)
+        $('.form-search-nav').toggleClass('active')
+    })
     function addToCart(id) {
         event.preventDefault()
        addCard(id, "", "../addCard");
@@ -181,6 +185,7 @@
         location.reload();
     }
 </script>
+
 </body>
 
 </html>

@@ -4,10 +4,10 @@ Template Name: Medilink | Best Medical, Hospital, Clinic and Diagnostic html
 Template URL: http://radiustheme.com/demo/html/medilink/medilink/index.html
 Description: Medilink | Best Medical, Hospital, Clinic and Diagnostic html
 Author: Radiustheme
-Author URL: http://radiustheme.com 
-Version: 1.2 
+Author URL: http://radiustheme.com
+Version: 1.2
 
-===================   
+===================
 CSS INDEX
 ===================
 
@@ -46,7 +46,7 @@ CSS INDEX
 [33] Animation Style
 
 /*=======================================================================
-[01] Typography 
+[01] Typography
 =========================================================================*/
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,700);
 html {
@@ -3785,9 +3785,85 @@ ul {
   -ms-flex-pack: center;
   justify-content: center;
 }
+.btn-search{
+    font-size: 20px;
+    color: #8a8a8a;
+}
+.btn-search:hover{
+    color: #2055e4;
+}
+.form-search-nav{
+    position: absolute;
+    width: 40%;
+    padding: 20px 0;
+    left: 0%;
+    opacity: 0;
+    visibility: hidden;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    z-index: 1;
+    background: #fff;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.form-search-nav.active{
+    left: 45%;
+    opacity: 1;
+    visibility: visible;
+}
+.form-search-nav .form-control{
+    height: 45px;
+    font-size: 14px;
+}
+.call-to-action-box-layout3 .single-item a .tooltips{
+    position: absolute;
+    width: 90%;
+    background: #fff;
+    border-top: 1px solid #2055e4;
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 22px 15px;
+    bottom: 140%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.call-to-action-box-layout3 .single-item a:hover .tooltips{
+    bottom: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.call-to-action-box-layout3 .single-item a .tooltips h5{
+    font-size: 24px;
+    font-weight: 600;
+}
+.call-to-action-box-layout3 .single-item a .tooltips h5 sup{
+    color: #2555d0;
+}
+.call-to-action-box-layout3 .single-item a .tooltips span{
+    font-size: 14px;
+    font-weight: 400;
+}
+.call-to-action-box-layout3 .single-item a .tooltips ul{
+    color: #111111;
+    font-size: 16px;
+    line-height: 30px;
+}
+
 @media only screen and (max-width: 1199px) {
   .call-to-action-box-layout3 .single-item a {
     border-radius: 4px;
+
   }
 }
 .call-to-action-box-layout3 .single-item a:after {
@@ -8303,7 +8379,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   color: #ffffff;
 }
 /*=======================================================================
-[19] Comingsoon Page Style        
+[19] Comingsoon Page Style
 =========================================================================*/
 .comingsoon-page {
   text-align: center;
@@ -8598,7 +8674,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   font-size: 15px;
 }
 /*=======================================================================
-[20] Appointment Page Style        
+[20] Appointment Page Style
 =========================================================================*/
 .appointment-wrap-layout1 {
   padding: 10rem 0;
@@ -8722,7 +8798,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   box-shadow: inherit;
 }
 /*=======================================================================
-[21] Contact Page Style        
+[21] Contact Page Style
 =========================================================================*/
 .contact-wrap-layout {
   padding: 10rem 0px;
@@ -8842,7 +8918,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   margin-bottom: 0;
 }
 /*=======================================================================
-[22] Faq Page Style        
+[22] Faq Page Style
 =========================================================================*/
 .faq-wrap-layout1 {
   padding: 8.5rem 0rem 10rem;
@@ -9092,7 +9168,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   box-shadow: inherit;
 }
 /*=======================================================================
-[23] Error Page Style        
+[23] Error Page Style
 =========================================================================*/
 .error-wrap-layout1 {
   padding: 17rem 0px;
@@ -10870,7 +10946,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   color: #396cf0;
 }
 /*=======================================================================
-[28] Preloader Style        
+[28] Preloader Style
 =========================================================================*/
 #preloader {
   background: #ffffff url('../img/preloader.gif') no-repeat scroll center center;
@@ -11325,7 +11401,7 @@ div ~ :last-child .call-to-action-box-layout5 {
   color: #ffffff !important;
 }
 /*=======================================================================
-[33] Animation Style        
+[33] Animation Style
 =========================================================================*/
 @keyframes toBottomFromTop {
   49% {
