@@ -170,7 +170,7 @@ class AbonnementController extends Controller
     public function initinfo_paiement()
     {
     }
-
+ 
 
 
     public function initInfo($request, $transaction_id)
