@@ -82,19 +82,36 @@
                                         @include('pages.listeCommune')
                                     </div>
                                     <div class="col-12">
-                                        <h2 class="title title-bar-primary2 liv" id='livraisonvue' style="margin-top: 20px">
-                                            Livraison : $ {{ Session::get('priceLivraison', '0') }}</h2>
+                                        <div class="total">
+                                            <span>Livraison : </span>
+                                            <span>$ {{ Session::get('priceLivraison', '0') }}</span>
+                                        </div>
                                     </div>
                                 @endif
                                 <div class="col-12">
-                                    <h2 class="title title-bar-primary2" style="margin-top: 20px">Sous-total : $
-                                        {{ Cart::subtotal() }}</h2>
-                                    <h2 class="title title-bar-primary2" style="margin-top: 20px">Tax : $ {{ Cart::tax() }}
-                                    </h2>
-                                    <hr>
+                                    <div class="total">
+                                        <span>Sous-total :
+                                        </span>
+                                        <span>
+                                            $ {{ Cart::subtotal() }}
+                                        </span>
+                                    </div>
+                                    <div class="total">
+                                        <span>Tax :
+                                        </span>
+                                        <span>
+                                            $ {{ Cart::tax() }}
+                                        </span>
+                                    </div>
 
-                                    <h2 class="title title-bar-primary2" id='total' style="margin-top: 20px">Totale : $
-                                        {{ Cart::total() + Session::get('priceLivraison', '0') }}</h2>
+                                    <hr>
+                                    <div class="total">
+                                        <span>Totale :
+                                        </span>
+                                        <span>
+                                            $ {{ Cart::total() + Session::get('priceLivraison', '0') }}
+                                        </span>
+                                    </div>
                                 </div>
                                </div>
 

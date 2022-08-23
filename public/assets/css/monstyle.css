@@ -232,6 +232,19 @@ h1 {
     -ms-transform: rotate(10deg);
     -o-transform: rotate(10deg);
 }
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: cente;
+    font-size: 20px;
+    color: #5a5a5a;
+    margin-bottom: 20px;
+}
+.total span:last-child{
+    font-weight: 600;
+    color: #111111;
+    font-size: 22px;
+}
 .modal-zone .modal-content .badge-zone span{
     font-weight: 600;
     position: relative;
