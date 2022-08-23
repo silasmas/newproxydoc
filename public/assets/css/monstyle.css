@@ -3933,11 +3933,13 @@ ul {
 .form-search-nav{
     position: absolute;
     width: 40%;
-    padding: 20px 0;
-    left: 0%;
+    padding: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    left: 50%;
     opacity: 0;
     visibility: hidden;
-    top: 50%;
+    top: 0%;
     transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
     -moz-transform: translate(-50%,-50%);
@@ -3950,9 +3952,13 @@ ul {
     -moz-transition: .5s;
     -ms-transition: .5s;
     -o-transition: .5s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 .form-search-nav.active{
-    left: 45%;
+    top: 130%;
     opacity: 1;
     visibility: visible;
 }
