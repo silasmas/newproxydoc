@@ -116,6 +116,128 @@ h4 {
 h1 {
   font-size: 48px;
 }
+.btn-zone{
+    cursor: pointer;
+    border-color: transparent;
+    font-size: 14px;
+    background: #396cf0;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.modal-zone .nav-zone .nav-link{
+    border: none;
+    color: #111111;
+    font-size: 14px;
+    position: relative;
+    background: none;
+    cursor: pointer;
+
+}
+.modal-zone .nav-zone .nav-link::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #396cf0;
+    left: 0;
+    bottom: -2px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.modal-zone .nav-zone .nav-link.active{
+    font-weight: 600;
+}
+.modal-zone .nav-zone .nav-link.active::before{
+    width: 100%;
+}
+.modal-zone .nav-zone .nav-link:focus{
+    border: none;
+    outline: none;
+}
+.modal-zone .list-zone{
+    height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: thin;
+    padding-bottom: 10px;
+}
+.modal-zone .list-zone .item-zone{
+    align-items: center;
+    padding: 10px 0;
+}
+.modal-zone .close{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+.modal-zone .tarif{
+    color: #5a5a5a;
+    margin-top: 20px;
+}
+.modal-zone .tarif span{
+    color: #396cf0;
+    font-weight: 500;
+    font-size: 20px;
+}
+.modal-zone .list-zone .item-zone h5{
+    margin-bottom: 0;
+    color: #111111;
+    font-size: 16px;
+}
+.modal-zone .modal-title{
+    color: #5a5a5a;
+    font-size: 18px;
+}
+
+.modal-zone .modal-content{
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.modal-zone .modal-content .badge-zone{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    bottom: -30px;
+    right: -30px;
+    display: flex;
+    z-index: -1;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    color: #fff;
+    transform: rotate(10deg);
+    border-radius: 100% 100% 100% 0;
+    background: #3c70fa ;
+    -webkit-border-radius: 100% 100% 100% 0;
+    -moz-border-radius: 100% 100% 100% 0;
+    -ms-border-radius: 100% 100% 100% 0;
+    -o-border-radius: 100% 100% 100% 0;
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+}
+.modal-zone .modal-content .badge-zone span{
+    font-weight: 600;
+    position: relative;
+    left: -10px;
+    top: -10px;
+}
 @media only screen and (max-width: 1199px) {
   h1 {
     font-size: calc(44px);
