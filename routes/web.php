@@ -61,7 +61,7 @@ Route::get('contact', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
-        return view('pages/home');
+        return view('pages.client.accueil');
     })->name('dashboard');
 
     Route::get('/mesAbonnements', [ServiceController::class, 'index'])->name('mesAbonnements');
