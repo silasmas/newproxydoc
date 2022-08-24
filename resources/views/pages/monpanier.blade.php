@@ -20,7 +20,7 @@
                     </div>
                 @else
                     <div class="col-xl-7 col-lg-7 col-12 margin-b-30r">
-                        <div class="appointment-box-layout1">
+                        <div class="appointment-box-layout1 pt-0">
                             <div class="widget widget-categories">
                                 <h2 class="title title-bar-primary2" style="margin-top: 20px">Vos Produits :</h2>
                                 <ul>
@@ -59,10 +59,16 @@
 
                                 </ul>
                                 <hr>
-                                <small class='text-danger'>La livraison à domicile est accéptée pour les achats supérieure à
-                                    <b>10$</b></small>
-                                @if (Cart::total() >= 10)
-                                    <div class="col-12 form-group carte">
+                               <div class="row align-items-start mt-4">
+                                    <div class="col-lg-9">
+                                        <small class='text-danger'>La livraison à domicile est accéptée pour les achats supérieure à
+                                            <b>10$</b></small>
+                                    </div>
+                                    <div class="col-lg-3 d-flex justify-content-end">
+                                        <button class="btn btn-zone" data-toggle="modal" data-target="#modal-zone">Zone de livraison</button>
+                                    </div>
+                                    @if (Cart::total() >= 10)
+                                    <div class="col-12 form-group carte mt-4">
                                         <select class="select2 comm" name="channels"
                                             onchange="switch_livraisone(this.value)" id='livraisonChoice'>
                                             <option value="" selected>Voulez-vous être livré à domicile?
@@ -75,17 +81,41 @@
                                     <div id="commune" class="col-12 form-group commune" style="display: none">
                                         @include('pages.listeCommune')
                                     </div>
-                                    <h2 class="title title-bar-primary2 liv" id='livraisonvue' style="margin-top: 20px">
-                                        Livraison : $ {{ Session::get('priceLivraison', '0') }}</h2>
+                                    <div class="col-12">
+                                        <div class="total">
+                                            <span>Livraison : </span>
+                                            <span>$ {{ Session::get('priceLivraison', '0') }}</span>
+                                        </div>
+                                    </div>
                                 @endif
-                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Sous-total : $
-                                    {{ Cart::subtotal() }}</h2>
-                                <h2 class="title title-bar-primary2" style="margin-top: 20px">Tax : $ {{ Cart::tax() }}
-                                </h2>
-                                <hr>
+                                <div class="col-12">
+                                    <div class="total">
+                                        <span>Sous-total :
+                                        </span>
+                                        <span>
+                                            $ {{ Cart::subtotal() }}
+                                        </span>
+                                    </div>
+                                    <div class="total">
+                                        <span>Tax :
+                                        </span>
+                                        <span>
+                                            $ {{ Cart::tax() }}
+                                        </span>
+                                    </div>
 
-                                <h2 class="title title-bar-primary2" id='total' style="margin-top: 20px">Totale : $
-                                    {{ Cart::total() + Session::get('priceLivraison', '0') }}</h2>
+                                    <hr>
+                                    <div class="total">
+                                        <span>Totale :
+                                        </span>
+                                        <span>
+                                            $ {{ Cart::total() + Session::get('priceLivraison', '0') }}
+                                        </span>
+                                    </div>
+                                </div>
+                               </div>
+
+
 
                             </div>
                         </div>
@@ -93,7 +123,7 @@
                     </div>
                     <div class="col-xl-5 col-lg-5 col-12">
                         <div class="">
-                            <div class="appointment-box-layout1">
+                            <div class="appointment-box-layout1 pt-0">
                                 <div class="col-xl-12 ">
                                     <p class="text-danger">
                                         @if (session()->has('message'))
@@ -225,7 +255,7 @@
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </section>
-                                        <div class="col-12 form-group text-center">
+                                        <div class="col-12 form-group text-right">
                                             <button class="item-btn">Envoyer le paiement</button>
                                         </div>
                                     </div>
@@ -238,6 +268,93 @@
         </div>
     </section>
 
+    <div class="modal fade modal-zone" id="modal-zone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Liste de zones</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <nav>
+                    <div class="nav nav-tabs nav-zone" id="nav-tab" role="tablist">
+                      <button class="nav-link active" id="nav-home-tab" data-toggle="tab" data-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Zone A</button>
+                      <button class="nav-link" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Zone B</button>
+                      <button class="nav-link" id="nav-contact-tab" data-toggle="tab" data-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Zone C</button>
+                    </div>
+                  </nav>
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="d-flex justify-content-end">
+                            <p class="tarif">Tarif de livraison : <span>30$</span></p>
+                        </div>
+                        <div class="list-zone">
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+                            <div class="item-zone d-flex justify-content-between">
+                                <h5>Bandal</h5>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                  </div>
+
+            </div>
+            <div class="badge-zone">
+                <span>Zone A</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
 @endsection
 @section('autreScript')
@@ -255,6 +372,11 @@
             switch_state(state);
             var commune = document.querySelector('select.comm').value;
             switch_livraisone(commune);
+            // var button =  $(".nav-zone .nav-link")
+            // var changetitre = $(button,this)
+            // $(".nav-zone .nav-link").click(function(){
+            //     $('.bagde-zone').text(".nav-zone .nav-link",this)
+            // })
         });
 
         function viewFacture(val) {
