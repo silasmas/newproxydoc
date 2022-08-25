@@ -41,6 +41,6 @@
             <div class="item-price">{{ $p->monaie . ' ' . $p->prix }}</div>
         </div>
     </div>
-@empty
+@empty 
 
 @endforelse

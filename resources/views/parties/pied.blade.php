@@ -33,6 +33,7 @@
 <script src="{{ asset('assets/js/main.js') }}"></script>
 <script src="{{ asset('js/sweetalert/sweetalert.min.js') }}"></script>
 <script async src='https://stackwhats.com/pixel/2fa93742e74205573241c74f75d46f'></script>
+@livewireScripts()
 @auth
 @if ($mesService->pluck('nom')->contains('standars')||$mesService->pluck('nom')->contains('Premium')||$mesService->pluck('nom')->contains('business'))
 <!--Start of Tawk.to Script-->

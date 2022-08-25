@@ -44,6 +44,8 @@
     <!-- Modernizr Js -->
     <script src="{{ asset('assets/js/modernizr-3.5.0.min.js') }}"></script>
     <link href="{{ asset('js/sweetalert/sweetalert.css') }}" rel="stylesheet">
+
+    @livewireStyles()
 </head>
 <body>
     <!-- Preloader Start Here -->

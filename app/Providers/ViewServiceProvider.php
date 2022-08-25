@@ -44,7 +44,7 @@ class ViewServiceProvider extends ServiceProvider
             }
         });
 
-        View::composer('pages.*', function ($view) {
+        View::composer('*', function ($view) {
             if (!Auth::guest()) {
                 $m = Auth::user()->abonnement;
                 $mines = $m->filter(function ($value, $key) {
