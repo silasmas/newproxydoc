@@ -44,6 +44,7 @@ Route::get('/monpanier', [ProduitController::class, 'monpanier'])->name('monpani
 Route::get('/notify', [AbonnementController::class, 'note'])->name('notify');
 Route::get('/pharmacie', [ProduitController::class, 'index'])->name('pharmacie');
 Route::get('detailProdui/{id}', [ProduitController::class, 'show'])->name('detailProdui');
+// Route::livewire("")
 
 Route::delete('cartRemove/{id}', [ProduitController::class, 'destroy'])->name('cartRemove');
 Route::get('showCat/{id}', [ProduitController::class, 'showCat'])->name('showCat');

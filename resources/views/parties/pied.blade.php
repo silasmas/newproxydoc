@@ -90,10 +90,7 @@
         event.preventDefault()
        addCard(id, "", "../addCard");
     }
-    function removeCart(id) {
-        event.preventDefault()
-        removeFromCartList(id);
-    }
+    
     function removedCart(form) {
         event.preventDefault()
         swal({

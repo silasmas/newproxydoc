@@ -408,6 +408,7 @@ function initPaie($cinetpay_data, $request, $user)
             return array(true,$produit->nom);
         } else {
 
+
             $produit = produit::find($idProd);
             Cart::add($produit->id, $produit->nom, $quantity, $produit->prix)
                 ->associate("App\models\produit");
