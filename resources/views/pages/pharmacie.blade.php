@@ -10,7 +10,7 @@
 @section('content')
     @include('parties.banner')
 
-
+@livewire("pharmacie")
 
 @endsection
 @section('autreScript')
