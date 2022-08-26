@@ -54,6 +54,34 @@
 @endauth
 
 <script>
+    window.addEventListener('swal:modal',event=>{
+            swal({
+                title: event.detail.titre,
+                text: event.detail.text,
+                icon: event.detail.type,
+            });
+        });
+    window.addEventListener('swal:confirm',event=>{
+            swal({
+                title: event.detail.titre,
+                text: event.detail.text,
+                icon: event.detail.type,
+            dangerMode: true,
+            buttons: {
+                cancel: 'Non',
+                delete: 'OUI'
+            }
+        }).then(function(willDelete) {
+            if (willDelete) {
+                window.livewire.emit('removeCarde',event.detail.id);
+            }
+
+        });
+        });
+
+
+
+
     $('.btn-search').click(function(){
         $(this)
         $('.form-search-nav').toggleClass('active')

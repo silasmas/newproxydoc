@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Session;
 use Gloudemans\Shoppingcart\Facades\Cart;
-
+use App\Models\produit;
+use Illuminate\Support\Str;
 /**
  * Cette fonction sert à verifier si l'utilisateur a un compte
  * avec son @email
@@ -389,4 +390,29 @@ function initPaie($cinetpay_data, $request, $user)
             return back()->with('message', $response_body['description']);
             // return response()->json(['reponse' => false, 'bank' => true, 'msg' => $response_body['description']]);
         }
+}
+
+ function addToCard($idProd,$quantity=1){
+
+    $duplicata = Cart::search(function ($cartItem, $rowId) use ($idProd){
+        return $cartItem->id == $idProd;
+    });
+    // dd($request->quantity);
+    if ($duplicata->isNotEmpty() && $duplicata->first()->qty == $quantity) {
+        return array(false,'');
+    } else {
+        if ($duplicata->isNotEmpty() && $duplicata->first()->qty != $quantity) {
+            $produit = produit::find($idProd);
+            Cart::add($produit->id, $produit->nom, $quantity, $produit->prix)
+                ->associate("App\models\produit");
+            return array(true,$produit->nom);
+        } else {
+
+            $produit = produit::find($idProd);
+            Cart::add($produit->id, $produit->nom, $quantity, $produit->prix)
+                ->associate("App\models\produit");
+
+            return array(true,$produit->nom);
+        }
+    }
 }

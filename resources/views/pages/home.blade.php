@@ -532,15 +532,6 @@
             @endguest
         }
 
-        window.addEventListener('swal:modal',event=>{
 
-            // alert(event.detail);
-            // console.log(event);
-            swal({
-                title: event.detail.titre,
-                text: event.detail.text,
-                icon: event.detail.type,
-            });
-        });
     </script>
 @endsection

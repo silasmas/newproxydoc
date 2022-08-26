@@ -1,7 +1,17 @@
-<!-- Shop Area Start Here -->
+<div>
+    <!-- Shop Area Start Here -->
 <section class="shop-wrap-layout1 bg-light-primary100">
     <div class="container">
         <div class="row">
+            <div class="col col-lg-9" style="margin-top: 50px">
+                <div class="form-group d-xl-block "id="top-search-form">
+                    <input type="text" class="form-control search-input" name="s"
+                    placeholder="Trouver un produit" value="" wire:model.debounce.500ms="search">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
             <div class="col-xl-9 col-lg-8 col-12">
                 <div class="row">
                     @forelse ($allproduits as $p)
@@ -11,18 +21,11 @@
                                     <img src="{{ asset('assets/img/shop1.png') }}" alt="shop" class="img-fluid">
                                     <ul class="shop-action-items">
                                         <li>
-                                            <a href="#" title="Ajouter au panier">
-                                                <form action="" method="post" onsubmit="addToCart(this)">
-                                                    @csrf
-                                                    <input type="text" name='idProd' class="form-control" value="{{ $p->id }}"
-                                                        placeholder="" hidden>
-                                                    <input type="text" name='quantity' class="form-control quantity-input" value="1"
-                                                        placeholder="1" hidden>
-                                                    <button type="submit" style="background: transparent; border: none">
+                                            <a title="Ajouter au panier">
+                                                    <button type="submit" style="background: transparent; border: none;cursor: pointer;"
+                                                    wire:click.prevent="addTocards('{{ $p->id }}')" wire:loading.delay.attr='disabled'>
                                                         <i class="flaticon-shopping-cart"></i>
                                                     </button>
-
-                                                </form>
                                             </a>
                                         </li>
                                         <li>
@@ -91,3 +94,4 @@
     </div>
 </section>
 <!-- Shop Area End Here -->
+</div>

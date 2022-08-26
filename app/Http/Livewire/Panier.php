@@ -8,30 +8,25 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 class Panier extends Component
 {
 
-    // public function addTocard($idProd,$quantity=1)
-    // {
+    protected $listeners=['removeCarde'];
+    public function deletConfirm($id){
+        $this->dispatchBrowserEvent('swal:confirm',[
+            'type'=>'warning',
+            'titre'=>"êtes vous sûre de vouloir retiré ce produit du panier?",
+            'text'=>"",
+            'id'=>$id,
+        ]);
+    }
+    public function removeCarde($id)
+    {
 
-    //     $duplicata = Cart::search(function ($cartItem, $rowId) use ($request) {
-    //         return $cartItem->id == $idProd;
-    //     });
-    //     // dd($request->quantity);
-    //     if ($duplicata->isNotEmpty() && $duplicata->first()->qty == $quantity) {
-    //         return response()->json(['reponse' => false, 'msg' => "Le produit a déjà été ajouté"]);
-    //     } else {
-    //         if ($duplicata->isNotEmpty() && $duplicata->first()->qty != $quantity) {
-    //             $produit = produit::find($idProd);
-    //             Cart::add($produit->id, $produit->nom, $quantity, $produit->prix)
-    //                 ->associate("App\models\produit");
-    //             return response()->json(['reponse' => true, 'msg' => "La quantité est mis à jour avec succès"]);
-    //         } else {
-
-    //             $produit = produit::find($idProd);
-    //             Cart::add($produit->id, $produit->nom, $quantity, $produit->prix)
-    //                 ->associate("App\models\produit");
-    //             return response()->json(['reponse' => true, 'msg' => "Le produit a bien été ajouté"]);
-    //         }
-    //     }
-    // }
+        Cart::remove($id);
+        $this->dispatchBrowserEvent('swal:modal',[
+            'type'=>'success',
+            'titre'=>'Panier mis à jour',
+            'text'=>"Produit retiré du panier",
+        ]);
+    }
     public function render()
     {
         return view('livewire.panier');

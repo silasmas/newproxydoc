@@ -20,20 +20,12 @@
                         <img src="{{ asset('assets/img/shop1.png') }}" alt="shop" class="img-fluid">
                         <ul class="shop-action-items">
 
-                            <li  >
-                                <a >
-                                    {{-- <form action="" method="post" onsubmit="addToCart(this)" wire:submit.prevent="addTocard">
-                                        @csrf
-                                        <input type="text" name='idProd' class="form-control" value="{{ $p->id }}"
-                                            placeholder="" hidden>
-                                        <input type="text" name='quantity' class="form-control quantity-input" value="1"
-                                            placeholder="1" hidden> --}}
-                                        <button type="submit" style="background: transparent; border: none;"
+                            <li>
+                                <a>
+                                        <button type="submit" style="background: transparent; border: none;cursor: pointer;"
                                         wire:click.prevent="addTocards('{{ $p->id }}')" wire:loading.delay.attr='disabled'>
                                         <i class="flaticon-shopping-cart"></i>
                                         </button>
-
-                                    {{-- </form> --}}
                                 </a>
                             </li>
 

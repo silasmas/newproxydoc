@@ -21,13 +21,10 @@
                 <div class="cart-price">
                     {{ $panier->model->monaie . '' . $panier->price }}</div>
                 <div class="cart-trash" >
-                 <form action="{{ route('cartRemove', ['id'=>$panier->rowId]) }}" method="post" onsubmit="removeCart(this)">
-                     @csrf
-                     @method("DELETE")
-                     <button type="submit" style="background: transparent; border: none;cursor: pointer;">
+                     <button type="submit" style="background: transparent; border: none;cursor: pointer;"
+                     wire:click="deletConfirm('{{ $panier->rowId }}')">
                          <i class="far fa-trash-alt"></i>
                      </button>
-                 </form>
                 </div>
             </div>
         @empty

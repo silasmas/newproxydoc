@@ -174,7 +174,9 @@
                             @if (isset($allproduits))
                             <li class="d-none d-xl-block">
                                 <form id="top-search-form" method="" acttion="" class="header-search-dark">
-                                    <input type="text" class="search-input" placeholder="cherchez un produit par son nom" required="">
+                                    <input type="text" class="search-input"
+                                    placeholder="cherchez un produit par son nom" required=""
+                                   >
                                     <button class="search-button" type="submit">
                                         <i class="flaticon-search"></i>
                                     </button>
