@@ -6088,6 +6088,11 @@ div ~ :last-child .call-to-action-box-layout5 {
   text-transform: capitalize;
   font-weight: 500;
   margin-bottom: 10px;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 .shop-box-layout1 .item-title a {
   color: #111111;
