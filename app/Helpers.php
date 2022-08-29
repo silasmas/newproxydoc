@@ -398,7 +398,7 @@ function addToCard($idProd, $quantity = 1)
     $duplicata = Cart::search(function ($cartItem, $rowId) use ($idProd) {
         return $cartItem->id == $idProd;
     });
-    dd($duplicata->first()->qty, $quantity);
+    //  dd($duplicata->first()->qty, $quantity);
     if ($duplicata->isNotEmpty() && $duplicata->first()->qty == $quantity) {
         return array(false, '');
     } else {
