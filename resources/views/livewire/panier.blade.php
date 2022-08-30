@@ -22,7 +22,7 @@
                     {{ $panier->model->monaie . '' . $panier->price }}</div>
                 <div class="cart-trash" >
                      <button type="submit" style="background: transparent; border: none;cursor: pointer;"
-                     wire:click="deletConfirm('{{ $panier->rowId }}')">
+                     wire:click.prevent="deletConfirm('{{ $panier->rowId }}')">
                          <i class="far fa-trash-alt"></i>
                      </button>
                 </div>
