@@ -1,5 +1,5 @@
 @extends('templates.templateCl')
-@section('title', 'Accueil')
+@section('title', 'dashboard')
 @section('autreStyle')
     <link href="{{ asset('js/sweetalert/sweetalert.css') }}" rel="stylesheet">
 @endsection

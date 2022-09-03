@@ -87,10 +87,10 @@
                                        <a href="{{ route('pharmacie') }}">Proxychem</a>
                                        <ul class="dropdown-menu-col-1">
                                         <li>
-                                            <a href="#">Trouvez la liste de médicaments</a>
+                                            <a href="#">Liste de médicaments</a>
                                         </li>
                                         <li>
-                                            <a href="#">Trouvez votre ordonance</a>
+                                            <a href="#">L'ordonance</a>
                                         </li>
                                        </ul>
                                    </li>
