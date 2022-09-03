@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Session;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\Models\produit;
 use Illuminate\Support\Str;
+
 /**
  * Cette fonction sert à verifier si l'utilisateur a un compte
  * avec son @email
@@ -334,86 +335,84 @@ function initInfo($request, $transaction_id)
 function initPaie($cinetpay_data, $request, $user)
 {
 
-        $url = 'https://api-checkout.cinetpay.com/v2/payment';
-        $response = Http::asJson()->post($url, $cinetpay_data);
+    $url = 'https://api-checkout.cinetpay.com/v2/payment';
+    $response = Http::asJson()->post($url, $cinetpay_data);
 
-        $response_body = json_decode($response->body(), JSON_THROW_ON_ERROR | true, 512, JSON_THROW_ON_ERROR);
-        if ($response->status() === 200) {
+    $response_body = json_decode($response->body(), JSON_THROW_ON_ERROR | true, 512, JSON_THROW_ON_ERROR);
+    if ($response->status() === 200) {
 
-            foreach (Cart::content() as $p) {
-                //dd(Session::get('priceLivraison', '0'));
-                if(Session::get('priceLivraison', '0')>0){
-                    $paiementInfo = livraison::create([
-                        "commune_id" => Session::get('communeLivraison', '0'),
-                        "user_id" => $user->id,
-                        "transaction_id" => $cinetpay_data['transaction_id'],
-                        "produit_id" => $p->id,
-                    ]);
-                }
-                $register = produitUser::create([
+        foreach (Cart::content() as $p) {
+            //dd(Session::get('priceLivraison', '0'));
+            if (Session::get('priceLivraison', '0') > 0) {
+                $paiementInfo = livraison::create([
+                    "commune_id" => Session::get('communeLivraison', '0'),
+                    "user_id" => $user->id,
+                    "transaction_id" => $cinetpay_data['transaction_id'],
                     "produit_id" => $p->id,
-                    "user_id" => $user->id,
-                    "transaction_id" => $cinetpay_data['transaction_id'],
-                    "quantite" => $p->qty,
-                    'etat' => "En attente",
-                    'livraison' => Session::get('communeLivraison', '0')=='0'?"0":"1",
                 ]);
-                $paiementInfo = order::create([
-                    "produits" => $p->id,
-                    "user_id" => $user->id,
-                    "montant" => Cart::total() + Session::get('priceLivraison', '0'),
-                    "transaction_id" => $cinetpay_data['transaction_id'],
-                    "description" => $cinetpay_data['description'],
-                    "token" => $response_body["data"]["payment_token"],
-                    'customer_address' => $request["customer_address"],
-                    'customer_city' => $request["customer_city"],
-                    'operateur' => $request["channels"],
-                    'customer_country' => $request["customer_country"],
-                    'customer_state' => $request["customer_state"],
-                    'customer_zip_code' => $request["customer_zip_code"],
-                ]);
-
             }
-            if ($register && $paiementInfo) {
-                if ((int) $response_body["code"] === 201) {
-                    $payment_link = $response_body["data"]["payment_url"];
-                    return Redirect::to($payment_link);
-                } else {
-                    return back()->with('message', $response_body['description']);
-                    // return response()->json(['reponse' => false, 'bank' => true, 'msg' => $response_body['description']]);
-                }
+            $register = produitUser::create([
+                "produit_id" => $p->id,
+                "user_id" => $user->id,
+                "transaction_id" => $cinetpay_data['transaction_id'],
+                "quantite" => $p->qty,
+                'etat' => "En attente",
+                'livraison' => Session::get('communeLivraison', '0') == '0' ? "0" : "1",
+            ]);
+            $paiementInfo = order::create([
+                "produits" => $p->id,
+                "user_id" => $user->id,
+                "montant" => Cart::total() + Session::get('priceLivraison', '0'),
+                "transaction_id" => $cinetpay_data['transaction_id'],
+                "description" => $cinetpay_data['description'],
+                "token" => $response_body["data"]["payment_token"],
+                'customer_address' => $request["customer_address"],
+                'customer_city' => $request["customer_city"],
+                'operateur' => $request["channels"],
+                'customer_country' => $request["customer_country"],
+                'customer_state' => $request["customer_state"],
+                'customer_zip_code' => $request["customer_zip_code"],
+            ]);
+        }
+        if ($register && $paiementInfo) {
+            if ((int) $response_body["code"] === 201) {
+                $payment_link = $response_body["data"]["payment_url"];
+                return Redirect::to($payment_link);
             } else {
-                return back()->with('message', "Erreur d'enregistrement!");
-                //return response()->json(['reponse' => false, 'bank' => true, 'msg' => "Erreur d'enregistrement!"]);
+                return back()->with('message', $response_body['description']);
+                // return response()->json(['reponse' => false, 'bank' => true, 'msg' => $response_body['description']]);
             }
         } else {
-            return back()->with('message', $response_body['description']);
-            // return response()->json(['reponse' => false, 'bank' => true, 'msg' => $response_body['description']]);
+            return back()->with('message', "Erreur d'enregistrement!");
+            //return response()->json(['reponse' => false, 'bank' => true, 'msg' => "Erreur d'enregistrement!"]);
         }
+    } else {
+        return back()->with('message', $response_body['description']);
+        // return response()->json(['reponse' => false, 'bank' => true, 'msg' => $response_body['description']]);
+    }
 }
 
- function addToCard($idProd,$quantity=1){
+function addToCard($idProd, $quantity = 1)
+{
 
-    $duplicata = Cart::search(function ($cartItem, $rowId) use ($idProd){
+    $duplicata = Cart::search(function ($cartItem, $rowId) use ($idProd) {
         return $cartItem->id == $idProd;
     });
-    // dd($request->quantity);
+    //  dd($duplicata->first()->qty, $quantity);
     if ($duplicata->isNotEmpty() && $duplicata->first()->qty == $quantity) {
-        return array(false,'');
+        return array(false, '');
     } else {
         if ($duplicata->isNotEmpty() && $duplicata->first()->qty != $quantity) {
             $produit = produit::find($idProd);
             Cart::add($produit->id, $produit->nom, $quantity, $produit->prix)
                 ->associate("App\models\produit");
-            return array(true,$produit->nom);
+            return array(true, $produit->nom);
         } else {
-
-
             $produit = produit::find($idProd);
             Cart::add($produit->id, $produit->nom, $quantity, $produit->prix)
                 ->associate("App\models\produit");
 
-            return array(true,$produit->nom);
+            return array(true, $produit->nom);
         }
     }
 }

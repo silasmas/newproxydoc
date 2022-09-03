@@ -43,7 +43,6 @@ class ProduitController extends Controller
      */
     public function store(Request $request)
     {
-
     }
 
     /**
@@ -54,8 +53,9 @@ class ProduitController extends Controller
      */
     public function show($id)
     {
-        $id=$id;
-        return view("pages.detailProduit",compact('id'));
+        // $prod = produit::with("categorie")->where("id", $id)->first();
+        // $cat = categorie::with("produit")->get();
+        return view("pages.detailProduit");
     }
     public function showCat($id)
     {
