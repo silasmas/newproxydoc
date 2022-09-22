@@ -26,6 +26,7 @@ class Panier extends Component
             'titre'=>'Panier mis à jour',
             'text'=>"Produit retiré du panier",
         ]);
+         redirect('monpanier');
     }
     public function render()
     {
