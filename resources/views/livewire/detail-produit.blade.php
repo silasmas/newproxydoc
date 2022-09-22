@@ -72,7 +72,7 @@
                                 </p>
                                 <div class="cart-action-area" x-data="{count:$wire.qty,idProd:{{ $prod->id }}}">
                                     {{-- wire:submit.prevent="ajoutCards({{ $prod->id }})" --}}
-                                    <form id="cart-quantity" @submit.prevent="$wire.ajoutCards(idProd,count)">
+                                    <form id="cart-quantity" @submit.prevent="$wire.ajoutCardsDetail(idProd,count)">
                                         {{-- @csrf --}}
                                         <input type="text"name='idProd' class="form-control"
                                         :value="idProd" hidden >
@@ -80,7 +80,7 @@
                                             <li>
                                                 <div class="input-group quantity-holder" id="quantity-holders2" >
                                                     <input type="text" name='quantityf' class="form-control quantity-inputdfd"
-                                                        value="" :value="count">
+                                                         :value="count"  >
                                                     <div class="btn-quantity-select">
                                                         <button class="quantity-plusg" type="button" @click="count++">
                                                             <i class="fas fa-plus"></i>
@@ -92,7 +92,7 @@
                                                 </div>
                                             </li>
                                             <li>
-                                                <button type="submit"  class="item-btn" >Ajouter au panier</button>
+                                                <button type="submit"  class="item-btn"  wire:loading.delay.attr='disabled'>Ajouter au panier</button>
                                             </li>
                                         </ul>
                                     </form>

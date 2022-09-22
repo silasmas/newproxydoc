@@ -18,9 +18,10 @@
 <!-- Nivo slider js -->
 <script src="{{ asset('assets/vendor/slider/js/jquery.nivo.slider.js') }}"></script>
 <script src="{{ asset('assets/vendor/slider/home.js') }}"></script>
+@yield('autreScript')
+@livewireScripts()
 <!-- Owl Carousel Js -->
 <script src="{{ asset('assets/vendor/OwlCarousel/owl.carousel.min.js') }}"></script>
-@yield('autreScript')
 <!-- Meanmenu Js -->
 <script src="{{ asset('assets/js/jquery.meanmenu.min.js') }}"></script>
 <!-- Magnific Popup Js -->
@@ -34,7 +35,7 @@
 <script src="{{ asset('js/sweetalert/sweetalert.min.js') }}"></script>
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-@livewireScripts()
+
 @auth
 @if ($mesService->pluck('nom')->contains('standars')||$mesService->pluck('nom')->contains('Premium')||$mesService->pluck('nom')->contains('business'))
 <!--Start of Tawk.to Script-->
@@ -55,12 +56,24 @@
 @endauth
 
 <script>
+    
     window.addEventListener('swal:modal',event=>{
             swal({
                 title: event.detail.titre,
-                text: event.detail.text,
+                text: event.detail.text+event.detail.from,
                 icon: event.detail.type,
             });
+            switch (event.detail.from) {
+                case "Monpanier":
+               // window.livewire.emit('updateMonPanier');
+                    break;
+                case "Detail":
+              //  window.livewire.emit('updateDetail');
+                    break;
+            
+                default:
+                    break;
+            }
         });
     window.addEventListener('swal:confirm',event=>{
             swal({
@@ -74,7 +87,22 @@
             }
         }).then(function(willDelete) {
             if (willDelete) {
-                window.livewire.emit('removeCarde',event.detail.id);
+               switch (event.detail.from) {
+                case 'Monpanier':
+                window.livewire.emit('removeCardeMonPanier',event.detail.id);
+                    break;
+                case 'panier':
+                    
+                    window.livewire.emit('removeCarde',event.detail.id);
+                    break;
+                case 'Detail':
+                    
+                    window.livewire.emit('ajoutCardsDetail',event.detail.id);
+                    break;
+               
+                default:
+                    break;
+               }
             }
 
         });

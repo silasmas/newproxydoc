@@ -84,10 +84,10 @@
                                    </li>
 
                                    <li>
-                                       <a href="{{ route('pharmacie') }}">Proxychem</a>
+                                       <a href="#">Proxychem</a>
                                        <ul class="dropdown-menu-col-1">
                                         <li>
-                                            <a href="#">Liste de médicaments</a>
+                                            <a href="{{ route('pharmacie') }}">Liste de médicaments</a>
                                         </li>
                                         <li>
                                             <a href="#">L'ordonance</a>
@@ -95,10 +95,10 @@
                                        </ul>
                                    </li>
                                    <li>
-                                       <a href="{{ route('docteur') }}">Proxychat</a>
+                                       <a href="#">Proxychat</a>
                                        <ul class="dropdown-menu-col-1">
                                         <li>
-                                            <a href="#">Trouvez l'annuaire des médecins</a>
+                                            <a href="{{ route('docteur') }}">Trouvez l'annuaire des médecins</a>
                                         </li>
                                         <li>
                                             <a href="#">Trouvez un spécialiste</a>

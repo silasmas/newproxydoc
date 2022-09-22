@@ -376,17 +376,7 @@
                         <p>Gynaecology</p>
                     </div>
                     <div class="item-schedule">
-                        <ul>
-                            <li>Mon - Tues
-                                <span>08.00 :17.00</span>
-                            </li>
-                            <li>Fri - Sat
-                                <span>09.00 :12.00</span>
-                            </li>
-                            <li>Sun - Mon
-                                <span>08.00 :17.00</span>
-                            </li>
-                        </ul>
+
                         <a href="#" class="item-btn">MAKE AN APPOINTMENT</a>
                     </div>
                 </div>
@@ -410,17 +400,7 @@
                         <p>Lense Expert</p>
                     </div>
                     <div class="item-schedule">
-                        <ul>
-                            <li>Mon - Tues
-                                <span>08.00 :17.00</span>
-                            </li>
-                            <li>Fri - Sat
-                                <span>09.00 :12.00</span>
-                            </li>
-                            <li>Sun - Mon
-                                <span>08.00 :17.00</span>
-                            </li>
-                        </ul>
+
                         <a href="#" class="item-btn">MAKE AN APPOINTMENT</a>
                     </div>
                 </div>
@@ -443,17 +423,7 @@
                         <p>Lense Expert</p>
                     </div>
                     <div class="item-schedule">
-                        <ul>
-                            <li>Mon - Tues
-                                <span>08.00 :17.00</span>
-                            </li>
-                            <li>Fri - Sat
-                                <span>09.00 :12.00</span>
-                            </li>
-                            <li>Sun - Mon
-                                <span>08.00 :17.00</span>
-                            </li>
-                        </ul>
+
                         <a href="#" class="item-btn">MAKE AN APPOINTMENT</a>
                     </div>
                 </div>

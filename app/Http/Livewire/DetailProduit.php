@@ -2,52 +2,55 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\categorie;
 use App\Models\produit;
 use Livewire\Component;
-use App\Models\categorie;
 use Illuminate\Support\Str;
-
 class DetailProduit extends Component
 {
     public $qty = 1;
-     public $idProd = "";
-    public function increment()
-    {
-        $this->qty = $this->qty + 1;
+    public $idProd = "";
+    public $prod;
+    public $cat;
+    protected $listeners = ['updateDetail' => '$refresh'];
+    public function up($i){
+        $this->qty=$i;
     }
-    public function decrement()
+    public function ajoutCardsDetail($idProd, $q)
     {
-        $this->qty = $this->qty - 1;
-    }
-    public function ajoutCards($idProd,$q)
-    {
-        // dd($q, $idProd);
-        // $this->reset();
+
         $card = addToCard($idProd, $q);
 
         if ($card[0] === true) {
-            $this->dispatchBrowserEvent('swal:modal', [ 
+            $this->emitSelf("updateDetail");
+            $this->dispatchBrowserEvent('swal:modal', [
                 'type' => 'success',
                 'titre' => 'Panier mis à jour',
-                'text' => 'Produit ' . Str::upper($card[1]) . " est ajouter au panier",
+                'from'=>"Detail",
+                'text' => 'Produit ' . Str::upper($card[1]) . " est ajouter au panier detail",
             ]);
-            
-           return redirect('detailProdui/' . $idProd);
+
         } else {
+            $this->emitSelf("updateDetail");
             $this->dispatchBrowserEvent('swal:modal', [
                 'type' => 'warning',
                 'titre' => 'Panier déjà existant',
-                'text' => 'Produit existe déjà dans votre panier',
+                'from'=>"Detail",
+                'text' => 'Produit existe déjà dans votre panier detail',
             ]);
-            return redirect('detailProdui/' . $idProd);
+
         }
     }
-
-    public function render()
+   
+    public function mount()
     {
         $id = request()->id;
-        $prod = produit::with("categorie")->where("id", $id)->first();
-        $cat = categorie::with("produit")->get();
-        return view('livewire.detail-produit', compact("prod", "cat"));
+        $this->prod = produit::with("categorie")->where("id", $id)->first();
+        $this->cat = categorie::with("produit")->get();
+    }
+    public function render()
+    {
+
+        return view('livewire.detail-produit');
     }
 }

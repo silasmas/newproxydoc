@@ -25,12 +25,14 @@ class Pharmacie extends Component
         $this->dispatchBrowserEvent('swal:modal',[
             'type'=>'success',
             'titre'=>'Panier mis à jour',
+            'from'=>"pharmacie",
             'text'=>'Produit '.Str::upper($card[1])." est ajouter au panier",
         ]);
        } else {
         $this->dispatchBrowserEvent('swal:modal',[
             'type'=>'warning',
             'titre'=>'Panier déjà existant',
+            'from'=>"pharmacie",
             'text'=>'Produit existe déjà dans votre panier',
         ]);
        }

@@ -6,14 +6,15 @@ use Livewire\Component;
 use App\Models\produit;
 use Gloudemans\Shoppingcart\Facades\Cart;
 class Panier extends Component
-{
+{ 
 
-    protected $listeners=['removeCarde'];
+    protected $listeners=['removeCarde',"updatePanier"=>'render'];
     public function deletConfirm($id){
         $this->dispatchBrowserEvent('swal:confirm',[
             'type'=>'warning',
             'titre'=>"êtes vous sûre de vouloir retiré ce produit du panier?",
             'text'=>"",
+            'from'=>"panier",
             'id'=>$id,
         ]);
     }
@@ -25,8 +26,9 @@ class Panier extends Component
             'type'=>'success',
             'titre'=>'Panier mis à jour',
             'text'=>"Produit retiré du panier",
+            'from'=>"panier",
         ]);
-         redirect('monpanier');
+         $this->emitTo("Panier","updatePanier");
     }
     public function render()
     {

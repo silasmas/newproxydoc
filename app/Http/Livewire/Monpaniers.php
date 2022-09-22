@@ -7,29 +7,29 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 class Monpaniers extends Component
 {
 
-    protected $listeners=['removeCarde'];
+    protected $listeners=["removeCardeMonPanier",'updateMonPanier'=>'$refresh'];
     public function deletConfirm($id){
         $this->dispatchBrowserEvent('swal:confirm',[
             'type'=>'warning',
-            'titre'=>"êtes vous sûre de vouloir retiré ce produit du panier?",
+            'titre'=>"êtes vous sûre de vouloir retiré ce produit du panier ?",
             'text'=>"",
+            'from'=>"Monpanier",
             'id'=>$id,
         ]);
     }
-    public function removeCarde($id)
+    public function removeCardeMonPanier($id)
     {
         Cart::remove($id);
+        $this->emitSelf("updateMonPanier");
         $this->dispatchBrowserEvent('swal:modal',[
             'type'=>'success',
-            'titre'=>'Panier mis à jour',
+            'titre'=>'Votre panier mis à jour panier',
             'text'=>"Produit retiré du panier",
+            'from'=>"Monpanier",
         ]);
-        $this->resetPage();
-    }
-    public function updating($nom,$value){
         
-            $this->resetPage();
     }
+
     public function render()
     {
         return view('livewire.monpaniers');
