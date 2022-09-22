@@ -32,7 +32,8 @@
 <!-- Custom Js -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
 <script src="{{ asset('js/sweetalert/sweetalert.min.js') }}"></script>
-<script async src='https://stackwhats.com/pixel/2fa93742e74205573241c74f75d46f'></script>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 @livewireScripts()
 @auth
 @if ($mesService->pluck('nom')->contains('standars')||$mesService->pluck('nom')->contains('Premium')||$mesService->pluck('nom')->contains('business'))
@@ -88,9 +89,9 @@
     })
     function addToCart(id) {
         event.preventDefault()
-       addCard(id, "", "../addCard");
+     //  addCard(id, "", "../addCard");
     }
-    
+
     function removedCart(form) {
         event.preventDefault()
         swal({
@@ -139,7 +140,7 @@
                         title: data.msg,
                         icon: 'success'
                     })
-                    actualiser();
+                   // actualiser();
                 }
             },
         });

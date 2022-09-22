@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/parsley/parsley.css') }}">
 @endsection
 @section('content')
-    @include('parties.banner')
+    @include('parties.banner') 
     <!-- Shop Area Start Here -->
     <section class="shop-wrap-layout1 bg-light-primary100">
         <div class="container">

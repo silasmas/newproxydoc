@@ -32,7 +32,7 @@
                                             class="active">
                                             <img alt="fitness-related1" src="{{ asset('assets/img/shop1.png') }}" class="img-responsive">
                                         </a>
-                                    </li> 
+                                    </li>
                                     <li class="nav-item">
                                         <a href="#fitness-related2" data-toggle="tab" aria-expanded="false">
                                             <img alt="fitness-related2" src="{{ asset('assets/img/shop2.png') }}" class="img-responsive">
@@ -57,7 +57,7 @@
                                             @empty
                                             @endforelse
                                 </ul>
-                                <div class="price">{{ $prod->prix.$prod->monaie }}{{ $qty }}</div>
+                                <div class="price">{{ $prod->prix.$prod->monaie }}</div>
                                 <div class="item-stock">
                                     @if ($prod->quantite>0)
                                     Disponibilité :
@@ -70,29 +70,29 @@
                                 <p>
 
                                 </p>
-                                <div class="cart-action-area">
+                                <div class="cart-action-area" x-data="{count:$wire.qty,idProd:{{ $prod->id }}}">
                                     {{-- wire:submit.prevent="ajoutCards({{ $prod->id }})" --}}
-                                    <form id="cart-quantity" >
+                                    <form id="cart-quantity" @submit.prevent="$wire.ajoutCards(idProd,count)">
                                         {{-- @csrf --}}
-                                        <input type="text"name='idProd' class="form-control" wire:model="idProd"
-                                                        value="{{ $prod->id }}" placeholder=""  hidden>
+                                        <input type="text"name='idProd' class="form-control"
+                                        :value="idProd" hidden >
                                         <ul class="cart-quantity" >
                                             <li>
-                                                <div class="input-group quantity-holder" id="quantity-holders2">
+                                                <div class="input-group quantity-holder" id="quantity-holders2" >
                                                     <input type="text" name='quantityf' class="form-control quantity-inputdfd"
-                                                        value="" placeholder="" wire:model="qty">
+                                                        value="" :value="count">
                                                     <div class="btn-quantity-select">
-                                                        <button class="quantity-plusg" type="button" wire:click="increment">
+                                                        <button class="quantity-plusg" type="button" @click="count++">
                                                             <i class="fas fa-plus"></i>
                                                         </button>
-                                                        <button class="quantity-minuss" type="button" wire:click="decrement">
+                                                        <button class="quantity-minuss" type="button" @click="count--">
                                                             <i class="fas fa-minus"></i>
                                                         </button>
                                                     </div>
                                                 </div>
                                             </li>
                                             <li>
-                                                <button type="submit" wire:submit.prevent="ajoutCards({{ $prod->id  }})" class="item-btn">Ajouter au panier</button>
+                                                <button type="submit"  class="item-btn" >Ajouter au panier</button>
                                             </li>
                                         </ul>
                                     </form>

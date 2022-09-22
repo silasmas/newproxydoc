@@ -16,6 +16,5 @@
 
 <script src="{{ asset('assets/client/js/main.js') }}"></script>
 
-
 </body>
 </html>

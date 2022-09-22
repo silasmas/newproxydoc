@@ -39,11 +39,7 @@
                             <p>Gynaecology</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -61,11 +57,7 @@
                             <p>Orthopaedics</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -83,11 +75,7 @@
                             <p>Lense Expert</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -105,11 +93,7 @@
                             <p>Cardiology</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -127,11 +111,7 @@
                             <p>Dental Consult</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -149,11 +129,7 @@
                             <p>Associate Eye</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -171,11 +147,7 @@
                             <p>Gastroenterology</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -193,11 +165,7 @@
                             <p>Gastroenterology</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -215,11 +183,7 @@
                             <p>Gastroenterology</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -237,11 +201,7 @@
                             <p>Associate Eye</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -259,11 +219,7 @@
                             <p>Associate Eye</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>
@@ -281,11 +237,7 @@
                             <p>Associate Eye</p>
                         </div>
                         <div class="item-schedule">
-                            <ul>
-                                <li>Mon - Tues<span>08.00 :17.00</span></li>
-                                <li>Fri - Sat<span>09.00 :12.00</span></li>
-                                <li>Sun - Mon<span>08.00 :17.00</span></li>
-                            </ul>
+
                             <a href="{{ route('detailDocteur') }}" class="item-btn">Entrer en contact</a>
                         </div>
                     </div>

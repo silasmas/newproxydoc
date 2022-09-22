@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 class DetailProduit extends Component
 {
     public $qty = 1;
-    // public $idProd = "";
+     public $idProd = "";
     public function increment()
     {
         $this->qty = $this->qty + 1;
@@ -19,19 +19,20 @@ class DetailProduit extends Component
     {
         $this->qty = $this->qty - 1;
     }
-    public function ajoutCards($idProd)
+    public function ajoutCards($idProd,$q)
     {
-        dd($this->qty, $idProd);
+        // dd($q, $idProd);
         // $this->reset();
-        $card = addToCard($idProd, $this->qty);
+        $card = addToCard($idProd, $q);
 
         if ($card[0] === true) {
-            $this->dispatchBrowserEvent('swal:modal', [
+            $this->dispatchBrowserEvent('swal:modal', [ 
                 'type' => 'success',
                 'titre' => 'Panier mis à jour',
                 'text' => 'Produit ' . Str::upper($card[1]) . " est ajouter au panier",
             ]);
-            return redirect('detailProdui/' . $idProd);
+            
+           return redirect('detailProdui/' . $idProd);
         } else {
             $this->dispatchBrowserEvent('swal:modal', [
                 'type' => 'warning',
