@@ -1,5 +1,5 @@
 <!-- Horizontal navbar -->
-<div id="navbar1" class="app-navbar horizontal">
+<div id="navbar1" class="app-navbar horizontal" wire:poll>
     <div class="navbar-wrap">
 
         <button class="no-style navbar-toggle navbar-open d-lg-none">
@@ -25,7 +25,8 @@
         </form>
 
 
-        <div class="app-actions">
+        <div class="app-actions" x-data="{nbr:{{ Cart::count() }},
+            tab:{{ Cart::content() }}}">
           <div class="dropdown item">
             <button
               class="no-style dropdown-toggle"
@@ -35,74 +36,40 @@
               aria-expanded="false"
               data-bs-offset="0, 12"
             >
-              <span class="icon icofont-notification"></span>
-              <span class="badge badge-danger badge-sm">5</span>
+              <span class="icon icofont-cart"></span>
+              <span class="badge badge-danger badge-sm" x-text="nbr">
+              </span>
             </button>
 
             <div class="dropdown-menu dropdown-menu-right dropdown-menu-w-280">
               <div class="menu-header">
-                <h4 class="h5 menu-title mt-0 mb-0">Notifications</h4>
+                <h4 class="h5 menu-title mt-0 mb-0">Panier</h4>
 
-                <a href="#" class="text-danger">Clear All</a>
+                <a href="#" class="text-danger" x-show="nbr>0">Tout supprimer</a>
               </div>
 
               <ul class="list">
-                <li>
-                  <a href="#">
-                    <span class="icon icofont-heart"></span>
-
-                    <div class="content">
-                      <span class="desc">Sara Crouch liked your photo</span>
-                      <span class="date">17 minutes ago</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="icon icofont-users-alt-6"></span>
-
-                    <div class="content">
-                      <span class="desc">New user registered</span>
-                      <span class="date">23 minutes ago</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="icon icofont-share"></span>
-
-                    <div class="content">
-                      <span class="desc">Amanda Lie shared your post</span>
-                      <span class="date">25 minutes ago</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="icon icofont-users-alt-6"></span>
-
-                    <div class="content">
-                      <span class="desc">New user registered</span>
-                      <span class="date">32 minutes ago</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span class="icon icofont-ui-message"></span>
-
-                    <div class="content">
-                      <span class="desc">You have a new message</span>
-                      <span class="date">58 minutes ago</span>
-                    </div>
-                  </a>
-                </li>
+                <template x-for="item in tab">
+                    <li>
+                      <a href="#">
+                        <span>
+                        <img src="{{ asset('assets/img/shop1.png') }}" alt="product"
+                        class="img-fluid" height="50" width="50">
+                    </span>
+                        <div class="content">
+                          <span class="desc" x-text="item.model.nom"></span>
+                          <span class="date" x-text="item.qty+' X '+ item.model.monaie + item.price"></span>
+                        </div>
+                        <span class="icon icofont-ui-delete" x-on:click.prevent="$wire.deletConfirm(item.rowId)"></span>
+                      </a>
+                    </li>
+                </template>
               </ul>
 
-              <div class="menu-footer">
+              <div class="menu-footer" x-show="nbr>0">
                 <button class="btn btn-primary w-100">
-                  View all notifications
-                  <span class="btn-icon ms-2 icofont-tasks-alt"></span>
+                  Voir tout mon panier
+                  <span class="btn-icon ms-2 icofont-cart-alt"></span>
                 </button>
               </div>
             </div>

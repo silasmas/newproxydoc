@@ -1,6 +1,7 @@
 @include('parties.client.entete')
 
-@include('parties.client.menu-horizontale')
+@include('livewire.menu-horizontale')
+
 @include('parties.client.menu')
 
 @yield('content','titre')

@@ -59,11 +59,10 @@
            </div>
        </div>
        <div class="header-menu-area header-menu-layout4">
-        <form action="" class="form-search-nav">
-            <div class="d-flex">
-                <input type="text" class="form-control" placeholder="Recherche...">
-            </div>
-        </form>
+        <div class="row">
+            <livewire:live-search/>
+
+        </div>
            <div class="container">
                <div class="row no-gutters d-flex align-items-center">
                    <div class="col-lg-2 col-md-2 logo-area-layout1">
@@ -175,8 +174,7 @@
                             <li class="d-none d-xl-block">
                                 <form id="top-search-form" method="" acttion="" class="header-search-dark">
                                     <input type="text" class="search-input"
-                                    placeholder="cherchez un produit par son nom" required=""
-                                   >
+                                    placeholder="cherchez un produit par son nom" required="" >
                                     <button class="search-button" type="submit">
                                         <i class="flaticon-search"></i>
                                     </button>

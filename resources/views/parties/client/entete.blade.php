@@ -25,9 +25,10 @@
     <link rel="stylesheet" href="{{ asset('assets/client/css/Chart.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/client/css/morris.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/client/css/leaflet.css') }}">
-
+    <link href="{{ asset('js/sweetalert/sweetalert.css') }}" rel="stylesheet">
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ asset('assets/client/css/style.css') }}">
+    @livewireStyles()
   </head>
 
 

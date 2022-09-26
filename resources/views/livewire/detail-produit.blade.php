@@ -67,7 +67,7 @@
                                     <span class="text-danger"> Epuisé</span>
                                     @endif
                                 </div>
-                                <p>
+                                <p> 
 
                                 </p>
                                 <div class="cart-action-area" x-data="{count:$wire.qty,idProd:{{ $prod->id }}}">
