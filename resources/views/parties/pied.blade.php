@@ -56,7 +56,7 @@
 @endauth
 
 <script>
-    
+
     window.addEventListener('swal:modal',event=>{
             swal({
                 title: event.detail.titre,
@@ -70,7 +70,7 @@
                 case "Detail":
               //  window.livewire.emit('updateDetail');
                     break;
-            
+
                 default:
                     break;
             }
@@ -92,14 +92,14 @@
                 window.livewire.emit('removeCardeMonPanier',event.detail.id);
                     break;
                 case 'panier':
-                    
+
                     window.livewire.emit('removeCarde',event.detail.id);
                     break;
                 case 'Detail':
-                    
+
                     window.livewire.emit('ajoutCardsDetail',event.detail.id);
                     break;
-               
+
                 default:
                     break;
                }
@@ -112,8 +112,7 @@
 
 
     $('.btn-search').click(function(){
-        $(this)
-        $('.form-search-nav').toggleClass('active')
+        $('.form-search-nav').addClass('active')
     })
     function addToCart(id) {
         event.preventDefault()
