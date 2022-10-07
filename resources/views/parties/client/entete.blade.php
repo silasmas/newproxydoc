@@ -14,7 +14,7 @@
     <meta name="keywords" content="MedicApp">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/logo/logo1.png') }}">
-
+    @yield('autreStyle')
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="{{ asset('assets/client/css/bootstrap/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/client/css/icofont.min.css') }}">
@@ -29,6 +29,7 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ asset('assets/client/css/style.css') }}">
     @livewireStyles()
+    
   </head>
 
 

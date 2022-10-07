@@ -5,6 +5,7 @@ use App\Http\Controllers\ProduitController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AchatController;
+use App\Http\Controllers\ActeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +70,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profil', [ServiceController::class, 'profil'])->name('profil');
     Route::get('/mesAchats', [AchatController::class, 'mesAchats'])->name('mesAchats');
     Route::get('/historique', [ServiceController::class, 'historique'])->name('historique');
+    Route::get('/cl_pharmacie', [ActeController::class, 'index'])->name('cl_pharmacie');
 
     Route::get('/detailProduitAcheter/{id}', [AchatController::class, 'show'])->name('detailProduitAcheter');
     Route::get('/detailHistorique/{id}', [ServiceController::class, 'detailHistorique'])->name('detailHistorique');

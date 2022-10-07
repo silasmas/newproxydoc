@@ -17,6 +17,7 @@
 <script src="{{ asset('assets/client/js/main.js') }}"></script>
 <script src="{{ asset('js/sweetalert/sweetalert.min.js') }}"></script>
 @livewireScripts()
+
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <script>
@@ -71,5 +72,6 @@
         });
         });
 </script>
+@yield('autreScript')
 </body>
 </html>
