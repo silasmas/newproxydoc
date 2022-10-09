@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
 
-        Schema::create('commune', function (Blueprint $table) {
+        Schema::create('communes', function (Blueprint $table) {
             $table->id();
             $table->string("nom");
             $table->foreignId('zone_id')->constrained()->onUpdate('cascade')
