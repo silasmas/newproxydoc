@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->text('description');
             $table->integer('prix');
+            $table->string('img1')->nullable();
+            $table->string('img2')->nullable();
+            $table->string('img3')->nullable();
             $table->string('monaie');
             $table->integer('quantite');
             $table->string('slug');

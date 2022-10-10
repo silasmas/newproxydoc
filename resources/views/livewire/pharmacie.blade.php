@@ -2,57 +2,50 @@
     <!-- Shop Area Start Here -->
 <section class="shop-wrap-layout1 bg-light-primary100">
     <div class="container">
-        <div class="row">
-            <div class="col col-lg-9" style="margin-top: 50px">
-                <div class="form-group d-xl-block "id="top-search-form">
-                    <input type="text" class="form-control search-input" name="s"
-                    placeholder="Trouver un produit" value="" wire:model.debounce.500ms="search">
+        <div class="row mb-5">
+            <div class="col col-lg-9">
+                <div class="input-group rounded">
+                    <input style="padding-top: 16px!important; padding-bottom: 16px!important;" type="search" class="form-control rounded fs-4" placeholder="Trouver un produit" aria-label="Trouver un produit" aria-describedby="search-addon" />
+                    <button style="padding-top: 10px!important; padding-bottom: 22px!important;" class="input-group-text btn btn-primary fs-4 shadow-0" id="search-addon">
+                      <i class="fas fa-search"></i>
+                    </button>
                 </div>
             </div>
         </div>
         <div class="row">
-
             <div class="col-xl-9 col-lg-8 col-12">
                 <div class="row">
-                    @forelse ($allproduits as $p)
-                        <div class="col-xl-3 col-lg-6 col-md-3 col-sm-6 col-12">
-                            <div class="shop-box-layout1 margin-b-30">
-                                <div class="item-img">
-                                    <img src="{{ asset('assets/img/shop1.png') }}" alt="shop" class="img-fluid">
-                                    <ul class="shop-action-items">
-                                        <li>
-                                            <a title="Ajouter au panier">
-                                                    <button type="submit" style="background: transparent; border: none;cursor: pointer;"
-                                                    wire:click.prevent="addTocards('{{ $p->id }}')" wire:loading.delay.attr='disabled'>
-                                                        <i class="flaticon-shopping-cart"></i>
-                                                    </button>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('detailProdui',['id'=>$p->id]) }}" alt="" title="Voir en detail">
-                                                <i class="flaticon-exchange-arrows"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                @forelse ($allproduits as $p)
+                    <div class="col-sm-6 col-12">
+                        <div class="card mb-4 overflow-hidden hover">
+                            <div class="row">
+                                <div class="col-lg-4 bg-light overflow-hidden border-end border-default" style="max-height: 16rem">
+                                    <img src="{{ !empty($p->img1) ? $p->img1 : asset('assets/img/shop1.png') }}" alt="" class="img-fluid align-middle" />
                                 </div>
-                                <div class="item-content">
-                                    <h4 class="item-title">
-                                        <a href="{{ route('detailProdui',['id'=>$p->id]) }}">{{ $p->nom }}</a>
-                                    </h4>
-                                    <div class="rate-items">
-                                        @forelse ($p->categorie as $c)
-                                            <div class="rate-item">
-                                                {{ $c->nom }}
-                                            </div>
-                                        @empty
-                                        @endforelse
+                                <div class="col-lg-8 ps-lg-0 text-lg-left text-center">
+                                    <div class="card-body ps-4 pt-5">
+                                        <h4 class="card-title">{{ $p->nom }}</h4>
+                                        <p class="card-text mb-3">Prix : {{ $p->prix . ' ' . $p->monaie }}</p>
+                                        <p class="m-0">
+                    @forelse ($p->categorie as $c)
+                                            <div class="badge badge-secondary me-2 fw-normal">{{ $c->nom }}</div>
+                    @empty
+                    @endforelse
+                                        </p>
+                                    </div>
+                                    <div class="card-footer pe-sm-4 pe-5 d-flex justify-content-between">
+                                        <a href="#" class="card-link fs-lg-4" wire:click.prevent="addTocards('{{ $p->id }}')" title="Ajouter au panier">
+                                            <i class="flaticon-shopping-cart align-middle"></i> <span class="">Ajouter au panier</span>
+                                        </a>
+                                        <a href="{{ route('detailProdui',['id'=>$p->id]) }}" class="card-link text-dark" title="Voir en detail">
+                                            <i class="fa fa-arrow-right align-bottom"></i>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="item-price">{{ $p->monaie . ' ' . $p->prix }}</div>
                             </div>
                         </div>
-            @empty
-
+                    </div>
+                @empty
                 @endforelse
 
 

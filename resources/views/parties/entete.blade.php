@@ -18,6 +18,7 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/mdb.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <!-- Animate CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/animate.min.css') }}">

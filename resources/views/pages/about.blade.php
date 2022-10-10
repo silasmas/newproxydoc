@@ -10,11 +10,8 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-box-layout13">
-                    <h2 class="item-title">Nos services
-                        <span>ProxyDoc </span>
-                       
-                    </h2>
-                    <p>L’application ou le site internet ProxyDoc propose les services ou options ci-après :</p>
+                    <h2 class="item-title h2 fw-bold mb-4">Nos services</h2>
+                    <p class="lead fs-2">L’application ProxyDoc propose les services ci-après :</p>
                     <ul class="list-info">
                         <li>ProxyChat </li>
                         <li>ProxyFamily</li>
@@ -66,8 +63,8 @@
                         <div class="tab-content">
                             <div class="tab-pane fade active show" id="related1">
                                 <div class="about-box-layout5">
-                                    <h2 class="item-title">Apropo de nous </h2>
-                                    <p>
+                                    <h2 class="item-title">A propos de nous</h2>
+                                    <p class="lead fs-3 text-black">
                                         Fort de l’ampleur que présentent les NTIC dans la vie 
                                         quotidienne de la population à travers le monde, 
                                         réalisant l’inaccessibilité des services médicaux 
@@ -82,8 +79,8 @@
                                            la population des services hospitaliers, sans se 
                                            déplacer.
                                     </p>
-                                 
-                                    <p>
+
+                                    <p class="lead fs-3 text-black">
                                         Une autre problématique à laquelle ProxyDoc se veut être une solution,
                                          c’est le manque à gagner des médecins (personnel de santé) face aux
                                           consultations informelles par des appels et messagerie téléphoniques
@@ -116,14 +113,14 @@
                             <div class="tab-pane fade" id="related2">
                                 <div class="about-box-layout5">
                                     <h2 class="item-title">Notre vision est de </h2>
-                                    <p>Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
+                                    <p class="lead fs-3 text-black">Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
                                         bibendum non mattis fusceut perspiciatis undeuisque. Maecenas. Eros mus.
                                         Hymenaeos eros. Nisi mauris et adipiscing. Aliquam class bibendum
                                         mattis fusceut persecenas. Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi
                                         mauris et adipisc iquam class bibendum non mattis fusceut perspiciatis
                                         undeuisque.</p>
                                    
-                                    <p>Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
+                                    <p class="lead fs-3 text-black">Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
                                         bibendum non mattis fusceut perspiciatis undeuisque. Maecenas. Eros mus.
                                         Hymenaeos eros. Nisi mauris et adipiscing. Aliquam class bibendum
                                         mattis fusceut persecenas. Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi
@@ -136,13 +133,13 @@
                             <div class="tab-pane fade" id="related3">
                                 <div class="about-box-layout5">
                                     <h2 class="item-title">Notre experience</h2>
-                                    <p>Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
+                                    <p class="lead fs-3 text-black">Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
                                         bibendum non mattis fusceut perspiciatis undeuisque. Maecenas. Eros mus.
                                         Hymenaeos eros. Nisi mauris et adipiscing. Aliquam class bibendum
                                         mattis fusceut persecenas. Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi
                                         mauris et adipisc iquam class bibendum non mattis fusceut perspiciatis
                                         undeuisque.</p>
-                                    <p>Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
+                                    <p class="lead fs-3 text-black">Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi mauris et adipisc iquam class
                                         bibendum non mattis fusceut perspiciatis undeuisque. Maecenas. Eros mus.
                                         Hymenaeos eros. Nisi mauris et adipiscing. Aliquam class bibendum
                                         mattis fusceut persecenas. Quisque. Maecenas. Eros mus. Hymenaeos eros. Nisi

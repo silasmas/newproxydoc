@@ -42,7 +42,7 @@
             s1.setAttribute('crossorigin','*');
             s0.parentNode.insertBefore(s1,s0);
             })();
-            </script>
-           
+        </script>
+        <script src="{{ asset('assets/js/mdb.min.js') }}"></script>
     </body>
 </html>

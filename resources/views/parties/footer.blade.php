@@ -116,7 +116,7 @@
         </div>
     </section> --}}
     <section class="footer-bottom-wrap">
-        <div class="copyright">Copyright @2022 Proxydoc. Tout droits réservé.</div>
+        <div class="copyright">Copyright &copy; 2022 Proxydoc. Tout droit réservé.</div>
     </section>
 </footer>
 <!-- Footer Area End Here -->
