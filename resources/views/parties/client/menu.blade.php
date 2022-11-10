@@ -17,21 +17,27 @@
                   <li class="menu-item">
                     <span class="group-title">Medicine</span>
                   </li>
-                  <li class="menu-item has-sub">
+                  <li class="menu-item {{ Route::current()->getName()=="dashboard"?"active":"" }}">
+                    <a class="item-link" href="#">
+                        <span class="link-icon icofont-home"></span>
+                        <span class="link-text">Accueil</span>
+                      </a>
+                  </li>
+                  <li class="menu-item has-sub {{ Route::current()->getName()==""?"active":"" }}">
                     <a class="item-link" href="#">
                       <span class="link-icon icofont-thermometer-alt"></span>
                       <span class="link-text">ProxyChem</span>
                       <span class="link-caret icofont-thin-right"></span>
                     </a>
                       <ul class="sub">
-                        <li class="menu-item">
+                        <li class="menu-item {{ Route::current()->getName()=="cl_pharmacie"?"active":"" }}">
                           <a class="item-link" href="{{ route('cl_pharmacie') }}">
                             <span class="link-icon icofont-pills"></span>
                             <span class="link-text">
                             Liste des médicaments
                         </span></a>
                         </li>
-                        <li class="menu-item">
+                        <li class="menu-item {{ Route::current()->getName()==""?"active":"" }}">
                           <a class="item-link" href="">
                             <span class="link-icon icofont-prescription"></span>
                             <span class="link-text">Ordonance</span></a>
@@ -45,13 +51,6 @@
                       <span class="link-caret icofont-thin-right"></span>
                     </a>
                     <ul class="sub">
-                        <li class="menu-item">
-                          <a class="item-link" href="#">
-                            <span class="link-icon icofont-ui-calandar"></span>
-                            <span class="link-text">
-                          Annuaire des médecins
-                        </span></a>
-                        </li>
                         <li class="menu-item">
                           <a class="item-link" href="">
                             <span class="link-icon icofont-prescription"></span>

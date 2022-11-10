@@ -11,7 +11,7 @@
     <div class="main-content-wrap">
       <div class="page-content">
         <div class="row">
-          <div class="col col-12 col-md-6 col-xl-3">
+          <div class="col col-12 col-md-6 col-xl-4">
             <div class="card animated fadeInUp delay-01s bg-light">
               <div class="card-body">
                 <div class="row align-items-center">
@@ -20,7 +20,7 @@
                   </div>
 
                   <div class="col col-7">
-                    <h6 class="mt-0 mb-1">Appointments</h6>
+                    <h6 class="mt-0 mb-1">Mes abonnements</h6>
                     <div class="count text-primary fs-20">213</div>
                   </div>
                 </div>
@@ -28,7 +28,7 @@
             </div>
           </div>
 
-          <div class="col col-12 col-md-6 col-xl-3">
+          <div class="col col-12 col-md-6 col-xl-4">
             <div class="card animated fadeInUp delay-02s bg-light">
               <div class="card-body">
                 <div class="row align-items-center">
@@ -37,7 +37,7 @@
                   </div>
 
                   <div class="col col-7">
-                    <h6 class="mt-0 mb-1">New patients</h6>
+                    <h6 class="mt-0 mb-1">Mes consultations</h6>
                     <div class="count text-primary fs-20">104</div>
                   </div>
                 </div>
@@ -45,7 +45,7 @@
             </div>
           </div>
 
-          <div class="col col-12 col-md-6 col-xl-3">
+          <div class="col col-12 col-md-6 col-xl-4">
             <div class="card animated fadeInUp delay-03s bg-light">
               <div class="card-body">
                 <div class="row align-items-center">
@@ -62,7 +62,7 @@
             </div>
           </div>
 
-          <div class="col col-12 col-md-6 col-xl-3">
+          {{-- <div class="col col-12 col-md-6 col-xl-3">
             <div class="card animated fadeInUp delay-04s bg-light">
               <div class="card-body">
                 <div class="row align-items-center">
@@ -77,7 +77,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
         </div>
 
         <div class="card">

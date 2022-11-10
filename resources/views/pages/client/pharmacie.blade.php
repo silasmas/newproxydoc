@@ -1,7 +1,7 @@
 @extends('templates.templateCl')
 @section('title', 'dashboard')
 @section('autreStyle')
-   
+  <link rel="stylesheet" href="{{ asset('assets/client/css/styleLoader.css') }}">
 @endsection
 
 @section('content')

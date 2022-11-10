@@ -34,12 +34,12 @@
 
 
   <body class="vertical-layout boxed">
-  <div class="app-loader main-loader">
+  {{-- <div class="app-loader main-loader">
     <div class="loader-box">
       <div class="bounceball"></div>
       <div class="text">Proxydoc<span>app</span></div>
     </div>
-  </div>
+  </div>  --}}
   <!-- .main-loader -->
   <div class="page-box">
     <div class="app-container">
