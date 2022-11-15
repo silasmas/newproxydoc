@@ -205,6 +205,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.card-prod-dash .name-prod:hover{
+    color: var(--primaryColor);
+}
 .card-prod-dash .btn-cart{
     position: absolute;
     width: 36px;
@@ -224,4 +227,9 @@
     background: var(--primaryColor);
     color: var(--colorWhite);
     box-shadow: 0 10px 10px hsla(223, 96%, 59%, 0.192);
+}
+.card-prod-dash .price{
+    font-size: 16px;
+    color: var(--colorTitre);
+    font-weight: 600;
 }

@@ -45,6 +45,7 @@
                                     <a href="{{ route('detailProdui',['id'=>$p->id]) }}">
                                         <h6 class="name-prod mt-0">{{ $p->nom }}</h6>
                                     </a>
+                                    <span class="price">1000 FC</span>
                                     <button class="btn btn-cart" wire:click.prevent="addTocards('{{ $p->id }}')" wire:loading.delay.attr='disabled'>
                                         <span class="icofont-ui-cart"></span>
                                     </button>
