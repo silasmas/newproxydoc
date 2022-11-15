@@ -70,7 +70,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profil', [ServiceController::class, 'profil'])->name('profil');
     Route::get('/mesAchats', [AchatController::class, 'mesAchats'])->name('mesAchats');
     Route::get('/historique', [ServiceController::class, 'historique'])->name('historique');
-    Route::get('/cl_pharmacie', [ActeController::class, 'index'])->name('cl_pharmacie');
+
 
     Route::get('/detailProduitAcheter/{id}', [AchatController::class, 'show'])->name('detailProduitAcheter');
     Route::get('/detailHistorique/{id}', [ServiceController::class, 'detailHistorique'])->name('detailHistorique');
@@ -78,6 +78,17 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/editprofil', [ServiceController::class, 'editprofil'])->name('editprofil');
     Route::post('/editPassword', [ServiceController::class, 'editPassword'])->name('editPassword');
+
+
+    Route::get('/cl_pharmacie', [ActeController::class, 'index'])->name('cl_pharmacie');
+    Route::get('/cl_annuaire', [ActeController::class, 'annuaire'])->name('cl_annuaire');
+    Route::get('/cl_specialiste', [ActeController::class, 'specialiste'])->name('cl_specialiste');
+    Route::get('/cl_chat', [ActeController::class, 'chat'])->name('cl_chat');
+    Route::get('/cl_rendezvous', [ActeController::class, 'rendezvous'])->name('cl_rendezvous');
+    Route::get('/cl_achats', [ActeController::class, 'achats'])->name('cl_achats');
+    Route::get('/cl_historique', [ActeController::class, 'historique'])->name('cl_historique');
+    Route::get('/cl_abonner', [ActeController::class, 'abonner'])->name('cl_abonner');
+    Route::get('/cl_ordonance', [ActeController::class, 'ordonance'])->name('cl_ordonance');
 });
 
 require __DIR__ . '/auth.php';

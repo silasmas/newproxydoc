@@ -17,6 +17,38 @@ class ActeController extends Controller
     {
         return view('pages.client.pharmacie');
     }
+    public function ordonance()
+    {
+        return view('pages.client.ordonance');
+    }
+    public function annuaire()
+    {
+        return view('pages.client.annuaire');
+    }
+    public function specialiste()
+    {
+        return view('pages.client.specialiste');
+    }
+    public function chat()
+    {
+        return view('pages.client.chat');
+    }
+    public function rendezvous()
+    {
+        return view('pages.client.rendezvous');
+    }
+    public function achats()
+    {
+        return view('pages.client.achats');
+    }
+    public function historique()
+    {
+        return view('pages.client.historique');
+    }
+    public function abonner()
+    {
+        return view('pages.client.abonner');
+    }
 
     /**
      * Show the form for creating a new resource.

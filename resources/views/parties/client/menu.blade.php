@@ -37,7 +37,7 @@
                         </span></a>
                         </li>
                         <li class="menu-item {{ Route::current()->getName()==""?"active":"" }}">
-                          <a class="item-link" href="">
+                          <a class="item-link" href="{{ route('cl_ordonance') }}">
                             <span class="link-icon icofont-prescription"></span>
                             <span class="link-text">Ordonance</span></a>
                         </li>
@@ -51,28 +51,28 @@
                     </a>
                     <ul class="sub">
                         <li class="menu-item">
-                          <a class="item-link" href="">
+                          <a class="item-link" href="{{ route('cl_annuaire') }}">
                             <span class="link-icon icofont-prescription"></span>
                             <span class="link-text">
                             Annuaire des médecins
                         </span></a>
                         </li>
                         <li class="menu-item">
-                          <a class="item-link" href="">
+                          <a class="item-link" href="{{ route('cl_specialiste') }}">
                             <span class="link-icon icofont-doctor-alt"></span>
                             <span class="link-text">
                             Trouver un spécialiste
                         </span></a>
                         </li>
                         <li class="menu-item">
-                          <a class="item-link" href="">
+                          <a class="item-link" href="{{ route('cl_chat') }}">
                             <span class="link-icon icofont-whatsapp"></span>
                             <span class="link-text">
                             Parler à un médecin
                         </span></a>
                         </li>
                         <li class="menu-item">
-                          <a class="item-link" href="">
+                          <a class="item-link" href="{{ route('cl_rendezvous') }}">
                             <span class="link-icon icofont-whatsapp"></span>
                             <span class="link-text">
                             Prendre un rendez-vous
@@ -80,20 +80,35 @@
                         </li>
                       </ul>
                   </li>
+<<<<<<< Updated upstream
                   <li class="menu-item link-hover">
                     <a class="item-link" href="">
+=======
+                  <li class="menu-item">
+                    <a class="item-link" href="{{ route('cl_achats') }}">
+>>>>>>> Stashed changes
                       <span class="link-icon icofont-cart"></span>
                       <span class="link-text">Mes achats</span>
                     </a>
                   </li>
+<<<<<<< Updated upstream
                   <li class="menu-item link-hover">
                     <a class="item-link" href="">
+=======
+                  <li class="menu-item">
+                    <a class="item-link" href="{{ route('cl_historique') }}">
+>>>>>>> Stashed changes
                       <span class="link-icon icofont-list"></span>
                       <span class="link-text">Historique</span>
                     </a>
                   </li>
+<<<<<<< Updated upstream
                   <li class="menu-item link-hover">
                     <a class="item-link" href="">
+=======
+                  <li class="menu-item">
+                    <a class="item-link" href="{{ route('cl_abonner') }}">
+>>>>>>> Stashed changes
                       <span class="link-icon icofont-patient-bed"></span>
                       <span class="link-text">S'abonner</span>
                     </a>
