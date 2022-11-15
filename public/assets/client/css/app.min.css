@@ -15,6 +15,9 @@
     background: var(--primaryColor);
     box-shadow: none!important;
 }
+.swal-button:hover{
+    box-shadow: 0 10px 10px hsla(223, 96%, 59%, 0.192);
+}
 .swal-title{
     font-size: 24px;
     color: var(--colorTitre);
