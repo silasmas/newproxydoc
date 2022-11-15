@@ -22,6 +22,13 @@
                   <li class="menu-item">
                     <span class="group-title">Medicine</span>
                   </li>
+                  <li class="menu-item link-hover">
+                    <a class="item-link" href="{{ route('dashboard') }}">
+                      <span class="link-icon icofont-home"></span>
+                      <span class="link-text">Accueil</span>
+                    </a>
+                  </li>
+
                   <li class="menu-item has-sub link-hover">
                     <a class="item-link" href="#">
                       <span class="link-icon icofont-thermometer-alt"></span>
@@ -80,24 +87,20 @@
                         </li>
                       </ul>
                   </li>
-
                   <li class="menu-item link-hover">
-                  <li class="menu-item">
                     <a class="item-link" href="{{ route('cl_achats') }}">
                       <span class="link-icon icofont-cart"></span>
                       <span class="link-text">Mes achats</span>
                     </a>
                   </li>
-
                   <li class="menu-item link-hover">
-                  <li class="menu-item">
                     <a class="item-link" href="{{ route('cl_historique') }}">
                       <span class="link-icon icofont-list"></span>
                       <span class="link-text">Historique</span>
                     </a>
                   </li>
 
-                  <li class="menu-item link-hover">
+                  {{-- <li class="menu-item link-hover"> --}}
                   <li class="menu-item">
                     <a class="item-link" href="{{ route('cl_abonner') }}">
 
