@@ -80,35 +80,35 @@
                         </li>
                       </ul>
                   </li>
-<<<<<<< Updated upstream
+
                   <li class="menu-item link-hover">
                     <a class="item-link" href="">
-=======
+
                   <li class="menu-item">
                     <a class="item-link" href="{{ route('cl_achats') }}">
->>>>>>> Stashed changes
+
                       <span class="link-icon icofont-cart"></span>
                       <span class="link-text">Mes achats</span>
                     </a>
                   </li>
-<<<<<<< Updated upstream
+
                   <li class="menu-item link-hover">
                     <a class="item-link" href="">
-=======
+
                   <li class="menu-item">
                     <a class="item-link" href="{{ route('cl_historique') }}">
->>>>>>> Stashed changes
+
                       <span class="link-icon icofont-list"></span>
                       <span class="link-text">Historique</span>
                     </a>
                   </li>
-<<<<<<< Updated upstream
+
                   <li class="menu-item link-hover">
                     <a class="item-link" href="">
-=======
+
                   <li class="menu-item">
                     <a class="item-link" href="{{ route('cl_abonner') }}">
->>>>>>> Stashed changes
+
                       <span class="link-icon icofont-patient-bed"></span>
                       <span class="link-text">S'abonner</span>
                     </a>
