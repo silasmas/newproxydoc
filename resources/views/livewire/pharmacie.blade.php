@@ -5,7 +5,9 @@
         <div class="row mb-5">
             <div class="col col-lg-9">
                 <div class="input-group rounded">
-                    <input style="padding-top: 16px!important; padding-bottom: 16px!important;" type="search" class="form-control rounded fs-4" placeholder="Trouver un produit" aria-label="Trouver un produit" aria-describedby="search-addon" />
+                    <input style="padding-top: 16px!important; padding-bottom: 16px!important;" type="search" class="form-control rounded fs-4"
+                    placeholder="Trouver un produit" aria-label="Trouver un produit" aria-describedby="search-addon"
+                    wire:model.debounce.500ms="search" name="s"/>
                     <button style="padding-top: 10px!important; padding-bottom: 22px!important;" class="input-group-text btn btn-primary fs-4 shadow-0" id="search-addon">
                       <i class="fas fa-search"></i>
                     </button>
@@ -33,9 +35,9 @@
                     @endforelse
                                         </p>
                                     </div>
-                                    <div class="card-footer pe-sm-4 pe-5 d-flex justify-content-between">
-                                        <a href="#" class="card-link fs-lg-4" wire:click.prevent="addTocards('{{ $p->id }}')" title="Ajouter au panier">
-                                            <i class="flaticon-shopping-cart align-middle"></i> <span class="">Ajouter au panier</span>
+                                    <div class="card-footer pe-sm-4 pe-5 d-flex justify-content-between" >
+                                        <a href="#"  class="card-link fs-lg-4" wire:click.prevent="addTocards('{{ $p->id }}')" title="Ajouter au panier">
+                                            <i class="flaticon-shopping-cart align-middle"></i> <span class="" wire:loading.class='disabled'>Ajouter au panier</span>
                                         </a>
                                         <a href="{{ route('detailProdui',['id'=>$p->id]) }}" class="card-link text-dark" title="Voir en detail">
                                             <i class="fa fa-arrow-right align-bottom"></i>

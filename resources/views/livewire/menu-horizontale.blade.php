@@ -1,5 +1,6 @@
-<!-- Horizontal navbar -->
-<div id="navbar1" class="app-navbar horizontal" wire:poll>
+<div>
+    <!-- Horizontal navbar -->
+<div id="navbar1" class="app-navbar horizontal">
     <div class="navbar-wrap">
 
         <button class="no-style navbar-toggle navbar-open d-lg-none">
@@ -14,7 +15,7 @@
                 <input
                   class="form-control autocomplete-control topbar-search"
                   type="search"
-                  placeholder="Type page's title"
+                  placeholder="Trouver un médecin par son nom"
                   autocomplete="on"
                   data-source="{{ asset('assets/client/data/search-menu.json') }}"
                 >
@@ -26,7 +27,7 @@
 
 
         <div class="app-actions" x-data="{nbr:{{ Cart::count() }},
-            tab:{{ Cart::content() }}}">
+            tab:{{ Cart::content() }}}" >
           <div class="dropdown item">
             <button
               class="no-style dropdown-toggle"
@@ -157,3 +158,5 @@
   </div>
 
   <!-- end Horizontal navbar -->
+
+</div>
