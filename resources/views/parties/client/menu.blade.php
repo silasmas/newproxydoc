@@ -82,30 +82,22 @@
                   </li>
 
                   <li class="menu-item link-hover">
-                    <a class="item-link" href="">
-
                   <li class="menu-item">
                     <a class="item-link" href="{{ route('cl_achats') }}">
-
                       <span class="link-icon icofont-cart"></span>
                       <span class="link-text">Mes achats</span>
                     </a>
                   </li>
 
                   <li class="menu-item link-hover">
-                    <a class="item-link" href="">
-
                   <li class="menu-item">
                     <a class="item-link" href="{{ route('cl_historique') }}">
-
                       <span class="link-icon icofont-list"></span>
                       <span class="link-text">Historique</span>
                     </a>
                   </li>
 
                   <li class="menu-item link-hover">
-                    <a class="item-link" href="">
-
                   <li class="menu-item">
                     <a class="item-link" href="{{ route('cl_abonner') }}">
 
