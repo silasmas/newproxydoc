@@ -28,8 +28,9 @@
     <link href="{{ asset('js/sweetalert/sweetalert.css') }}" rel="stylesheet">
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ asset('assets/client/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/client/css/app.min.css') }}">
     @livewireStyles()
-    
+
   </head>
 
 

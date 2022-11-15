@@ -1,4 +1,4 @@
-@include('parties.client.entete')
+ @include('parties.client.entete')
 
 @include('livewire.menu-horizontale')
 

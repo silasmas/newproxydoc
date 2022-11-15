@@ -2,20 +2,124 @@
     <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
 
     <div class="main-content-wrap">
-        <header class="page-header">
-            <h1 class="page-title">Liste des médicaments</h1>
-        </header>
-        <div class="row">
-            <div class="col col-lg-9" style="margin-top: 50px">
-                <div class="form-group d-xl-block " id="top-search-form">
-                    <input type="text" class="form-control search-input" name="s" placeholder="Trouver un produit"
+        <div class="d-flex align-items-center justify-content-between mb-5">
+            <h1 class="page-title mt-0 mb-0">Liste des médicaments</h1>
+            <div class="block-tools d-flex align-items-center">
+                <div class="block-search d-flex align-items-center">
+                    <div class="content-input d-flex align-items-center">
+                        <input type="text" class="form-control search-input" name="s" placeholder="Trouver un produit"
                         value="" wire:model.debounce.500ms="search">
+                    </div>
+                    <div class="block-icon-search">
+                        <div class="suffix-icon icofont-search"></div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="page-content">
-            <div class="row">
+            <div class="row g-lg-4 g-3">
                 @forelse ($allproduits as $p)
+                <div class="col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                    <div class="card card-prod-dash">
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="{{ route('detailProdui',['id'=>$p->id]) }}">
+                                    <div class="block-img-prod">
+                                        <img src="{{ asset('assets/img/department-1.jpg') }}" class="card-img-top" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8">
+                                <div class="block-detail-prod">
+                                    <span class="category">Médicament</span>
+                                    <a href="{{ route('detailProdui',['id'=>$p->id]) }}">
+                                        <h6 class="name-prod mt-0">{{ $p->nom }}</h6>
+                                    </a>
+                                    <button class="btn btn-cart" wire:click.prevent="addTocards('{{ $p->id }}')" wire:loading.delay.attr='disabled'>
+                                        <span class="icofont-ui-cart"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @empty
+                <span>Aucun produit trouvé</span>
+                @endforelse
+
+                {{-- <div class="col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+                    <div class="card card-prod-dash">
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="#">
+                                    <div class="block-img-prod">
+                                        <img src="{{ asset('assets/img/department-1.jpg') }}" class="card-img-top" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8">
+                                <div class="block-detail-prod">
+                                    <span class="category">Médicament</span>
+                                    <a href="#">
+                                        <h6 class="name-prod mt-0">Aspirine</h6>
+                                    </a>
+                                    <button class="btn btn-cart">
+                                        <span class="icofont-ui-cart"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+                    <div class="card card-prod-dash">
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="#">
+                                    <div class="block-img-prod">
+                                        <img src="{{ asset('assets/img/department-1.jpg') }}" class="card-img-top" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8">
+                                <div class="block-detail-prod">
+                                    <span class="category">Médicament</span>
+                                    <a href="#">
+                                        <h6 class="name-prod mt-0">Aspirine</h6>
+                                    </a>
+                                    <button class="btn btn-cart">
+                                        <span class="icofont-ui-cart"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+                    <div class="card card-prod-dash">
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="#">
+                                    <div class="block-img-prod">
+                                        <img src="{{ asset('assets/img/department-1.jpg') }}" class="card-img-top" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-8">
+                                <div class="block-detail-prod">
+                                    <span class="category">Médicament</span>
+                                    <a href="#">
+                                        <h6 class="name-prod mt-0">Aspirine</h6>
+                                    </a>
+                                    <button class="btn btn-cart">
+                                        <span class="icofont-ui-cart"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
+                {{-- @forelse ($allproduits as $p)
                 <div class="col-12 col-md-4">
                     <div class="card department bg-light bg-gradient">
                         <img src="{{ asset('assets/img/department-1.jpg') }}" class="card-img-top" width="100"
@@ -47,13 +151,13 @@
                                     ></span>
                                 </button>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
                 @empty
                 <span>Aucun produit trouvé</span>
-                @endforelse
+                @endforelse --}}
                 <div class="col-12 form-group text-center">
 
                     {{ $allproduits->links() }}

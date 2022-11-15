@@ -5,9 +5,14 @@
 
             <button class="no-style navbar-toggle navbar-close icofont-close-line d-lg-none"></button>
             <div class="app-logo">
-              <div class="logo-wrap">
+              <div class="logo-wrap d-flex align-items-center">
                 <!-- Image logo -->
-                <img src="{{ asset('assets/logo/11-12.png') }}" alt="" width="147" height="100" class="logo-img">
+                <div class="block-logo">
+                    <img src="{{ asset('assets/logo/logo-app.png') }}" alt="" width="147" height="100" class="logo-img">
+                </div>
+                <div class="name-brand">
+                    Proxy Doc
+                </div>
                 <!-- end Image logo -->
               </div>
             </div>
@@ -17,7 +22,7 @@
                   <li class="menu-item">
                     <span class="group-title">Medicine</span>
                   </li>
-                  <li class="menu-item has-sub">
+                  <li class="menu-item has-sub link-hover">
                     <a class="item-link" href="#">
                       <span class="link-icon icofont-thermometer-alt"></span>
                       <span class="link-text">ProxyChem</span>
@@ -38,7 +43,7 @@
                         </li>
                       </ul>
                   </li>
-                  <li class="menu-item has-sub">
+                  <li class="menu-item has-sub link-hover">
                     <a class="item-link" href="#">
                       <span class="link-icon icofont-stethoscope-alt"></span>
                       <span class="link-text">ProxyChat</span>
@@ -82,19 +87,19 @@
                         </li>
                       </ul>
                   </li>
-                  <li class="menu-item">
+                  <li class="menu-item link-hover">
                     <a class="item-link" href="">
                       <span class="link-icon icofont-cart"></span>
                       <span class="link-text">Mes achats</span>
                     </a>
                   </li>
-                  <li class="menu-item">
+                  <li class="menu-item link-hover">
                     <a class="item-link" href="">
                       <span class="link-icon icofont-list"></span>
                       <span class="link-text">Historique</span>
                     </a>
                   </li>
-                  <li class="menu-item">
+                  <li class="menu-item link-hover">
                     <a class="item-link" href="">
                       <span class="link-icon icofont-patient-bed"></span>
                       <span class="link-text">S'abonner</span>
