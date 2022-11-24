@@ -3,7 +3,7 @@
     <div class="main-content-wrap">
         <div class="d-flex align-items-center justify-content-between mb-5">
             <h1 class="page-title mt-0 mb-0">
-                Listes des médecins spécialistes
+                Parler à un médecin
             </h1>
             <div class="block-tools d-flex align-items-center">
                 <div class="block-search d-flex align-items-center">
@@ -38,9 +38,25 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
-                            <a href="#" class="btn btn-chat">
-                                <span class="link-icon icofont-chat"></span>
-                            </a>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Chatter
+                                </a>
+                                <a href="tel:+2340000000" class="btn btn-call">
+                                    Appeler
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -52,9 +68,25 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
-                            <a href="#" class="btn btn-chat">
-                                <span class="link-icon icofont-chat"></span>
-                            </a>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Chatter
+                                </a>
+                                <a href="tel:+2340000000" class="btn btn-call">
+                                    Appeler
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,9 +98,25 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
-                            <a href="#" class="btn btn-chat">
-                                <span class="link-icon icofont-chat"></span>
-                            </a>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Chatter
+                                </a>
+                                <a href="tel:+2340000000" class="btn btn-call">
+                                    Appeler
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,9 +128,25 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
-                            <a href="#" class="btn btn-chat">
-                                <span class="link-icon icofont-chat"></span>
-                            </a>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Chatter
+                                </a>
+                                <a href="tel:+2340000000" class="btn btn-call">
+                                    Appeler
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,9 +158,25 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
-                            <a href="#" class="btn btn-chat">
-                                <span class="link-icon icofont-chat"></span>
-                            </a>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Chatter
+                                </a>
+                                <a href="tel:+2340000000" class="btn btn-call">
+                                    Appeler
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -108,9 +188,25 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
-                            <a href="#" class="btn btn-chat">
-                                <span class="link-icon icofont-chat"></span>
-                            </a>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Chatter
+                                </a>
+                                <a href="tel:+2340000000" class="btn btn-call">
+                                    Appeler
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -122,13 +218,28 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
-                            <a href="#" class="btn btn-chat">
-                                <span class="link-icon icofont-chat"></span>
-                            </a>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Chatter
+                                </a>
+                                <a href="tel:+2340000000" class="btn btn-call">
+                                    Appeler
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-3 col-12 col-md-6">
                     <div class="card h-100 card-upload">
                         <div class="block-detail-doc text-center">
@@ -137,9 +248,25 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
-                            <a href="#" class="btn btn-chat">
-                                <span class="link-icon icofont-chat"></span>
-                            </a>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Chatter
+                                </a>
+                                <a href="tel:+2340000000" class="btn btn-call">
+                                    Appeler
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
