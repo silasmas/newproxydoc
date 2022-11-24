@@ -385,6 +385,9 @@
     border: none;
     padding: 3px 12px;
 }
+.dropdown-menu .list > li > a .icon{
+    margin-left: auto;
+}
 .card-table .table .badge.succes{
     color: #17ca80;
     background: #d9ffef;
