@@ -35,7 +35,7 @@
                             <div class="col-4">
                                 <a href="{{ route('detailProdui',['id'=>$p->id]) }}">
                                     <div class="block-img-prod">
-                                        <img src="{{ asset('assets/img/department-1.jpg') }}" class="card-img-top" alt="">
+                                        <img src="{{ asset('assets/img/shop1.png') }}" class="card-img-top" alt="">
                                     </div>
                                 </a>
                             </div>
