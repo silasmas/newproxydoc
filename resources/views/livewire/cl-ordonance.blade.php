@@ -32,7 +32,7 @@
             <div class="row g-lg-4 g-3">
                 <div class="col-lg-3 col-12 col-md-6">
                     <div class="card h-100 card-upload">
-                        <div class="block-add">
+                        <div class="block-add" data-bs-toggle="modal" data-bs-target="#modal-new-file">
                             <span class="link-icon icofont-plus"></span>
                             <p>Ajouter une ordonnance</p>
                         </div>
@@ -69,6 +69,61 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-new-file" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: var(--colorTitre)">Ajouter une ordonnance</h1>
+                <button type="button" class="btn-close btn-modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="icon icofont-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group row g-2">
+                        <div class="col-12">
+                            <div class="block-ulpload-file-lg">
+                                <input type="file" name="file" id="input-file" accept=".pdf,.jpeg,.png,.jpg">
+                                <label for="input-file">
+                                    <span class="icon icofont-cloud-upload"></span>
+                                    <p>Cliquez pour télécharger un fichier</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 d-none col-file">
+                            <ul class="list-file">
+                                <li class="d-flex align-items-center">
+                                    <div class="block-remove">
+                                        <a href="#" class="btn btn-remove">
+                                            <span class="icon icofont-bin"></span>
+                                        </a>
+                                    </div>
+                                    <i class="icon icofont-file-file"></i>
+                                    <div class="block-detail">
+                                        <div class="names">
+                                            <p class="name-file-upload"></p>
+                                            <p class="pourc">
+                                                <span class="icon icofont-check-alt" style="font-size: 20px; color: #07c451"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 d-flex justify-content-end align-items-center d-none col-file">
+                            <input type="text" class="form-control" placeholder="Nom du fichier" name="file-name">
+                        </div>
+                        <div class="col-12 d-flex justify-content-end align-items-center mt-4">
+                            <button class="btn btn-add-action">
+                                Valider
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

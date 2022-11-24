@@ -61,7 +61,7 @@
                           <span class="desc" x-text="item.model.nom"></span>
                           <span class="date" x-text="item.qty+' X '+ item.model.monaie + item.price"></span>
                         </div>
-                        <span class="icon icofont-ui-delete" x-on:click.prevent="$wire.deletConfirm(item.rowId)"></span>
+                        <span class="icon icofont-ui-delete ms-auto" x-on:click.prevent="$wire.deletConfirm(item.rowId)"></span>
                       </a>
                     </li>
                 </template>
