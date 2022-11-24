@@ -48,6 +48,7 @@
                                 <h6 class="name">Ordonnance de malaria</h6>
                                 <p>Ref: 038KZN</p>
                                 <p>Enregistrée le : 11/11/2022</p>
+                                <div class="badge success">Validée</div>
                             </div>
                         </div>
                     </div>
@@ -62,164 +63,12 @@
                                 <h6 class="name">Ordonnance de malaria</h6>
                                 <p>Ref: 038KZN</p>
                                 <p>Enregistrée le : 11/11/2022</p>
+                                <div class="badge warning">En attente</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card card-upload">
-                        <div class="row g-1">
-                            <div class="col-4 d-flex align-items-center justify-content-center">
-                                <span class="link-icon icofont-list icon-ordonnance"></span>
-                            </div>
-                            <div class="col-8">
-                                <h6 class="name">Ordonnance de malaria</h6>
-                                <p>Ref: 038KZN</p>
-                                <p>Enregistrée le : 11/11/2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

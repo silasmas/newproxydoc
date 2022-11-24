@@ -380,15 +380,18 @@
     color: var(--colorTitre);
     margin-left: 5px;
 }
-.card-table .table .badge{
+.card-table .table .badge, .card-upload .badge{
     font-size: 11px;
     border: none;
     padding: 3px 12px;
 }
+.card-upload .badge{
+    margin-top: 5px;
+}
 .dropdown-menu .list > li > a .icon{
     margin-left: auto;
 }
-.card-table .table .badge.succes{
+.card-table .table .badge.succes, .card-upload .badge.success{
     color: #17ca80;
     background: #d9ffef;
 }
@@ -396,7 +399,7 @@
     color: #db2626;
     background: #fcd0d0;
 }
-.card-table .table .badge.warning{
+.card-table .table .badge.warning,.card-upload .badge.warning{
     color: #f18d2e;
     background: #ffe6cd;
 }
