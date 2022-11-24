@@ -233,3 +233,167 @@
     color: var(--colorTitre);
     font-weight: 600;
 }
+.card-upload{
+    box-shadow: 0 5px 24px rgba(81, 99, 149, 0.08);
+    background: var(--colorWhite);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 0;
+}
+.card-upload .block-add{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #d9e1f3;
+    border-radius: 8px;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+
+}
+.card-upload .block-add p{
+    color: var(--colorParagraph);
+    font-size: 14px;
+}
+.card-upload .block-add .link-icon{
+    width: 30px;
+    height: 30px;
+    background: var(--primaryColor);
+    color: var(--colorWhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+.card-upload .name{
+    font-size: 13px;
+    margin-bottom: 3px;
+    line-height: 100%;
+    color: var(--colorTitre);
+    margin-top: 0;
+}
+.card-upload p{
+    color: var(--colorParagraph);
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.card-upload .icon-ordonnance{
+    color: var(--primaryColor);
+    font-size: 45px;
+}
+.card-upload .block-detail-doc .block-avatar-doc{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-upload .block-detail-doc .block-avatar-doc img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+
+}
+.card-upload .block-detail-doc .name-doc{
+    font-size: 15px;
+    color: var(--colorTitre);
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.card-upload .block-detail-doc .function{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.card-upload .block-detail-doc .btn-chat{
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: var(--bg-fond);
+    box-shadow: none;
+    color: var(--primaryColor);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.card-upload .block-detail-doc .btn-chat:hover {
+    background: var(--primaryColor);
+    color: var(--colorWhite);
+    box-shadow: 0 10px 10px hsla(223, 96%, 59%, 0.192);
+  }
+.btn-add-action{
+    color: var(--colorWhite);
+    font-size: 14px;
+    background: var(--primaryColor);
+    box-shadow: none;
+}
+.btn-add-action:hover{
+    box-shadow: 0 10px 10px hsla(223, 96%, 59%, 0.192);
+    color: var(--colorWhite);
+}
+.card-table{
+    box-shadow: 0 5px 24px rgba(81, 99, 149, 0.08);
+    background: var(--colorWhite);
+    border-radius: 12px;
+    padding: 30px 20px;
+    margin-bottom: 0;
+}
+.card-table h6{
+    color: var(--colorTitre);
+    margin-top: 0;
+}
+.card-table .table thead tr th{
+    background: var(--bg-fond);
+    border-bottom: none;
+    color: var(--primaryColor);
+    font-weight: 500;
+}
+.card-table .table tbody td{
+    color: var(--colorParagraph);
+    background: transparent;
+    border-bottom: 1px solid #f0f2f7!important;
+}
+.card-table .table .block-detail-doc-sm{
+    white-space: nowrap;
+    align-items: center;
+}
+.card-table .table .block-detail-doc-sm .avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+.card-table .table .block-detail-doc-sm .avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.card-table .table .block-detail-doc-sm span{
+    color: var(--colorTitre);
+    margin-left: 5px;
+}
+.card-table .table .badge{
+    font-size: 11px;
+    border: none;
+    padding: 3px 12px;
+}
+.card-table .table .badge.succes{
+    color: #17ca80;
+    background: #d9ffef;
+}
+.card-table .table .badge.danger{
+    color: #db2626;
+    background: #fcd0d0;
+}
+.card-table .table .badge.warning{
+    color: #f18d2e;
+    background: #ffe6cd;
+}

@@ -7,7 +7,7 @@
 @section('content')
 <main class="main-content">
     @livewire("cl-ordonance")
-   </main>
+</main>
 @endsection
 
 @section('autreScript')
