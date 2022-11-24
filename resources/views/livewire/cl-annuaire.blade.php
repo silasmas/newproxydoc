@@ -3,7 +3,7 @@
     <div class="main-content-wrap">
         <div class="d-flex align-items-center justify-content-between mb-5">
             <h1 class="page-title mt-0 mb-0">
-                Listes des médecins
+               Annuaire des médecins
             </h1>
             <div class="block-tools d-flex align-items-center">
                 <div class="block-search d-flex align-items-center">
@@ -30,138 +30,349 @@
         </div>
         <div class="page-content">
             <div class="row g-lg-4 g-3">
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                <div class="col-lg-4 col-12 col-md-6">
+                    <div class="card card-upload">
+                        <div class="row  align-items-center w-100">
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <div class="block-avatar-doc block-avatar-doc-sm">
+                                        <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
+                            <div class="col-lg-6">
+                                <div class="block-detail-doc  ">
+                                    <h4 class="name-doc">John doe</h4>
+                                    <p class="function">Pédiatre</p>
+                                    <div class="net-work justify-content-start mb-0">
+                                        <a href="#">
+                                            <i class="link icofont-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <a href="#" class="btn btn-chat mb-0">Profil</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                <div class="col-lg-4 col-12 col-md-6">
+                    <div class="card card-upload">
+                        <div class="row  align-items-center w-100">
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <div class="block-avatar-doc block-avatar-doc-sm">
+                                        <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
+                            <div class="col-lg-6">
+                                <div class="block-detail-doc  ">
+                                    <h4 class="name-doc">John doe</h4>
+                                    <p class="function">Pédiatre</p>
+                                    <div class="net-work justify-content-start mb-0">
+                                        <a href="#">
+                                            <i class="link icofont-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <a href="#" class="btn btn-chat mb-0">Profil</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                <div class="col-lg-4 col-12 col-md-6">
+                    <div class="card card-upload">
+                        <div class="row  align-items-center w-100">
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <div class="block-avatar-doc block-avatar-doc-sm">
+                                        <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
+                            <div class="col-lg-6">
+                                <div class="block-detail-doc  ">
+                                    <h4 class="name-doc">John doe</h4>
+                                    <p class="function">Pédiatre</p>
+                                    <div class="net-work justify-content-start mb-0">
+                                        <a href="#">
+                                            <i class="link icofont-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <a href="#" class="btn btn-chat mb-0">Profil</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                <div class="col-lg-4 col-12 col-md-6">
+                    <div class="card card-upload">
+                        <div class="row  align-items-center w-100">
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <div class="block-avatar-doc block-avatar-doc-sm">
+                                        <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
+                            <div class="col-lg-6">
+                                <div class="block-detail-doc  ">
+                                    <h4 class="name-doc">John doe</h4>
+                                    <p class="function">Pédiatre</p>
+                                    <div class="net-work justify-content-start mb-0">
+                                        <a href="#">
+                                            <i class="link icofont-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <a href="#" class="btn btn-chat mb-0">Profil</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                <div class="col-lg-4 col-12 col-md-6">
+                    <div class="card card-upload">
+                        <div class="row  align-items-center w-100">
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <div class="block-avatar-doc block-avatar-doc-sm">
+                                        <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
+                            <div class="col-lg-6">
+                                <div class="block-detail-doc  ">
+                                    <h4 class="name-doc">John doe</h4>
+                                    <p class="function">Pédiatre</p>
+                                    <div class="net-work justify-content-start mb-0">
+                                        <a href="#">
+                                            <i class="link icofont-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <a href="#" class="btn btn-chat mb-0">Profil</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                <div class="col-lg-4 col-12 col-md-6">
+                    <div class="card card-upload">
+                        <div class="row  align-items-center w-100">
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <div class="block-avatar-doc block-avatar-doc-sm">
+                                        <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
+                            <div class="col-lg-6">
+                                <div class="block-detail-doc  ">
+                                    <h4 class="name-doc">John doe</h4>
+                                    <p class="function">Pédiatre</p>
+                                    <div class="net-work justify-content-start mb-0">
+                                        <a href="#">
+                                            <i class="link icofont-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <a href="#" class="btn btn-chat mb-0">Profil</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                <div class="col-lg-4 col-12 col-md-6">
+                    <div class="card card-upload">
+                        <div class="row  align-items-center w-100">
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <div class="block-avatar-doc block-avatar-doc-sm">
+                                        <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
+                            <div class="col-lg-6">
+                                <div class="block-detail-doc  ">
+                                    <h4 class="name-doc">John doe</h4>
+                                    <p class="function">Pédiatre</p>
+                                    <div class="net-work justify-content-start mb-0">
+                                        <a href="#">
+                                            <i class="link icofont-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <a href="#" class="btn btn-chat mb-0">Profil</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                <div class="col-lg-4 col-12 col-md-6">
+                    <div class="card card-upload">
+                        <div class="row  align-items-center w-100">
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <div class="block-avatar-doc block-avatar-doc-sm">
+                                        <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
+                            <div class="col-lg-6">
+                                <div class="block-detail-doc  ">
+                                    <h4 class="name-doc">John doe</h4>
+                                    <p class="function">Pédiatre</p>
+                                    <div class="net-work justify-content-start mb-0">
+                                        <a href="#">
+                                            <i class="link icofont-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <a href="#" class="btn btn-chat mb-0">Profil</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                <div class="col-lg-4 col-12 col-md-6">
+                    <div class="card card-upload">
+                        <div class="row  align-items-center w-100">
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <div class="block-avatar-doc block-avatar-doc-sm">
+                                        <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
+                            <div class="col-lg-6">
+                                <div class="block-detail-doc  ">
+                                    <h4 class="name-doc">John doe</h4>
+                                    <p class="function">Pédiatre</p>
+                                    <div class="net-work justify-content-start mb-0">
+                                        <a href="#">
+                                            <i class="link icofont-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <a href="#" class="btn btn-chat mb-0">Profil</a>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
-                            </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
-                            </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
-                            </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>

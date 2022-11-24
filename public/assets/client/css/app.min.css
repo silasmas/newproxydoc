@@ -298,6 +298,12 @@
     margin-left: auto;
     margin-right: auto;
 }
+.card-upload .block-detail-doc .block-avatar-doc-sm{
+    margin-top: 0;
+    width: 60Px;
+    height: 60px;
+    
+}
 .card-upload .block-detail-doc .block-avatar-doc img{
     width: 100%;
     height: 100%;
