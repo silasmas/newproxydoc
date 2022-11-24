@@ -15,7 +15,7 @@
                         <div class="suffix-icon icofont-search"></div>
                     </div>
                 </div> --}}
-                <a href="#" class="btn btn-add-action">
+                <a href="#" class="btn btn-add-action" data-bs-toggle="modal" data-bs-target="#modal-new-rdv">
                     Prendre rendez-vous
                 </a>
             </div>
@@ -47,6 +47,7 @@
                                         <th scope="col">Heure</th>
                                         <th scope="col">Date</th>
                                         <th scope="col">Etat</th>
+                                        <th scope="col">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -60,7 +61,8 @@
                                         <td>
                                             <div class="block-detail-doc-sm d-flex aling-items-center">
                                                 <div class="avatar">
-                                                    <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                                    <img src="{{ asset('assets/client/content/user-400-1.jpg') }}"
+                                                        alt="">
                                                 </div>
                                                 <span class="name">John Doe</span>
                                             </div>
@@ -77,6 +79,16 @@
                                         <td>
                                             <div class="badge succes">Succes</div>
                                         </td>
+                                        <td>
+                                            <div class="d-flex aling-items-center">
+                                                <button class="btn btn-edit">
+                                                    <span class="icon icofont-pencil"></span>
+                                                </button>
+                                                <button class="btn btn-delete">
+                                                    <span class="icon icofont-bin"></span>
+                                                </button>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -88,7 +100,8 @@
                                         <td>
                                             <div class="block-detail-doc-sm d-flex aling-items-center">
                                                 <div class="avatar">
-                                                    <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                                    <img src="{{ asset('assets/client/content/user-400-1.jpg') }}"
+                                                        alt="">
                                                 </div>
                                                 <span class="name">John Doe</span>
                                             </div>
@@ -105,6 +118,16 @@
                                         <td>
                                             <div class="badge danger">Danger</div>
                                         </td>
+                                        <td>
+                                            <div class="d-flex aling-items-center">
+                                                <button class="btn btn-edit">
+                                                    <span class="icon icofont-pencil"></span>
+                                                </button>
+                                                <button class="btn btn-delete">
+                                                    <span class="icon icofont-bin"></span>
+                                                </button>
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -116,7 +139,8 @@
                                         <td>
                                             <div class="block-detail-doc-sm d-flex aling-items-center">
                                                 <div class="avatar">
-                                                    <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                                    <img src="{{ asset('assets/client/content/user-400-1.jpg') }}"
+                                                        alt="">
                                                 </div>
                                                 <span class="name">John Doe</span>
                                             </div>
@@ -133,12 +157,294 @@
                                         <td>
                                             <div class="badge warning">Warning</div>
                                         </td>
+                                        <td>
+                                            <div class="d-flex aling-items-center">
+                                                <button class="btn btn-edit">
+                                                    <span class="icon icofont-pencil"></span>
+                                                </button>
+                                                <button class="btn btn-delete">
+                                                    <span class="icon icofont-bin"></span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            01
+                                        </td>
+                                        <td>
+                                            Rendez-vous de santé
+                                        </td>
+                                        <td>
+                                            <div class="block-detail-doc-sm d-flex aling-items-center">
+                                                <div class="avatar">
+                                                    <img src="{{ asset('assets/client/content/user-400-1.jpg') }}"
+                                                        alt="">
+                                                </div>
+                                                <span class="name">John Doe</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, accusamus.
+                                        </td>
+                                        <td>
+                                            12h:30
+                                        </td>
+                                        <td>
+                                            2022-10-21
+                                        </td>
+                                        <td>
+                                            <div class="badge succes">Succes</div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex aling-items-center">
+                                                <button class="btn btn-edit">
+                                                    <span class="icon icofont-pencil"></span>
+                                                </button>
+                                                <button class="btn btn-delete">
+                                                    <span class="icon icofont-bin"></span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            02
+                                        </td>
+                                        <td>
+                                            Rendez-vous de santé
+                                        </td>
+                                        <td>
+                                            <div class="block-detail-doc-sm d-flex aling-items-center">
+                                                <div class="avatar">
+                                                    <img src="{{ asset('assets/client/content/user-400-1.jpg') }}"
+                                                        alt="">
+                                                </div>
+                                                <span class="name">John Doe</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, accusamus.
+                                        </td>
+                                        <td>
+                                            12h:30
+                                        </td>
+                                        <td>
+                                            2022-10-21
+                                        </td>
+                                        <td>
+                                            <div class="badge danger">Danger</div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex aling-items-center">
+                                                <button class="btn btn-edit">
+                                                    <span class="icon icofont-pencil"></span>
+                                                </button>
+                                                <button class="btn btn-delete">
+                                                    <span class="icon icofont-bin"></span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            02
+                                        </td>
+                                        <td>
+                                            Rendez-vous de santé
+                                        </td>
+                                        <td>
+                                            <div class="block-detail-doc-sm d-flex aling-items-center">
+                                                <div class="avatar">
+                                                    <img src="{{ asset('assets/client/content/user-400-1.jpg') }}"
+                                                        alt="">
+                                                </div>
+                                                <span class="name">John Doe</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, accusamus.
+                                        </td>
+                                        <td>
+                                            12h:30
+                                        </td>
+                                        <td>
+                                            2022-10-21
+                                        </td>
+                                        <td>
+                                            <div class="badge warning">Warning</div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex aling-items-center">
+                                                <button class="btn btn-edit">
+                                                    <span class="icon icofont-pencil"></span>
+                                                </button>
+                                                <button class="btn btn-delete">
+                                                    <span class="icon icofont-bin"></span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            01
+                                        </td>
+                                        <td>
+                                            Rendez-vous de santé
+                                        </td>
+                                        <td>
+                                            <div class="block-detail-doc-sm d-flex aling-items-center">
+                                                <div class="avatar">
+                                                    <img src="{{ asset('assets/client/content/user-400-1.jpg') }}"
+                                                        alt="">
+                                                </div>
+                                                <span class="name">John Doe</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, accusamus.
+                                        </td>
+                                        <td>
+                                            12h:30
+                                        </td>
+                                        <td>
+                                            2022-10-21
+                                        </td>
+                                        <td>
+                                            <div class="badge succes">Succes</div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex aling-items-center">
+                                                <button class="btn btn-edit">
+                                                    <span class="icon icofont-pencil"></span>
+                                                </button>
+                                                <button class="btn btn-delete">
+                                                    <span class="icon icofont-bin"></span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            02
+                                        </td>
+                                        <td>
+                                            Rendez-vous de santé
+                                        </td>
+                                        <td>
+                                            <div class="block-detail-doc-sm d-flex aling-items-center">
+                                                <div class="avatar">
+                                                    <img src="{{ asset('assets/client/content/user-400-1.jpg') }}"
+                                                        alt="">
+                                                </div>
+                                                <span class="name">John Doe</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, accusamus.
+                                        </td>
+                                        <td>
+                                            12h:30
+                                        </td>
+                                        <td>
+                                            2022-10-21
+                                        </td>
+                                        <td>
+                                            <div class="badge danger">Danger</div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex aling-items-center">
+                                                <button class="btn btn-edit">
+                                                    <span class="icon icofont-pencil"></span>
+                                                </button>
+                                                <button class="btn btn-delete">
+                                                    <span class="icon icofont-bin"></span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            02
+                                        </td>
+                                        <td>
+                                            Rendez-vous de santé
+                                        </td>
+                                        <td>
+                                            <div class="block-detail-doc-sm d-flex aling-items-center">
+                                                <div class="avatar">
+                                                    <img src="{{ asset('assets/client/content/user-400-1.jpg') }}"
+                                                        alt="">
+                                                </div>
+                                                <span class="name">John Doe</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, accusamus.
+                                        </td>
+                                        <td>
+                                            12h:30
+                                        </td>
+                                        <td>
+                                            2022-10-21
+                                        </td>
+                                        <td>
+                                            <div class="badge warning">Warning</div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex aling-items-center">
+                                                <button class="btn btn-edit">
+                                                    <span class="icon icofont-pencil"></span>
+                                                </button>
+                                                <button class="btn btn-delete">
+                                                    <span class="icon icofont-bin"></span>
+                                                </button>
+                                            </div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-new-rdv" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: var(--colorTitre)">Prendre rendez-vous</h1>
+                <button type="button" class="btn-close btn-modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="icon icofont-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="form-group row g-2">
+                        <div class="col-12 d-flex justify-content-end align-items-center">
+                            <input type="text" class="form-control" placeholder="Titre" name="title">
+                        </div>
+                        <div class="col-12 d-flex justify-content-end align-items-center">
+                            <input type="text" class="form-control" placeholder="Nom médecin" name="name-doc">
+                        </div>
+                        <div class="col-12 d-flex justify-content-end align-items-center">
+                            <input type="text" class="form-control" placeholder="Motif" name="motif">
+                        </div>
+                        <div class="col-12 d-flex justify-content-end align-items-center">
+                            <input type="text" class="form-control" placeholder="date" name="date">
+                        </div>
+                        <div class="col-12 d-flex justify-content-end align-items-center">
+                            <input type="text" class="form-control" placeholder="Heure" name="date">
+                        </div>
+                        <div class="col-12 d-flex justify-content-end align-items-center mt-4">
+                            <button class="btn btn-add-action">
+                                Valider
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

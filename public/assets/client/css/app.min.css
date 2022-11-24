@@ -302,7 +302,7 @@
     margin-top: 0;
     width: 60Px;
     height: 60px;
-    
+
 }
 .card-upload .block-detail-doc .block-avatar-doc img{
     width: 100%;
@@ -319,7 +319,7 @@
 }
 .card-upload .block-detail-doc .function{
     font-size: 13px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .card-upload .block-detail-doc .net-work{
     display: flex;
@@ -380,15 +380,38 @@
     color: var(--colorWhite);
 }
 .card-table{
-    box-shadow: 0 5px 24px rgba(81, 99, 149, 0.08);
+    box-shadow: 0 5px 24px rgba(160, 181, 238, 0.08);
     background: var(--colorWhite);
     border-radius: 12px;
-    padding: 30px 20px;
+    padding: 30px 0px;
     margin-bottom: 0;
+}
+.card-table .table .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    width: 30px;
+    height: 30px;
+    color: var(--colorParagraph);
+    padding: 0;
+    margin-right: 5px;
+}
+.card-table .table .btn:hover{
+    color: var(--primaryColor);
+    background: var(--bg-fond);
+}
+.card-table .table .btn-delete:hover{
+    color: #db2626;
+    background: #fcd0d0;
+}
+.card-table .table .btn:last-child{
+    margin-right: 0;
 }
 .card-table h6{
     color: var(--colorTitre);
     margin-top: 0;
+    padding-left: 20px;
 }
 .card-table .table thead tr th{
     background: var(--bg-fond);

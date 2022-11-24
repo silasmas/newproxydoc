@@ -38,6 +38,22 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Profil
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -49,6 +65,22 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Profil
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -60,6 +92,22 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Profil
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,6 +119,22 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Profil
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,6 +146,22 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Profil
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,6 +173,22 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Profil
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,6 +200,22 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Profil
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -115,50 +227,22 @@
                             </div>
                             <h4 class="name-doc">John doe</h4>
                             <p class="function">Pédiatre</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                            <div class="net-work">
+                                <a href="#">
+                                    <i class="link icofont-facebook"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="link icofont-instagram"></i>
+                                </a>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-chat">
+                                    Profil
+                                </a>
                             </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
-                            </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-12 col-md-6">
-                    <div class="card h-100 card-upload">
-                        <div class="block-detail-doc text-center">
-                            <div class="block-avatar-doc">
-                                <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
-                            </div>
-                            <h4 class="name-doc">John doe</h4>
-                            <p class="function">Pédiatre</p>
                         </div>
                     </div>
                 </div>
