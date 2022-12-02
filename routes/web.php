@@ -19,7 +19,7 @@ use App\Http\Controllers\ActeController;
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    return view('pages.index');
 })->name('home');
 Route::get('/abonnement', [AbonnementController::class, 'index'])->name('abonnement');
 Route::get('/detailAbonnement', [AbonnementController::class, 'detail'])->name('detailAbonnement');
