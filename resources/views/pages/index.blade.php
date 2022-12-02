@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proxydoc | Accueil</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/logo/logo1.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
     <!-- <link rel="shortcut icon" href="images/Fichier 29.png" type="image/x-icon"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -23,8 +24,11 @@
                 <span></span>
             </div>
             <div class="container-fluid px-lg-5">
-                <a class="navbar-brand" href="index.html">
-                    <i class="bi bi-heart-pulse-fill"></i> Proxydoc
+                <a class="navbar-brand" href="{{ route('home')}}">
+                    {{-- <i class="bi bi-heart-pulse-fill"></i> --}}
+                    <img src="{{ asset('assets/img/proxy/11-12.png') }}" alt="Proxydoc" height="200"
+                               width="200" class="img-fluid">
+
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto me-auto mb-0">
@@ -40,15 +44,15 @@
                         <li class="nav-item">
                             <a class="nav-link me-4 scrollTop" href="#plans">Plans tarifaires</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
-                        </li>
+                        </li> --}}
                     </ul>
                     <div class="d-flex align-items-center btns">
-                        <a href="#" class="btn">
-                            S'incrire
+                        <a href="#plans" class="btn">
+                            S'abonner
                         </a>
-                        <a href="#" class="btn">
+                        <a href="{{ route('login') }}" class="btn">
                             Se connecter
                         </a>
                     </div>
@@ -81,15 +85,15 @@
                             <div class="col-lg-6 col-text">
                                 <h1>Connecter pour une meilleure <span>Santé</span></h1>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum architecto, sunt
-                                    voluptatem labore ut hic!
+                                    Construire un environnement sain qui soutient le développement de la communauté. Votre gestionnaire de cas personnel veillera à ce que vous receviez les meilleurs soins possibles.
                                 </p>
-                                <a href="#" class="btn">Commancez</a>
+                                <a href="#plans" class="btn">Commancez</a>
                             </div>
                             <div class="col-lg-6 d-flex align-items-center justify-content-center position-relative"
                                 style="position: relative;">
                                 <div class="card">
-                                    <img src="{{asset('assets/img/man.png')}}" alt="img" class="img-float">
+                                    <img src="{{ asset('assets/img/proxy/5-09.png') }}" alt="img" class="img-float">
+                                    {{-- <img src="{{asset('assets/img/man.png')}}" alt="img" class="img-float"> --}}
                                 </div>
                             </div>
                         </div>
@@ -104,10 +108,10 @@
                                 <div class="text-star">
                                     <h4>01</h4>
                                     <h5>
-                                        Items
+                                        ProxyChat
                                     </h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, porro?
+                                        Ce service vous permet d'être consulté en ligne par un medecin
                                     </p>
                                 </div>
                             </div>
@@ -115,39 +119,41 @@
                                 <div class="text-star">
                                     <h4>02</h4>
                                     <h5>
-                                        Items
+                                        Proxychem
                                     </h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, porro?
+                                        Ce service vous permet de trouver des médicaments et être servi à domicile...
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="block-icon">
-                                <i class="bi bi-heart-pulse-fill"></i>
+                                <img src="{{ asset('assets/img/proxy/11-12.png') }}" alt="Proxydoc" height="300"
+                                width="400" class="img-fluid">
+                                {{-- <i class="bi bi-heart-pulse-fill"></i> --}}
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="text-star">
-                                    <h4>01</h4>
+                                    <h4>03</h4>
                                     <h5>
-                                        Items
+                                        ProxyFamily
                                     </h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, porro?
+                                        La famille est precieuse, ProxyDoc vous dispose par ce service des medecins de famille à domicile...
                                     </p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="text-star">
-                                    <h4>01</h4>
+                                    <h4>04</h4>
                                     <h5>
-                                        Items
+                                        ProxyGency
                                     </h5>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, porro?
+                                        Ce service vous permet d'avoir notre service d'urgence 24h/7
                                     </p>
                                 </div>
                             </div>
@@ -164,8 +170,7 @@
                                     <div class="col-lg-6">
                                         <div class="text-center">
                                             <h2>Connecter pour une meilleure Santé</h2>
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos ab delectus
-                                                commodi sunt saepe a?</p>
+                                            <p>L’entreprise ProxyDoc s’assigne comme objectif de rendre les services médicaux à la population au travers des moyens de nouvelles technologies de l’information et de communication (NTIC).</p>
                                             <a href="#" class="btn">Savoir plus</a>
                                         </div>
                                     </div>
@@ -182,47 +187,25 @@
                             <div class="row justify-content-center g-lg-5 align-items-center">
                                 <div class="col-lg-7">
                                     <h2>Services</h2>
-                                    <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+                                    <h3>Vous servir est notre passion alors, <b>Connecter pour une meilleure Santé</b></h3>
                                     <p>
 
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, similique earum
-                                        eveniet aperiam cupiditate sequi pariatur. Asperiores hic sit esse?
+                                        Construire un environnement sain qui soutient le développement de la communauté. Votre gestionnaire de cas personnel veillera à ce que vous receviez les meilleurs soins possibles.
 
                                     </p>
                                     <!-- <a href="#" class="link">Savoir plus</a> -->
                                     <div class="row g-3">
+                                        @forelse ($service as $s)
                                         <div class="col-lg-6">
                                             <div class="card card-sm">
-                                                <h5>01</h5>
-                                                <h6>ProxyChem</h6>
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore,
-                                                    soluta!</p>
+                                                <h5>{{ $loop->index+1 }}</h5>
+                                                <h6>{{ $s->nom }}</h6>
+                                                <p>{{ $s->description }}</p>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="card card-sm">
-                                                <h5>01</h5>
-                                                <h6>ProxyChem</h6>
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore,
-                                                    soluta!</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="card card-sm">
-                                                <h5>01</h5>
-                                                <h6>ProxyChem</h6>
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore,
-                                                    soluta!</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="card card-sm">
-                                                <h5>01</h5>
-                                                <h6>ProxyChem</h6>
-                                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore,
-                                                    soluta!</p>
-                                            </div>
-                                        </div>
+                                        @empty
+
+                                        @endforelse
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
@@ -251,45 +234,36 @@
                         <h2>Notre Plan Tarifaire</h2>
                     </div>
                     <div class="row g-lg-5">
+
+                        @forelse ($abonnement as $ab)
+                        @foreach ($ab as $a)
                         <div class="col-lg-3">
                             <div class="card">
                                 <div class="text-star">
-                                    <h4>Ordinaire</h4>
-                                    <h5>1<sup>$</sup> / <span>Mois</span></h5>
+                                    <h4>{{ $a->nom }}</h4>
+                                    <h5>{{ $a->prix }}<sup>{{ $a->monaie=="USD"?"$":"FC" }}</sup>/<span>Mois</span></h5>
                                     <ul>
-                                        <li>
+                                        @forelse ($a->service as $s)
+
+                                        <li><i class="bi bi-check-lg"></i> {{ $s->nom }}</li>
+                                        @empty
+
+                                        @endforelse
+                                        {{-- <li>
                                             <i class="bi bi-check-lg"></i> ProxyChem
-                                        </li>
-                                        <li>
-                                            <i class="bi bi-check-lg"></i> ProxyChem
-                                        </li>
+                                        </li> --}}
                                     </ul>
-                                    <a href="#" class="btn">
+                                    <a href="{{ route('createAbonnement',['id'=>$a->id])}}" class="btn">
                                         Souscrire
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="card">
-                                <div class="text-star">
-                                    <h4>Standars</h4>
-                                    <h5>2<sup>$</sup>/<span>Mois</span></h5>
-                                    <ul>
-                                        <li>
-                                            <i class="bi bi-check-lg"></i> ProxyChem
-                                        </li>
-                                        <li>
-                                            <i class="bi bi-check-lg"></i> ProxyChem
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="btn">
-                                        Souscrire
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
+                        @endforeach
+                        @empty
+
+                        @endforelse
+                        {{-- <div class="col-lg-3">
                             <div class="card">
                                 <div class="text-star">
                                     <h4>Premium</h4>
@@ -326,7 +300,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

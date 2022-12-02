@@ -1,11 +1,11 @@
 <?php
 
 use App\Http\Controllers\AbonnementController;
-use App\Http\Controllers\ProduitController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AchatController;
 use App\Http\Controllers\ActeController;
+use App\Http\Controllers\ProduitController;
+use App\Http\Controllers\ServiceController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +16,14 @@ use App\Http\Controllers\ActeController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('pages.index');
 })->name('home');
+Route::get('accueil', function () {
+    return view('pages.home');
+})->name('accueil');
 Route::get('/abonnement', [AbonnementController::class, 'index'])->name('abonnement');
 Route::get('/detailAbonnement', [AbonnementController::class, 'detail'])->name('detailAbonnement');
 Route::get('about', function () {
@@ -50,7 +53,6 @@ Route::get('detailProdui/{id}', [ProduitController::class, 'show'])->name('detai
 Route::delete('cartRemove/{id}', [ProduitController::class, 'destroy'])->name('cartRemove');
 Route::get('showCat/{id}', [ProduitController::class, 'showCat'])->name('showCat');
 
-
 Route::post('confirmUserLivraison', [AchatController::class, 'confirmUserLivraison'])->name('confirmUserLivraison');
 Route::post('addCard', [ProduitController::class, 'store'])->name('addCard');
 Route::post('achatProduit', [AchatController::class, 'store'])->name('achatProduit');
@@ -71,14 +73,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/mesAchats', [AchatController::class, 'mesAchats'])->name('mesAchats');
     Route::get('/historique', [ServiceController::class, 'historique'])->name('historique');
 
-
     Route::get('/detailProduitAcheter/{id}', [AchatController::class, 'show'])->name('detailProduitAcheter');
     Route::get('/detailHistorique/{id}', [ServiceController::class, 'detailHistorique'])->name('detailHistorique');
     Route::get('/detailmonAbonnement/{id}', [ServiceController::class, 'show'])->name('detailmonAbonnement');
 
     Route::post('/editprofil', [ServiceController::class, 'editprofil'])->name('editprofil');
     Route::post('/editPassword', [ServiceController::class, 'editPassword'])->name('editPassword');
-
 
     Route::get('/cl_pharmacie', [ActeController::class, 'index'])->name('cl_pharmacie');
     Route::get('/cl_annuaire', [ActeController::class, 'annuaire'])->name('cl_annuaire');
