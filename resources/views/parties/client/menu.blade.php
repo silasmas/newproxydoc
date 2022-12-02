@@ -22,7 +22,7 @@
                   <li class="menu-item">
                     <span class="group-title">Medicine</span>
                   </li>
-                  <li class="menu-item link-hover">
+                  <li class="menu-item link-hover {{ Route::current()->getName()=="dashboard"?"active":"" }}">
                     <a class="item-link" href="{{ route('dashboard') }}">
                       <span class="link-icon icofont-home"></span>
                       <span class="link-text">Accueil</span>
@@ -57,28 +57,28 @@
                       <span class="link-caret icofont-thin-right"></span>
                     </a>
                     <ul class="sub">
-                        <li class="menu-item">
+                        <li class="menu-item {{ Route::current()->getName()=="cl_annuaire"?"active":"" }}">
                           <a class="item-link" href="{{ route('cl_annuaire') }}">
                             <span class="link-icon icofont-prescription"></span>
                             <span class="link-text">
                             Annuaire des médecins
-                        </span></a>
+                            </span></a>
                         </li>
-                        <li class="menu-item">
+                        <li class="menu-item {{ Route::current()->getName()=="cl_specialiste"?"active":"" }}">
                           <a class="item-link" href="{{ route('cl_specialiste') }}">
                             <span class="link-icon icofont-doctor-alt"></span>
                             <span class="link-text">
                             Trouver un spécialiste
                         </span></a>
                         </li>
-                        <li class="menu-item">
+                        <li class="menu-item {{ Route::current()->getName()=="cl_chat"?"active":"" }}">
                           <a class="item-link" href="{{ route('cl_chat') }}">
                             <span class="link-icon icofont-whatsapp"></span>
                             <span class="link-text">
                             Parler à un médecin
                         </span></a>
                         </li>
-                        <li class="menu-item">
+                        <li class="menu-item {{ Route::current()->getName()=="cl_rendezvous"?"active":"" }}">
                           <a class="item-link" href="{{ route('cl_rendezvous') }}">
                             <span class="link-icon icofont-whatsapp"></span>
                             <span class="link-text">
@@ -87,13 +87,13 @@
                         </li>
                       </ul>
                   </li>
-                  <li class="menu-item link-hover">
+                  <li class="menu-item link-hover {{ Route::current()->getName()=="cl_achat"?"active":"" }}">
                     <a class="item-link" href="{{ route('cl_achats') }}">
                       <span class="link-icon icofont-cart"></span>
                       <span class="link-text">Mes achats</span>
                     </a>
                   </li>
-                  <li class="menu-item link-hover">
+                  <li class="menu-item link-hover {{ Route::current()->getName()=="cl_historique"?"active":"" }}">
                     <a class="item-link" href="{{ route('cl_historique') }}">
                       <span class="link-icon icofont-list"></span>
                       <span class="link-text">Historique</span>
@@ -101,7 +101,7 @@
                   </li>
 
                   {{-- <li class="menu-item link-hover"> --}}
-                  <li class="menu-item">
+                  <li class="menu-item {{ Route::current()->getName()=="cl_abonner"?"active":"" }}">
                     <a class="item-link" href="{{ route('cl_abonner') }}">
 
                       <span class="link-icon icofont-patient-bed"></span>
