@@ -239,7 +239,46 @@
         location.reload();
     }
 </script>
+<script src="{{ asset('assets/js/js/app.js') }}"></script>
+            <script src="{{ asset('assets/js/js/bootstrap.min.js') }}"></script>
+            <script>
+                $(window).scroll(function() {
 
+                    if ($(this).scrollTop() > 40) {
+                        $(".navbar").addClass('bg-white');
+
+                    } else {
+                        $(".navbar").removeClass('bg-white');
+                    }
+                });
+                $('.menu-toggle').click(function() {
+                    $(this).toggleClass('active')
+                    $('.full-menu').addClass('active')
+                })
+                $('.close-menu').click(function() {
+                    $('.menu-toggle').removeClass('active')
+                    $('.full-menu').removeClass('active')
+                })
+                // $(window).on('load',function(){
+                //     $('.loading').addClass('complete');
+                // });
+                $('.scrollTop').click(function() {
+                    $('.scrollTop').removeClass('active')
+                    $(this).addClass('active')
+                    $('.menu-toggle').removeClass('active')
+
+                    $('.full-menu').removeClass('active')
+                    var getElement = $(this).attr('href');
+                    if ($(getElement).length) {
+                        var getOffset = $(getElement).offset().top - $('.navbar').height();
+                        $('html,body').animate({
+                            scrollTop: getOffset
+                        }, 1000);
+                    }
+                    return false;
+                })
+                new WOW().init()
+            </script>
 </body>
 
 </html>

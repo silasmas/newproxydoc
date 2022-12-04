@@ -45,6 +45,8 @@
     <!-- Modernizr Js -->
     <script src="{{ asset('assets/js/modernizr-3.5.0.min.js') }}"></script>
     <link href="{{ asset('js/sweetalert/sweetalert.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ asset('assets/home/app.css') }}">
 
     @livewireStyles()
 </head>
