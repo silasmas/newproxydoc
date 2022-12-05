@@ -777,4 +777,19 @@ footer {
             }
         }
     }
+    .block-info{
+        .items{
+            margin-right: 20px;
+            .bi{
+                color: var(--colorWhite);
+                font-size: 22px;
+                margin-right: 5px;
+            }
+            a{
+                color: var(--colorWhite);
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
+    }
 }

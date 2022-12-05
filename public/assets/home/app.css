@@ -841,4 +841,20 @@ footer .block-network a:hover {
 footer .block-network a:last-child {
   margin-right: 0;
 }
+
+footer .block-info .items {
+  margin-right: 20px;
+}
+
+footer .block-info .items .bi {
+  color: var(--colorWhite);
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+footer .block-info .items a {
+  color: var(--colorWhite);
+  text-decoration: none;
+  font-size: 16px;
+}
 /*# sourceMappingURL=app.css.map */
