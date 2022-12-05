@@ -127,10 +127,12 @@
                 </div>
             </div>
             <div class="bundel" id="about">
+
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-11">
                             <div class="card">
+                                <img src="{{asset('assets/img/bg-1.png')}}" alt="image de proxydoc" class="img-cover">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6">
                                         <div class="text-center">
