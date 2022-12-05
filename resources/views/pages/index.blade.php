@@ -27,12 +27,28 @@
                 <div class="content-banner">
                     <div class="block-line">
                         <div class="block-card">
-                            <div class="img-card">
-                                <img src="{{ asset('assets/img/bg.png') }}" alt="">
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <div class="img-card">
+                                        <img src="{{ asset('assets/img/bg.png') }}" alt="">
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="img-card">
+                                        <img src="{{ asset('assets/img/bg.png') }}" alt="">
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <div class="img-card">
+                                        <img src="{{ asset('assets/img/bg.png') }}" alt="">
+                                    </div>
+                                  </div>
+                                </div>
                             </div>
-                            <div class="img-card">
+                            {{-- <div class="img-card">
                                 <img src="{{ asset('assets/img/bg-1.jpg') }}" alt="">
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="circle"></div>
