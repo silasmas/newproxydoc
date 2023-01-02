@@ -19,9 +19,9 @@
             <div class="main-menu">
               <nav class="main-menu-wrap">
                 <ul class="menu-ul">
-                  <li class="menu-item">
+                  {{-- <li class="menu-item">
                     <span class="group-title">Medicine</span>
-                  </li>
+                  </li> --}}
                   <li class="menu-item link-hover {{ Route::current()->getName()=="dashboard"?"active":"" }}">
                     <a class="item-link" href="{{ route('dashboard') }}">
                       <span class="link-icon icofont-home"></span>
@@ -105,7 +105,7 @@
                     <a class="item-link" href="{{ route('cl_abonner') }}">
 
                       <span class="link-icon icofont-patient-bed"></span>
-                      <span class="link-text">S'abonner</span>
+                      <span class="link-text">Abonnements</span>
                     </a>
                   </li>
 
@@ -125,13 +125,20 @@
 
 
             <div class="assistant-menu">
-
-              <a class="link" href="#" data-bs-toggle="modal" data-bs-target="#settings">
+                <div class="card card-help">
+                    <div class="circle"></div>
+                    <h5>Avez-vous besoin d'aide ?</h5>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <div class="btn">
+                        Contactez-nous
+                    </div>
+                </div>
+              {{-- <a class="link" href="#" data-bs-toggle="modal" data-bs-target="#settings">
                 <span class="link-icon icofont-ui-settings"></span>Settings
               </a>
               <a class="link" href="#">
                 <span class="link-icon icofont-question-square"></span>FAQ &amp; Support
-              </a>
+              </a> --}}
             </div>
 
 

@@ -2,7 +2,7 @@
     <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
 
     <div class="main-content-wrap">
-        <div class="d-flex align-items-center justify-content-between mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-2 mb-md-4">
             <h1 class="page-title mt-0 mb-0">Liste des médicaments</h1>
             <div class="block-tools d-flex align-items-center">
                 <div class="block-search d-flex align-items-center">
@@ -29,7 +29,7 @@
         <div class="page-content">
             <div class="row g-lg-4 g-3">
                 @forelse ($allproduits as $p)
-                <div class="col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="col-md-6 col-lg-4 col-xl-4 col-xxl-3">
                     <div class="card card-prod-dash">
                         <div class="row">
                             <div class="col-4">

@@ -7,7 +7,7 @@
 @yield('content','titre')
 
 
-@include('parties.client.footer')
+{{-- @include('parties.client.footer') --}}
 @include('parties.client.modal')
 
 @include('parties.client.pied')

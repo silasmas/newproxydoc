@@ -1,7 +1,7 @@
 <div>
     <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
     <div class="main-content-wrap">
-        <div class="d-flex align-items-center justify-content-between mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-2 mb-md-4">
             <h1 class="page-title mt-0 mb-0">
                 Rendez-vous
             </h1>
