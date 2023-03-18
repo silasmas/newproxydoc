@@ -56,6 +56,18 @@
     color: var(--colorWhite);
     box-shadow: none;
   }
+  .card-filter-lg .price{
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    color: var(--colorTitre);
+    font-weight: 700;
+  }
+  .card-filter-lg .price span{
+    color: var(--colorParagraph);
+    font-size: 14px;
+    font-weight: 400;
+  }
   .card-filter-lg .btn-first span{
     font-size: 22px;
     margin-right: 10px;

@@ -8,7 +8,7 @@
 <main class="main-content">
     <div class="app-loader"><i class="icofont-spinner-alt-4 rotate"></i></div>
     <div class="main-content-wrap">
-        <div class="d-flex align-items-center justify-content-between mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-4">
             <h1 class="page-title mt-0 mb-0" style="font-size: 16px">
                Détail medicament
             </h1>
@@ -35,10 +35,20 @@
                             
                         </div>
                         <h6 class="mt-0">Quantité</h6>
-                        <div class="d-flex mb-4 align-items-center">
-                            <button class="btn btn-action me-2">-</button>
-                            <input type="text" placeholder="" value="0" class="form-control w-25 text-center">
-                            <button class="btn btn-action ms-2">+</button>
+                        <div class="row align-items-center mb-4 ">
+                            <div class="col-lg-6">
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-action me-2">-</button>
+                                    <input type="text" placeholder="" value="0" class="form-control w-50 text-center">
+                                    <button class="btn btn-action ms-2">+</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="price text-end">
+                                    <span>Prix total</span>
+                                    2500FC
+                                </div>
+                            </div>
                         </div>
                         <h6 class="mt-0">Filtre de prix</h6>
                         <div class="price-input price-input-1 mb-4">
