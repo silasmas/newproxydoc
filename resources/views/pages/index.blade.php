@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
                                     <div class="img-card">
-                                        <img src="{{ asset('assets/img/bg.png') }}" alt="">
+                                        <img src="{{ asset('assets/img/slider/dr3.png') }}" alt="">
                                     </div>
                                   </div>
                                   <div class="carousel-item">
@@ -41,7 +41,7 @@
                                   </div>
                                   <div class="carousel-item">
                                     <div class="img-card">
-                                        <img src="{{ asset('assets/img/bg.png') }}" alt="">
+                                        <img src="{{ asset('assets/img/slider/tem2.png') }}" alt="">
                                     </div>
                                   </div>
                                 </div>

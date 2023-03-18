@@ -36,6 +36,21 @@
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 
+<!-- Sendinblue Conversations {literal} -->
+<script>
+    (function(d, w, c) {
+        w.SibConversationsID = '63b2dfaebc5faf7191551ccd';
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://conversations-widget.sendinblue.com/sib-conversations.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'SibConversations');
+</script>
+<!-- /Sendinblue Conversations {/literal} -->
+
 @auth
 @if ($mesService->pluck('nom')->contains('standars')||$mesService->pluck('nom')->contains('Premium')||$mesService->pluck('nom')->contains('business'))
 <!--Start of Tawk.to Script-->
