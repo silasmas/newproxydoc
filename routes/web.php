@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.index');
 })->name('home');
+Route::get('/detail_med', function () {
+    return view('pages.client.detail-med');
+})->name('home');
 Route::get('accueil', function () {
     return view('pages.home');
 })->name('accueil');

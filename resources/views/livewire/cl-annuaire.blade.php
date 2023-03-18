@@ -28,6 +28,20 @@
                 </div>
             </div>
         </div>
+        <div class="nav-filter">
+            <div class="item-nav">
+                <a href="#" class="active">Tous</a>
+            </div>
+            <div class="item-nav">
+                <a href="#">Spécialiste</a>
+            </div>
+            <div class="item-nav">
+                <a href="#">Pédiatre</a>
+            </div>
+            <div class="item-nav">
+                <a href="#">Cardiologue</a>
+            </div>
+        </div>
         <div class="page-content">
             <div class="row g-lg-4 g-3">
                 <div class="col-lg-4 col-12 col-md-6">
@@ -43,9 +57,10 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="block-detail-doc  ">
-                                    <h4 class="name-doc">John doe</h4>
+                                    <h4 class="name-doc mt-0">John doe</h4>
                                     <p class="function">Pédiatre</p>
-                                    <div class="net-work justify-content-start mb-0">
+                                    <div class="badge success">Disponible</div>
+                                    {{-- <div class="net-work justify-content-start mb-0">
                                         <a href="#">
                                             <i class="link icofont-facebook"></i>
                                         </a>
@@ -55,7 +70,7 @@
                                         <a href="#">
                                             <i class="link icofont-instagram"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                             </div>
@@ -81,9 +96,10 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="block-detail-doc  ">
-                                    <h4 class="name-doc">John doe</h4>
+                                    <h4 class="name-doc mt-0">John doe</h4>
                                     <p class="function">Pédiatre</p>
-                                    <div class="net-work justify-content-start mb-0">
+                                    <div class="badge danger">Non disponible</div>
+                                    {{-- <div class="net-work justify-content-start mb-0">
                                         <a href="#">
                                             <i class="link icofont-facebook"></i>
                                         </a>
@@ -93,7 +109,7 @@
                                         <a href="#">
                                             <i class="link icofont-instagram"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                             </div>
@@ -119,9 +135,10 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="block-detail-doc  ">
-                                    <h4 class="name-doc">John doe</h4>
+                                    <h4 class="name-doc mt-0">John doe</h4>
                                     <p class="function">Pédiatre</p>
-                                    <div class="net-work justify-content-start mb-0">
+                                    <div class="badge success">Disponible</div>
+                                    {{-- <div class="net-work justify-content-start mb-0">
                                         <a href="#">
                                             <i class="link icofont-facebook"></i>
                                         </a>
@@ -131,7 +148,7 @@
                                         <a href="#">
                                             <i class="link icofont-instagram"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                             </div>
@@ -157,9 +174,10 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="block-detail-doc  ">
-                                    <h4 class="name-doc">John doe</h4>
+                                    <h4 class="name-doc mt-0">John doe</h4>
                                     <p class="function">Pédiatre</p>
-                                    <div class="net-work justify-content-start mb-0">
+                                    <div class="badge danger">Non disponible</div>
+                                    {{-- <div class="net-work justify-content-start mb-0">
                                         <a href="#">
                                             <i class="link icofont-facebook"></i>
                                         </a>
@@ -169,7 +187,7 @@
                                         <a href="#">
                                             <i class="link icofont-instagram"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                             </div>
@@ -195,9 +213,10 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="block-detail-doc  ">
-                                    <h4 class="name-doc">John doe</h4>
+                                    <h4 class="name-doc mt-0">John doe</h4>
                                     <p class="function">Pédiatre</p>
-                                    <div class="net-work justify-content-start mb-0">
+                                    <div class="badge success">Disponible</div>
+                                    {{-- <div class="net-work justify-content-start mb-0">
                                         <a href="#">
                                             <i class="link icofont-facebook"></i>
                                         </a>
@@ -207,7 +226,7 @@
                                         <a href="#">
                                             <i class="link icofont-instagram"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                             </div>
@@ -233,9 +252,10 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="block-detail-doc  ">
-                                    <h4 class="name-doc">John doe</h4>
+                                    <h4 class="name-doc mt-0">John doe</h4>
                                     <p class="function">Pédiatre</p>
-                                    <div class="net-work justify-content-start mb-0">
+                                    <div class="badge danger">Non disponible</div>
+                                    {{-- <div class="net-work justify-content-start mb-0">
                                         <a href="#">
                                             <i class="link icofont-facebook"></i>
                                         </a>
@@ -245,7 +265,7 @@
                                         <a href="#">
                                             <i class="link icofont-instagram"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                             </div>
@@ -271,9 +291,10 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="block-detail-doc  ">
-                                    <h4 class="name-doc">John doe</h4>
+                                    <h4 class="name-doc mt-0">John doe</h4>
                                     <p class="function">Pédiatre</p>
-                                    <div class="net-work justify-content-start mb-0">
+                                    <div class="badge success">Disponible</div>
+                                    {{-- <div class="net-work justify-content-start mb-0">
                                         <a href="#">
                                             <i class="link icofont-facebook"></i>
                                         </a>
@@ -283,7 +304,7 @@
                                         <a href="#">
                                             <i class="link icofont-instagram"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                             </div>
@@ -309,9 +330,10 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="block-detail-doc  ">
-                                    <h4 class="name-doc">John doe</h4>
+                                    <h4 class="name-doc mt-0">John doe</h4>
                                     <p class="function">Pédiatre</p>
-                                    <div class="net-work justify-content-start mb-0">
+                                    <div class="badge danger">Non disponible</div>
+                                    {{-- <div class="net-work justify-content-start mb-0">
                                         <a href="#">
                                             <i class="link icofont-facebook"></i>
                                         </a>
@@ -321,7 +343,7 @@
                                         <a href="#">
                                             <i class="link icofont-instagram"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                             </div>
@@ -347,9 +369,10 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="block-detail-doc  ">
-                                    <h4 class="name-doc">John doe</h4>
+                                    <h4 class="name-doc mt-0">John doe</h4>
                                     <p class="function">Pédiatre</p>
-                                    <div class="net-work justify-content-start mb-0">
+                                    <div class="badge success">Disponible</div>
+                                    {{-- <div class="net-work justify-content-start mb-0">
                                         <a href="#">
                                             <i class="link icofont-facebook"></i>
                                         </a>
@@ -359,7 +382,7 @@
                                         <a href="#">
                                             <i class="link icofont-instagram"></i>
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                             </div>
@@ -372,7 +395,45 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="col-lg-4 col-12 col-md-6">
+                    <div class="card card-upload">
+                        <div class="row  align-items-center w-100">
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <div class="block-avatar-doc block-avatar-doc-sm">
+                                        <img src="{{asset('assets/client/content/user-400-1.jpg')}}" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="block-detail-doc  ">
+                                    <h4 class="name-doc mt-0">John doe</h4>
+                                    <p class="function">Pédiatre</p>
+                                    <div class="badge danger">Non disponible</div>
+                                    {{-- <div class="net-work justify-content-start mb-0">
+                                        <a href="#">
+                                            <i class="link icofont-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="link icofont-instagram"></i>
+                                        </a>
+                                    </div> --}}
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="block-detail-doc">
+                                    <a href="#" class="btn btn-chat mb-0">Profil</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
