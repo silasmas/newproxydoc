@@ -757,6 +757,8 @@ body.boxed .app-navbar .navbar-wrap{
     opacity: 1;
     font-size: 24px;
 }
+
+
 .card-prod-dash{
     background: var(--colorWhite);
     padding: 14px;
@@ -821,6 +823,42 @@ body.boxed .app-navbar .navbar-wrap{
     font-size: 16px;
     color: var(--colorParagraph);
     font-weight: 400;
+}
+.card-prod-dash-lg .block-img-prod{
+    height: 80px;
+}
+.card-prod-dash-lg .category{
+    font-size: 13px;
+}
+.card-prod-dash-lg .name-prod{
+    color: var(--colorTitre)!important;
+    font-size: 15px;
+}
+.card-prod-dash-lg .delete{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: var(--bg-fond);
+    right: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-prod-dash-lg .delete span{
+    position: absolute;
+    width: 12px;
+    height: 1px;
+    background: var(--colorTitre);
+}
+.card-prod-dash-lg .delete span:nth-child(1){
+    transform: rotate(-45deg);
+}
+.card-prod-dash-lg .delete span:nth-child(2){
+    transform: rotate(45deg);
 }
 .card-upload{
     box-shadow: 0 5px 24px rgba(160, 181, 238, 0.08);

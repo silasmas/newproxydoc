@@ -23,7 +23,13 @@ Route::get('/', function () {
 })->name('home');
 Route::get('/detail_med', function () {
     return view('pages.client.detail-med');
-})->name('home');
+})->name('detail-med');
+Route::get('/cart', function () {
+    return view('pages.client.cart');
+})->name('panier');
+Route::get('/facturation', function () {
+    return view('pages.client.facturation');
+})->name('panier');
 Route::get('accueil', function () {
     return view('pages.home');
 })->name('accueil');
